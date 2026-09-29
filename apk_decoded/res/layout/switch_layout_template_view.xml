@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/template_view" android:layout_width="@dimen/switch_layout_template_width" android:layout_height="@dimen/switch_layout_template_height" android:layout_marginTop="@dimen/switch_layout_template_margin_top" android:layout_centerHorizontal="true" />
+    <ImageView android:id="@id/checked" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/switch_layout_checked_margin_top" android:src="@drawable/switch_layout_checked" android:layout_centerHorizontal="true" />
+    <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="#dfffffff" android:gravity="center" android:id="@id/layout_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/switch_layout_title_margin_top" android:layout_below="@id/template_view" android:layout_centerHorizontal="true" />
+    <TextView android:textSize="12.0sp" android:textColor="#3effffff" android:gravity="center" android:id="@id/layout_subtitle" android:layout_width="@dimen/switch_layout_template_width" android:layout_height="wrap_content" android:layout_marginTop="@dimen/switch_layout_subtitle_margin_top" android:layout_below="@id/layout_title" android:layout_centerHorizontal="true" />
+</RelativeLayout>

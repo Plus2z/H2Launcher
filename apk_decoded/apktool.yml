@@ -1,0 +1,35 @@
+version: 3.0.2
+apkFileName: 氢桌面_1.6.1.190514143941.58119eb.apk
+usesFramework:
+  ids:
+  - 1
+sdkInfo:
+  minSdkVersion: 26
+  targetSdkVersion: 26
+versionInfo:
+  versionCode: 313
+  versionName: 1.6.1.190514143941.58119eb
+resourcesInfo:
+  packageId: 127
+  keepRawValues: true
+doNotCompress:
+- arsc
+- jpg
+- png
+- themes/oneplus_1/color.net.oneplus.h2launcher.apk
+- themes/oneplus_10/color.net.oneplus.h2launcher.apk
+- themes/oneplus_11/color.net.oneplus.h2launcher.apk
+- themes/oneplus_12/color.net.oneplus.h2launcher.apk
+- themes/oneplus_13/color.net.oneplus.h2launcher.apk
+- themes/oneplus_14/color.net.oneplus.h2launcher.apk
+- themes/oneplus_15/color.net.oneplus.h2launcher.apk
+- themes/oneplus_2/color.net.oneplus.h2launcher.apk
+- themes/oneplus_3/color.net.oneplus.h2launcher.apk
+- themes/oneplus_4/color.net.oneplus.h2launcher.apk
+- themes/oneplus_5/color.net.oneplus.h2launcher.apk
+- themes/oneplus_6/color.net.oneplus.h2launcher.apk
+- themes/oneplus_7/color.net.oneplus.h2launcher.apk
+- themes/oneplus_8/color.net.oneplus.h2launcher.apk
+- themes/oneplus_9/color.net.oneplus.h2launcher.apk
+- themes/oneplus_black/net.oneplus.h2launcher.apk
+- themes/oneplus_white/net.oneplus.h2launcher.apk

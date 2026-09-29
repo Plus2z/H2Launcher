@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<favorites>
+    <customwidget container="-100" screen="0" x="0" y="0" spanX="4" spanY="2" packageName="net.oneplus.h2launcher" className="net.oneplus.h2launcher.internalwidget.clock.ClockWidget" />
+    <favorite className="com.oneplus.contacts.activities.OPDialtactsActivity" packageName="com.android.contacts" screen="0" x="0" y="4" />
+    <favorite className="com.android.mms.ui.ConversationList" packageName="com.android.mms" screen="0" x="1" y="4" />
+    <favorite className="com.google.android.apps.chrome.Main" packageName="com.android.chrome" screen="0" x="2" y="4" />
+    <favorite className="com.oneplus.camera.OPCameraActivity" packageName="com.oneplus.camera" screen="0" x="3" y="4" />
+</favorites>

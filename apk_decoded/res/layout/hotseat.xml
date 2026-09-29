@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<net.oneplus.h2launcher.Hotseat
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <net.oneplus.h2launcher.CellLayout android:layout_gravity="center" android:id="@id/layout" android:layout_width="wrap_content" android:layout_height="match_parent" />
+</net.oneplus.h2launcher.Hotseat>

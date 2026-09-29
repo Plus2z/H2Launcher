@@ -1,0 +1,24 @@
+{
+  "app": [
+    {
+      "src": "com.android.dialer/.DialtactsActivity",
+      "dst": "com.android.contacts/com.oneplus.contacts.activities.OPDialtactsActivity"
+    } ,
+    {
+      "src": "net.oneplus.deskclock/.DeskClock",
+      "dst": "com.oneplus.deskclock/.DeskClock"
+    },
+    {
+      "src": "com.android.documentsui/.DocumentsActivity",
+      "dst": "com.oneplus.filemanager/.HomePageActivity"
+    },
+    {
+      "src": "com.android.contacts/com.android.contacts.activities.PeopleActivity",
+      "dst": "com.android.contacts/com.oneplus.contacts.activities.OPPeopleActivity"
+    },
+    {
+      "src": "com.google.android.apps.messaging/com.google.android.apps.messaging.ui.ConversationListActivity",
+      "dst": "com.android.mms/com.android.mms.ui.ConversationList"
+    }
+  ]
+}

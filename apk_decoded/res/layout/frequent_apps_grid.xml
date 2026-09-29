@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:gravity="center" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:oneplus="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="14.0sp" android:textColor="@color/quick_page_app_title_color" android:gravity="center_vertical" android:visibility="visible" android:layout_width="match_parent" android:layout_height="48.0dp" android:text="@string/frequently_used_apps" android:layout_marginStart="16.0dp" />
+    <net.oneplus.h2launcher.widget.OneplusFlowLayout android:layout_gravity="center_horizontal" android:id="@id/apps_grid" android:paddingTop="48.0dp" android:paddingBottom="@dimen/frequent_apps_margin_bottom" android:layout_width="wrap_content" android:layout_height="wrap_content" oneplus:childrenWidth="@dimen/frequent_apps_item_size" oneplus:childrenHeight="@dimen/frequent_apps_container_size" oneplus:verticalSpace="@dimen/frequent_apps_vertical_spacing" oneplus:horizontalSpace="@dimen/frequent_apps_horizontal_spacing" oneplus:paddingLeft="@dimen/frequent_apps_vertical_spacing" oneplus:columns="@integer/config_recentAppsColumns" oneplus:wrap="true" />
+    <net.oneplus.h2launcher.quickpage.view.EmptyView android:id="@id/empty_view" android:paddingTop="48.0dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" />
+</FrameLayout>

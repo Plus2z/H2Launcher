@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="match_parent" android:layout_height="match_parent" launcher:layout_ignoreInsets="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:launcher="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/search_overlay" android:background="#ff00ff00" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="match_parent" />
+    <FrameLayout android:id="@id/search_box" android:background="#ffff0000" android:layout_width="match_parent" android:layout_height="48.0dp" android:layout_marginLeft="8.0dp" android:layout_marginTop="36.0dp" android:layout_marginRight="8.0dp" />
+</FrameLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<net.oneplus.h2launcher.customizations.ColorCircleView android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/color_dot" android:layout_width="match_parent" android:layout_height="match_parent" />
+    <ImageView android:layout_gravity="end|bottom" android:id="@id/checked_circle" android:visibility="invisible" android:layout_width="@dimen/checked_color_circle_size" android:layout_height="@dimen/checked_color_circle_size" />
+</net.oneplus.h2launcher.customizations.ColorCircleView>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<net.oneplus.h2launcher.inputmethod.T9.T9Panel android:orientation="vertical" android:background="@color/search_t9_keyboard_background_color" android:clickable="true" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/keyboard_first_row_margin_top">
+        <LinearLayout android:id="@id/digit_one_container" android:layout_width="@dimen/keyboard_button_layout_width" android:layout_height="@dimen/keyboard_button_layout_height" style="@style/leftPadButton">
+            <TextView android:text="@string/t9_pad_one" android:layout_width="match_parent" android:layout_height="@dimen/keyboard_primary_layout_height" style="@style/DigitalPadPrimary" />
+            <TextView android:text="@string/t9_pad_space" android:layout_width="match_parent" android:layout_height="@dimen/keyboard_secondary_layout_height" style="@style/DigitalPadSecondary" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/digit_two_container" android:layout_width="@dimen/keyboard_button_layout_width" android:layout_height="@dimen/keyboard_button_layout_height" style="@style/PadButton">
+            <TextView android:text="@string/t9_pad_two" android:layout_width="match_parent" android:layout_height="@dimen/keyboard_primary_layout_height" style="@style/DigitalPadPrimary" />
+            <TextView android:text="@string/t9_pad_abc" android:layout_width="match_parent" android:layout_height="@dimen/keyboard_secondary_layout_height" style="@style/DigitalPadSecondary" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/digit_three_container" android:layout_width="@dimen/keyboard_button_layout_width" android:layout_height="@dimen/keyboard_button_layout_height" style="@style/PadButton">
+            <TextView android:text="@string/t9_pad_three" android:layout_width="match_parent" android:layout_height="@dimen/keyboard_primary_layout_height" style="@style/DigitalPadPrimary" />
+            <TextView android:text="@string/t9_pad_def" android:layout_width="match_parent" android:layout_height="@dimen/keyboard_secondary_layout_height" style="@style/DigitalPadSecondary" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/keyboard_second_row_margin_top">
+        <LinearLayout android:id="@id/digit_four_container" android:layout_width="@dimen/keyboard_button_layout_width" android:layout_height="@dimen/keyboard_button_layout_height" style="@style/leftPadButton">
+            <TextView android:text="@string/t9_pad_four" android:layout_width="match_parent" android:layout_height="@dimen/keyboard_primary_layout_height" style="@style/DigitalPadPrimary" />
+            <TextView android:text="@string/t9_pad_ghi" android:layout_width="match_parent" android:layout_height="@dimen/keyboard_secondary_layout_height" style="@style/DigitalPadSecondary" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/digit_five_container" android:layout_width="@dimen/keyboard_button_layout_width" android:layout_height="@dimen/keyboard_button_layout_height" style="@style/PadButton">
+            <TextView android:text="@string/t9_pad_five" android:layout_width="match_parent" android:layout_height="@dimen/keyboard_primary_layout_height" style="@style/DigitalPadPrimary" />
+            <TextView android:text="@string/t9_pad_jkl" android:layout_width="match_parent" android:layout_height="@dimen/keyboard_secondary_layout_height" style="@style/DigitalPadSecondary" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/digit_six_container" android:layout_width="@dimen/keyboard_button_layout_width" android:layout_height="@dimen/keyboard_button_layout_height" style="@style/PadButton">
+            <TextView android:text="@string/t9_pad_six" android:layout_width="match_parent" android:layout_height="@dimen/keyboard_primary_layout_height" style="@style/DigitalPadPrimary" />
+            <TextView android:text="@string/t9_pad_mno" android:layout_width="match_parent" android:layout_height="@dimen/keyboard_secondary_layout_height" style="@style/DigitalPadSecondary" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/keyboard_third_row_margin_top">
+        <LinearLayout android:id="@id/digit_seven_container" android:layout_width="@dimen/keyboard_button_layout_width" android:layout_height="@dimen/keyboard_button_layout_height" style="@style/leftPadButton">
+            <TextView android:text="@string/t9_pad_seven" android:layout_width="match_parent" android:layout_height="@dimen/keyboard_primary_layout_height" style="@style/DigitalPadPrimary" />
+            <TextView android:text="@string/t9_pad_pqrs" android:layout_width="match_parent" android:layout_height="@dimen/keyboard_secondary_layout_height" style="@style/DigitalPadSecondary" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/digit_eight_container" android:layout_width="@dimen/keyboard_button_layout_width" android:layout_height="@dimen/keyboard_button_layout_height" style="@style/PadButton">
+            <TextView android:text="@string/t9_pad_eight" android:layout_width="match_parent" android:layout_height="@dimen/keyboard_primary_layout_height" style="@style/DigitalPadPrimary" />
+            <TextView android:text="@string/t9_pad_tuv" android:layout_width="match_parent" android:layout_height="@dimen/keyboard_secondary_layout_height" style="@style/DigitalPadSecondary" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/digit_nine_container" android:layout_width="@dimen/keyboard_button_layout_width" android:layout_height="@dimen/keyboard_button_layout_height" style="@style/PadButton">
+            <TextView android:text="@string/t9_pad_nine" android:layout_width="match_parent" android:layout_height="@dimen/keyboard_primary_layout_height" style="@style/DigitalPadPrimary" />
+            <TextView android:text="@string/t9_pad_wxyz" android:layout_width="match_parent" android:layout_height="@dimen/keyboard_secondary_layout_height" style="@style/DigitalPadSecondary" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:background="@null" android:layout_width="@dimen/keyboard_button_layout_width" android:layout_height="@dimen/keyboard_button_layout_height" style="@style/leftPadButton" />
+        <LinearLayout android:id="@id/digit_zero_container" android:layout_width="@dimen/keyboard_button_layout_width" android:layout_height="@dimen/keyboard_button_layout_height" style="@style/PadButton">
+            <TextView android:text="@string/t9_pad_zero" android:layout_width="match_parent" android:layout_height="@dimen/keyboard_primary_layout_height" style="@style/DigitalZeroPrimary" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/digit_delete_container" android:layout_width="@dimen/keyboard_button_layout_width" android:layout_height="@dimen/keyboard_button_layout_height" style="@style/PadButton">
+            <TextView android:text="@string/action_delete" android:layout_width="match_parent" android:layout_height="@dimen/keyboard_primary_layout_height" style="@style/TextPadPrimary" />
+        </LinearLayout>
+    </LinearLayout>
+</net.oneplus.h2launcher.inputmethod.T9.T9Panel>

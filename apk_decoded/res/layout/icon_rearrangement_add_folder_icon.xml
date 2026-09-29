@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<net.oneplus.h2launcher.iconrearrangement.IconRearrangementAddFolderIcon android:orientation="vertical" android:paddingLeft="18.0dp" android:paddingRight="18.0dp" android:focusable="true" android:layout_width="86.0dp" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center_horizontal" android:id="@id/preview_background" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/bg_add_folder" android:antialias="true" android:scaleType="center" />
+    <net.oneplus.h2launcher.BubbleTextView android:textSize="@dimen/icon_rearrangement_icon_text_size" android:layout_gravity="center_horizontal" android:id="@id/folder_icon_name" android:layout_width="220.0px" android:layout_height="match_parent" android:text="@string/icon_rearrangement_create_a_new_folder" style="@style/Icon" />
+    <net.oneplus.h2launcher.BubbleTextView android:textSize="@dimen/icon_rearrangement_icon_text_size" android:layout_gravity="center_horizontal" android:id="@id/folder_icon_animation_name" android:visibility="gone" android:layout_width="220.0px" android:layout_height="match_parent" android:text="@string/icon_rearrangement_folder_empty_name" style="@style/Icon" />
+</net.oneplus.h2launcher.iconrearrangement.IconRearrangementAddFolderIcon>

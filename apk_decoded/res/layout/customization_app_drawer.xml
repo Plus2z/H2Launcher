@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/selections_app_drawer" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <net.oneplus.h2launcher.customizations.Selection android:id="@id/selection_small" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/customization_app_drawer_margin_left" android:layout_marginTop="@dimen/customization_app_drawer_margin_top" android:layout_marginBottom="@dimen/customization_app_drawer_margin_bottom" android:layout_alignParentLeft="true">
+        <ImageView android:background="@drawable/btn_grid_small" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </net.oneplus.h2launcher.customizations.Selection>
+    <TextView android:textSize="@dimen/customization_app_drawer_text_size" android:textColor="@color/customization_app_drawer_text_color" android:gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/size_small" android:layout_below="@id/selection_small" android:layout_alignStart="@id/selection_small" android:layout_alignEnd="@id/selection_small" />
+    <net.oneplus.h2launcher.customizations.Selection android:id="@id/selection_standard" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/customization_app_drawer_margin_top" android:layout_marginBottom="@dimen/customization_app_drawer_margin_bottom" android:layout_centerHorizontal="true">
+        <ImageView android:background="@drawable/btn_grid_standard" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </net.oneplus.h2launcher.customizations.Selection>
+    <TextView android:textSize="@dimen/customization_app_drawer_text_size" android:textColor="@color/customization_app_drawer_text_color" android:gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/size_normal" android:layout_below="@id/selection_standard" android:layout_centerHorizontal="true" android:layout_alignStart="@id/selection_standard" android:layout_alignEnd="@id/selection_standard" />
+    <net.oneplus.h2launcher.customizations.Selection android:id="@id/selection_large" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/customization_app_drawer_margin_top" android:layout_marginRight="@dimen/customization_app_drawer_margin_right" android:layout_marginBottom="@dimen/customization_app_drawer_margin_bottom" android:layout_alignParentRight="true">
+        <ImageView android:background="@drawable/btn_grid_large" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </net.oneplus.h2launcher.customizations.Selection>
+    <TextView android:textSize="@dimen/customization_app_drawer_text_size" android:textColor="@color/customization_app_drawer_text_color" android:gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/size_large" android:layout_below="@id/selection_large" android:layout_alignStart="@id/selection_large" android:layout_alignEnd="@id/selection_large" />
+</RelativeLayout>

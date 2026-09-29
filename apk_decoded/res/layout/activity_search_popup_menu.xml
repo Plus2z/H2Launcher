@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:textSize="@dimen/search_input_text_drop_down_list_text_size" android:textColor="@color/search_pop_menu_text_color" android:gravity="center_vertical" android:paddingLeft="@dimen/search_input_text_drop_down_list_padding_left" android:paddingRight="@dimen/search_input_text_drop_down_list_padding_right" android:layout_width="match_parent" android:layout_height="@dimen/search_input_text_popup_window_item_height" android:singleLine="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

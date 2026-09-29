@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <net.oneplus.h2launcher.quickpage.view.EditTextBackEvent android:textSize="@dimen/input_dialog_info_text_size" android:textColor="@color/grey_1000" android:gravity="start|top" android:layout_gravity="center_vertical" android:id="@id/note_content" android:background="@null" android:layout_width="match_parent" android:layout_height="@dimen/quick_page_inputfield_height" android:layout_margin="@dimen/input_dialog_container_inner_margin" android:alpha="0.87" android:textCursorDrawable="@drawable/input_dialog_cursor" />
+    <View android:background="@color/note_panel_bar_divider_color" android:layout_width="match_parent" android:layout_height="1.0dp" android:alpha="0.12" />
+    <net.oneplus.h2launcher.quickpage.widget.ButtonBarLayout android:gravity="bottom" android:orientation="horizontal" android:id="@id/buttonPanel" android:paddingTop="@dimen/input_dialog_container_button_padding_top" android:paddingBottom="@dimen/input_dialog_container_button_padding_bottom" android:layout_width="match_parent" android:layout_height="wrap_content" android:layoutDirection="locale" android:paddingStart="@dimen/input_dialog_container_button_padding_start" android:paddingEnd="@dimen/input_dialog_container_button_padding_end" style="?android:attr/buttonBarStyle">
+        <Button android:textColor="@color/grey_1000" android:id="@id/set_reminder" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawablePadding="@dimen/note_input_container_margin" android:alpha="0.87" android:drawableStart="@drawable/ic_note_reminder_panel" style="?android:attr/buttonBarButtonStyle" />
+        <Space android:id="@id/spacer" android:visibility="invisible" android:layout_width="0.0dp" android:layout_height="0.0dp" android:layout_weight="1.0" />
+        <Button android:textColor="@color/oneplus_accent_color" android:id="@id/done_button" android:layout_width="wrap_content" android:layout_height="wrap_content" style="?android:attr/buttonBarButtonStyle" />
+    </net.oneplus.h2launcher.quickpage.widget.ButtonBarLayout>
+</LinearLayout>

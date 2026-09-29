@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<style
+  xmlns:launcher="http://schemas.android.com/apk/res-auto/net.oneplus.h2launcher">
+    <quickpage launcher:type="4" launcher:size="-1" />
+    <quickpage launcher:type="1" launcher:size="-1" />
+    <quickpage launcher:type="0" launcher:size="-1" />
+    <quickpage launcher:className="@string/op_security_widget_class_name" launcher:packageName="@string/op_security_package_name" launcher:type="2" launcher:size="-1" launcher:widgetId="-1" />
+</style>

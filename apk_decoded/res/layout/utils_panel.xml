@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_gravity="center|bottom" android:paddingLeft="@dimen/utils_panel_padding_left" android:paddingRight="@dimen/utils_panel_padding_right" android:layout_width="@dimen/utils_panel_width" android:layout_height="@dimen/utils_panel_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/sort_button" android:layout_width="@dimen/utils_panel_item_size" android:layout_height="@dimen/utils_panel_item_size" android:src="@drawable/ic_sort" android:layout_alignParentLeft="true" android:layout_centerVertical="true" style="@style/UtilsPanelItem" />
+    <ImageView android:id="@id/clear_button" android:layout_width="@dimen/utils_panel_item_size" android:layout_height="@dimen/utils_panel_item_size" android:src="@drawable/ic_clear" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/UtilsPanelItem" />
+    <ImageView android:id="@id/left_undo_button" android:layout_width="@dimen/utils_panel_item_size" android:layout_height="@dimen/utils_panel_item_size" android:src="@drawable/ic_undo" android:layout_centerInParent="true" style="@style/UtilsPanelItem" />
+    <ImageView android:id="@id/right_undo_button" android:layout_width="@dimen/utils_panel_item_size" android:layout_height="@dimen/utils_panel_item_size" android:src="@drawable/ic_undo" android:layout_centerInParent="true" style="@style/UtilsPanelItem" />
+</RelativeLayout>

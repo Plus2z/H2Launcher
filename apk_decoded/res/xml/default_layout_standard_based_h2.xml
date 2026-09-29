@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<favorites>
+    <favorite container="-101" screen="0" x="0" y="0" packageName="com.android.contacts" className="com.oneplus.contacts.activities.OPDialtactsActivity" />
+    <favorite container="-101" screen="1" x="1" y="0" packageName="com.android.mms" className="com.android.mms.ui.ConversationList" />
+    <favorite container="-101" screen="3" x="2" y="0" packageName="com.android.browser" className="com.tencent.mtt.SplashActivity" />
+    <favorite container="-101" screen="4" x="3" y="0" packageName="com.oneplus.camera" className="com.oneplus.camera.OPCameraActivity" />
+    <folder title="@string/oneplus_folder_title" screen="0" x="0" y="4">
+        <favorite packageName="net.oneplus.weather" className="net.oneplus.weather.app.MainActivity" />
+        <favorite packageName="com.oneplus.calendar" className="com.android.calendar.AllInOneActivity" />
+        <favorite packageName="com.oneplus.gallery" className="com.oneplus.gallery.OPGalleryActivity" />
+        <favorite packageName="com.oneplus.deskclock" className="com.oneplus.deskclock.DeskClock" />
+        <favorite packageName="com.android.settings" className="com.android.settings.Settings" />
+    </folder>
+    <favorite screen="0" x="3" y="4" packageName="com.oneplus.market" className="com.oneplus.market.activity.MainActivity" />
+</favorites>

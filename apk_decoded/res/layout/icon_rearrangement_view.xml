@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<net.oneplus.h2launcher.iconrearrangement.IconRearrangementContainerView android:orientation="vertical" android:id="@id/icon_rearrangement_view" android:descendantFocusability="afterDescendants" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/content" android:layout_width="match_parent" android:layout_height="match_parent">
+        <FrameLayout android:layout_gravity="center" android:id="@id/icon_rearrangement_reveal_view" android:focusable="false" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="match_parent" android:elevation="2.0dp" />
+        <net.oneplus.h2launcher.iconrearrangement.IconRearrangementPanel android:layout_gravity="bottom" android:orientation="horizontal" android:id="@id/icon_rearrangement_content_layout" android:background="@color/icon_rearrangement_background" android:layout_width="match_parent" android:layout_height="112.0dp">
+            <TextView android:textSize="12.0sp" android:textColor="@color/grey_A1000" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/empty_view" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/icon_rearrangement_list_empty" android:textAllCaps="true" android:fontFamily="sans-serif-condensed" />
+            <LinearLayout android:orientation="horizontal" android:id="@id/non_empty_view" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="19.0dp">
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/folder_button_layout" android:layout_width="86.0dp" android:layout_height="wrap_content" android:layout_marginTop="2.0dp" android:drawablePadding="-3.0dp" />
+                <ImageView android:id="@id/divider_line" android:background="@color/grey_A1000" android:paddingLeft="18.0dp" android:layout_width="1.0px" android:layout_height="54.0dp" android:alpha="0.24" />
+                <RelativeLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:id="@id/icon_rearrangement_list_view_container" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="2.0dp">
+                    <net.oneplus.h2launcher.iconrearrangement.IconRearrangementRecyclerView android:theme="@style/Theme.Dark.CustomOverscroll" android:layout_gravity="center_vertical" android:orientation="horizontal" android:id="@id/icon_rearrangement_list_view" android:layout_width="match_parent" android:layout_height="wrap_content" />
+                </RelativeLayout>
+            </LinearLayout>
+        </net.oneplus.h2launcher.iconrearrangement.IconRearrangementPanel>
+    </FrameLayout>
+</net.oneplus.h2launcher.iconrearrangement.IconRearrangementContainerView>

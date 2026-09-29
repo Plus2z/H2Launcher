@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<net.oneplus.h2launcher.SearchDropTargetBar android:focusable="false" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="center" android:id="@id/drag_target_bar" android:layout_width="match_parent" android:layout_height="match_parent">
+        <FrameLayout android:layout_width="0.0dp" android:layout_height="match_parent" android:layout_weight="1.0" style="@style/DropTargetButtonContainer">
+            <net.oneplus.h2launcher.DeleteDropTarget android:id="@id/delete_target_text" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/delete_target_label" style="@style/DropTargetButton" />
+        </FrameLayout>
+        <FrameLayout android:layout_width="0.0dp" android:layout_height="match_parent" android:layout_weight="1.0" style="@style/DropTargetButtonContainer">
+            <net.oneplus.h2launcher.EditDropTarget android:id="@id/edit_target_text" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/action_edit" android:drawableStart="@drawable/edit_target_selector" style="@style/DropTargetButton" />
+        </FrameLayout>
+        <FrameLayout android:layout_width="0.0dp" android:layout_height="match_parent" android:layout_weight="1.0" style="@style/DropTargetButtonContainer">
+            <net.oneplus.h2launcher.InfoDropTarget android:id="@id/info_target_text" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/info_target_label" style="@style/DropTargetButton" />
+        </FrameLayout>
+        <FrameLayout android:layout_width="0.0dp" android:layout_height="match_parent" android:layout_weight="1.0" style="@style/DropTargetButtonContainer">
+            <net.oneplus.h2launcher.UninstallDropTarget android:id="@id/uninstall_target_text" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/delete_target_uninstall_label" style="@style/DropTargetButton" />
+        </FrameLayout>
+    </LinearLayout>
+</net.oneplus.h2launcher.SearchDropTargetBar>

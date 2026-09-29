@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/search_bar_default_bg" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/google_logo_default" android:layout_centerVertical="true" android:layout_marginStart="@dimen/customization_quick_search_bar_google_logo_margin_start" android:layout_alignParentStart="true" />
+    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_mic_default" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/customization_quick_search_bar_mic_icon_margin_end" android:layout_alignParentEnd="true" />
+</RelativeLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<favorites
+  xmlns:launcher="http://schemas.android.com/apk/res-auto/net.oneplus.h2launcher">
+    <customwidget container="-100" screen="0" x="0" y="0" spanX="4" spanY="2" packageName="net.oneplus.h2launcher" className="net.oneplus.h2launcher.internalwidget.clock.ClockWidget" />
+    <favorite launcher:className="net.oneplus.weather.app.MainActivity" launcher:packageName="net.oneplus.weather" launcher:screen="0" launcher:x="0" launcher:y="2" />
+    <favorite launcher:className="com.android.calendar.AllInOneActivity" launcher:packageName="com.oneplus.calendar" launcher:screen="0" launcher:x="1" launcher:y="2" />
+    <favorite launcher:className="com.oneplus.gallery.OPGalleryActivity" launcher:packageName="com.oneplus.gallery" launcher:screen="0" launcher:x="2" launcher:y="2" />
+    <favorite launcher:className="com.oneplus.deskclock.DeskClock" launcher:packageName="com.oneplus.deskclock" launcher:screen="0" launcher:x="3" launcher:y="2" />
+    <favorite launcher:className="com.oppo.market.activity.MainActivity" launcher:packageName="com.oppo.market" launcher:screen="0" launcher:x="0" launcher:y="3" />
+    <favorite launcher:className="com.oneplus.market.activity.MainActivity" launcher:packageName="com.oneplus.market" launcher:screen="0" launcher:x="0" launcher:y="3" />
+    <favorite launcher:className="com.oneplus.note.ui.MainActivity" launcher:packageName="com.oneplus.note" launcher:screen="0" launcher:x="1" launcher:y="3" />
+    <favorite launcher:className="com.oneplus.filemanager.HomePageActivity" launcher:packageName="com.oneplus.filemanager" launcher:screen="0" launcher:x="2" launcher:y="3" />
+    <favorite launcher:className="com.android.settings.Settings" launcher:packageName="com.android.settings" launcher:screen="0" launcher:x="3" launcher:y="3" />
+    <favorite launcher:className="com.oneplus.contacts.activities.OPDialtactsActivity" launcher:packageName="com.android.contacts" launcher:screen="0" launcher:x="0" launcher:y="4" />
+    <favorite launcher:className="com.android.mms.ui.ConversationList" launcher:packageName="com.android.mms" launcher:screen="0" launcher:x="1" launcher:y="4" />
+    <favorite launcher:className="com.tencent.mtt.SplashActivity" launcher:packageName="com.android.browser" launcher:screen="0" launcher:x="2" launcher:y="4" />
+    <favorite launcher:className="com.oneplus.camera.OPCameraActivity" launcher:packageName="com.oneplus.camera" launcher:screen="0" launcher:x="3" launcher:y="4" />
+    <favorite launcher:className="com.netease.mobimail.activity.LaunchActivity" launcher:packageName="com.netease.mail" launcher:screen="1" launcher:x="0" launcher:y="0" />
+    <favorite launcher:className="com.autonavi.map.activity.SplashActivity" launcher:packageName="com.autonavi.minimap" launcher:screen="1" launcher:x="1" launcher:y="0" />
+    <favorite launcher:className="com.netease.cloudmusic.activity.LoadingActivity" launcher:packageName="com.netease.cloudmusic" launcher:screen="1" launcher:x="2" launcher:y="0" />
+    <folder launcher:title="@string/folder_name_system_application" launcher:screen="1" launcher:x="3" launcher:y="0">
+        <favorite launcher:className="com.oneplus.calculator.Calculator" launcher:packageName="com.oneplus.calculator" />
+        <favorite launcher:className="com.oneplus.soundrecorder.SoundRecorder" launcher:packageName="com.oneplus.soundrecorder" />
+        <favorite launcher:className="com.oneplus.contacts.activities.OPPeopleActivity" launcher:packageName="com.android.contacts" />
+        <favorite launcher:className="com.oneplus.card.entity.activity.CardlistActivity" launcher:packageName="com.oneplus.card" />
+    </folder>
+    <folder launcher:title="@string/folder_name_life" launcher:screen="1" launcher:x="0" launcher:y="1">
+        <favorite launcher:className="com.tencent.qqlive.ona.activity.WelcomeActivity" launcher:packageName="com.tencent.qqlive" />
+        <favorite launcher:className="com.tencent.news.activity.SplashActivity" launcher:packageName="com.tencent.news" />
+        <favorite launcher:className="com.qq.reader.activity.SplashActivity" launcher:packageName="com.qq.reader" />
+        <favorite launcher:className="com.jingdong.app.mall.main.MainActivity" launcher:packageName="com.jingdong.app.mall" />
+        <favorite launcher:className="ctrip.android.view.view.CtripDeclarationActivity" launcher:packageName="ctrip.android.view" />
+        <favorite launcher:className="com.sankuai.meituan.activity.PreloadedWelcome" launcher:packageName="com.sankuai.meituan" />
+        <favorite launcher:className="com.youdao.dict.activity.LaunchActivity" launcher:packageName="com.youdao.dict.yz" />
+        <favorite launcher:className="com.eg.android.AlipayGphone.AlipayLogin" launcher:packageName="com.eg.android.AlipayGphone" />
+    </folder>
+    <favorite launcher:className="com.oneplus.bbs.ui.activity.PreStartActivity" launcher:packageName="com.oneplus.bbs" launcher:screen="1" launcher:x="1" launcher:y="1" />
+    <favorite launcher:className="com.sina.weibo.SplashActivity" launcher:packageName="com.sina.weibo" launcher:screen="1" launcher:x="2" launcher:y="1" />
+</favorites>

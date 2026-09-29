@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:paddingBottom="12.0dp" android:layout_width="48.0dp" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <net.oneplus.h2launcher.quickpage.view.CircleImageView android:id="@id/grid_item_image" android:layout_width="@dimen/favorite_contacts_image_size" android:layout_height="@dimen/favorite_contacts_image_size" android:layout_centerHorizontal="true" />
+    <TextView android:textSize="10.0dp" android:textColor="@color/search_result_item_text_color" android:gravity="center|bottom" android:id="@id/grid_item_text" android:layout_width="48.0dp" android:layout_height="16.0dp" android:layout_marginTop="7.0dp" android:singleLine="true" android:layout_below="@id/grid_item_image" android:layout_centerHorizontal="true" />
+</RelativeLayout>

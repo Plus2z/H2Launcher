@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="action_type1">
+        <item>org.adw.launcher.THEMES</item>
+        <item>org.adw.launcher.icons.ACTION_PICK_ICON</item>
+        <item>ginlemon.smartlauncher.THEMES</item>
+        <item>ginlemon.smartlauncher.BUBBLESTYLE</item>
+        <item>ginlemon.smartlauncher.BUBBLEICONS</item>
+        <item>ginlemon.smartlauncher.CLOCKS</item>
+        <item>ginlemon.smartlauncher.CLOCKFONTS</item>
+        <item>mobi.bbase.ahome.THEME</item>
+        <item>com.rogro.GDE.THEME.1</item>
+        <item>cdproductions.crazyicons.TWO</item>
+        <item>com.gau.go.launcherex.theme</item>
+        <item>net.oneplus.launcher.icons.ACTION_PICK_ICON</item>
+    </string-array>
+    <string-array name="action_type2">
+        <item>android.intent.action.MAIN</item>
+    </string-array>
+    <string-array name="global_search_popup_menu_items">
+        <item>@string/normal_search_input_method</item>
+        <item>@string/quick_search_input_method</item>
+        <item>@string/clear_history</item>
+    </string-array>
+    <string-array name="grid_size_entries">
+        <item>@string/size_small</item>
+        <item>@string/size_normal</item>
+        <item>@string/size_large</item>
+    </string-array>
+    <integer-array name="grid_size_large_dimensions">
+        <item>6</item>
+        <item>4</item>
+    </integer-array>
+    <integer-array name="grid_size_normal_dimensions">
+        <item>-1</item>
+        <item>4</item>
+    </integer-array>
+    <integer-array name="grid_size_small_dimensions">
+        <item>4</item>
+        <item>3</item>
+    </integer-array>
+    <string-array name="icon_pack_asset_paths">
+        <item>icons/res/xml</item>
+        <item></item>
+    </string-array>
+</resources>

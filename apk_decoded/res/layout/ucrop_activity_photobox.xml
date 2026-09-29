@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/ucrop_photobox" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v7.widget.Toolbar android:theme="@style/ToolbarTheme" android:id="@id/toolbar" android:background="@color/ucrop_color_toolbar" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="?actionBarSize">
+        <TextView android:textColor="@color/ucrop_color_toolbar_widget" android:id="@id/toolbar_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/ucrop_margin_left_toolbar_title" android:text="@string/ucrop_label_edit_photo" style="@style/ToolbarTitleTextStyle" />
+    </android.support.v7.widget.Toolbar>
+    <LinearLayout android:id="@id/orientation_box" android:visibility="gone" android:layout_width="match_parent" android:layout_height="@dimen/ucrop_height_orientation_box" android:layout_below="@id/toolbar">
+        <ImageView android:layout_gravity="center" android:layout_width="0.0dp" android:layout_height="match_parent" android:src="@drawable/ic_crop_portrait" android:scaleType="center" android:layout_weight="1.0" />
+        <ImageView android:layout_gravity="center" android:layout_width="0.0dp" android:layout_height="match_parent" android:src="@drawable/ic_crop_landscape" android:scaleType="center" android:layout_weight="1.0" />
+    </LinearLayout>
+    <FrameLayout android:id="@id/ucrop_frame" android:background="@color/ucrop_color_crop_background" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@id/orientation_box">
+        <net.oneplus.h2launcher.crop.view.UCropView android:id="@id/ucrop_secondary" android:layout_width="match_parent" android:layout_height="match_parent" android:alpha="0.0" />
+        <net.oneplus.h2launcher.crop.view.UCropView android:id="@id/ucrop" android:layout_width="match_parent" android:layout_height="match_parent" android:alpha="0.0" />
+    </FrameLayout>
+</RelativeLayout>

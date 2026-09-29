@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:paddingBottom="@dimen/edit_dialog_padding_bottom" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:paddingTop="@dimen/edit_dialog_padding_small" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/edit_dialog_padding" android:paddingEnd="@dimen/edit_dialog_padding">
+        <ImageButton android:layout_gravity="center_vertical" android:id="@id/app_edit_icon" android:background="@drawable/edit_dialog_icon_bg" android:padding="@dimen/edit_dialog_icon_picker_padding" android:layout_width="@dimen/edit_dialog_icon_picker_size" android:layout_height="@dimen/edit_dialog_icon_picker_size" android:scaleType="fitXY" />
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/edit_dialog_padding_small">
+            <TextView android:textSize="@dimen/edit_dialog_title_size" android:textColor="?android:colorAccent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/edit_dialog_app_label" android:layout_marginStart="3.0dp" />
+            <EditText android:textSize="@dimen/edit_dialog_text_size" android:textColor="@color/edit_text_font_color" android:id="@id/app_edit_label" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="text" />
+        </LinearLayout>
+    </LinearLayout>
+    <Button android:textColor="?android:colorAccent" android:id="@id/reset_button" android:background="@drawable/ripple_with_mask" android:layout_width="@dimen/edit_dialog_reset_button_width" android:layout_height="@dimen/edit_dialog_button_height" android:text="@string/action_reset" android:layout_alignParentBottom="true" android:layout_marginStart="@dimen/edit_dialog_button_margin_sides" android:layout_alignParentStart="true" />
+    <Button android:textColor="?android:colorAccent" android:id="@id/ok_button" android:background="@drawable/ripple_with_mask" android:layout_width="@dimen/edit_dialog_ok_button_width" android:layout_height="@dimen/edit_dialog_button_height" android:text="@android:string/ok" android:layout_alignParentBottom="true" android:layout_marginEnd="@dimen/edit_dialog_button_margin_sides" android:layout_alignParentEnd="true" />
+</RelativeLayout>

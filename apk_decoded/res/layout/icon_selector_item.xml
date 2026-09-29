@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:background="?android:selectableItemBackgroundBorderless" android:clickable="true" android:descendantFocusability="beforeDescendants" android:layout_width="@dimen/icon_selector_image_size" android:layout_height="@dimen/icon_selector_image_size"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/selector_app_icon" android:layout_width="@dimen/icon_selector_image_size" android:layout_height="@dimen/icon_selector_image_size" android:scaleType="fitXY" />
+</LinearLayout>

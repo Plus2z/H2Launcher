@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <drawable name="default_wallpaper_simplified_16859">@drawable/wallpaper_26_land</drawable>
+    <drawable name="default_wallpaper_simplified_17801">@drawable/wallpaper_26_land</drawable>
+    <drawable name="default_wallpaper_simplified_18821">@drawable/wallpaper_e_3_land</drawable>
+    <drawable name="default_wallpaper_simplified_e">@drawable/wallpaper_e_3_land</drawable>
+    <drawable name="default_wallpaper_standard_16859">@drawable/wallpaper_26</drawable>
+    <drawable name="default_wallpaper_standard_17801">@drawable/wallpaper_26</drawable>
+    <drawable name="default_wallpaper_standard_18821">@drawable/wallpaper_e_3</drawable>
+    <drawable name="default_wallpaper_standard_e">@drawable/wallpaper_e_3</drawable>
+</resources>

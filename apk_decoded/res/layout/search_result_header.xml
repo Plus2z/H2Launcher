@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="horizontal" android:focusable="false" android:focusableInTouchMode="false" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="14.0sp" android:textColor="@color/search_container_title_color" android:gravity="center_vertical" android:id="@id/result_title" android:background="@drawable/global_search_title_card_round_corner" android:visibility="visible" android:layout_width="match_parent" android:layout_height="@dimen/result_container_title_height" android:text="@string/search_result_apps" android:paddingStart="@dimen/result_container_title_padding_left" />
+    <ImageView android:id="@id/show_more" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="@dimen/result_container_title_height" android:src="@drawable/ic_keyboard_arrow_down" android:layout_centerVertical="true" android:paddingStart="@dimen/search_show_more_padding_left" android:paddingEnd="@dimen/search_show_more_padding_right" android:layout_alignParentEnd="true" />
+</RelativeLayout>

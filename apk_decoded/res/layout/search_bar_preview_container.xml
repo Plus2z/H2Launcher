@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:id="@id/search_bar_preview_default" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <include android:layout_width="match_parent" android:layout_height="@dimen/customization_quick_search_bar_height" android:layout_marginStart="@dimen/customization_quick_search_bar_margin_sides" android:layout_marginEnd="@dimen/customization_quick_search_bar_margin_sides" layout="@layout/search_bar_default" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:id="@id/search_bar_preview_transparent" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <include android:layout_width="match_parent" android:layout_height="@dimen/customization_quick_search_bar_height" android:layout_marginStart="@dimen/customization_quick_search_bar_margin_sides" android:layout_marginEnd="@dimen/customization_quick_search_bar_margin_sides" layout="@layout/search_bar_transparent" />
+    </LinearLayout>
+</FrameLayout>

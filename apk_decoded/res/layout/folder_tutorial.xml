@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/folder_tutorial" android:background="@color/cling_scrim_background" android:layout_width="match_parent" android:layout_height="match_parent" launcher:layout_ignoreInsets="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:launcher="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:background="#d62196f3" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/folder_tutorial" android:layout_marginStart="@dimen/folder_tutorial_image_padding_start" />
+        <FrameLayout android:id="@id/folder_tutorial_content" android:layout_width="match_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<net.oneplus.h2launcher.customizations.CustomizationsContainerView android:orientation="vertical" android:descendantFocusability="afterDescendants" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/content" android:layout_width="match_parent" android:layout_height="match_parent">
+        <FrameLayout android:layout_gravity="center" android:id="@id/customizations_reveal_view" android:focusable="false" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="match_parent" android:elevation="2.0dp" />
+        <RelativeLayout android:id="@id/customizations_content_container" android:layout_width="match_parent" android:layout_height="match_parent">
+            <include android:id="@id/customizations_action_bar" android:layout_width="match_parent" android:layout_height="@dimen/customization_action_bar_height" android:layout_marginTop="@dimen/status_bar_height" android:layout_alignParentTop="true" layout="@layout/customizations_action_bar" />
+            <ViewStub android:id="@id/search_bar_preview_container_stub" android:layout="@layout/search_bar_preview_container" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@id/customizations_action_bar" android:layout_centerHorizontal="true" />
+            <net.oneplus.h2launcher.customizations.CustomizationPager android:id="@id/customization_pager" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" />
+            <net.oneplus.h2launcher.customizations.CustomizationPagerIndicator android:id="@id/customization_pager_indicator" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="@dimen/customization_pager_indicator_height" android:layout_marginBottom="@dimen/customization_pager_indicator_margin_bottom" android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+    </FrameLayout>
+</net.oneplus.h2launcher.customizations.CustomizationsContainerView>

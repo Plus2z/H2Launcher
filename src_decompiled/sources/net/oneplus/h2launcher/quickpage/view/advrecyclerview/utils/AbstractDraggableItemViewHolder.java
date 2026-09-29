@@ -1,0 +1,24 @@
+package net.oneplus.h2launcher.quickpage.view.advrecyclerview.utils;
+
+import android.view.View;
+import com.oneplus.lib.widget.recyclerview.RecyclerView;
+import net.oneplus.h2launcher.quickpage.view.advrecyclerview.draggable.DraggableItemViewHolder;
+
+/* loaded from: classes.dex */
+public abstract class AbstractDraggableItemViewHolder extends RecyclerView.ViewHolder implements DraggableItemViewHolder {
+    private int mDragStateFlags;
+
+    public AbstractDraggableItemViewHolder(View itemView) {
+        super(itemView);
+    }
+
+    @Override // net.oneplus.h2launcher.quickpage.view.advrecyclerview.draggable.DraggableItemViewHolder
+    public void setDragStateFlags(int flags) {
+        this.mDragStateFlags = flags;
+    }
+
+    @Override // net.oneplus.h2launcher.quickpage.view.advrecyclerview.draggable.DraggableItemViewHolder
+    public int getDragStateFlags() {
+        return this.mDragStateFlags;
+    }
+}

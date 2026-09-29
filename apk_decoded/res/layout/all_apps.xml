@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<net.oneplus.h2launcher.allapps.AllAppsContainerView android:orientation="vertical" android:id="@id/apps_view" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/search_box_container" android:focusable="true" android:focusableInTouchMode="true" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" />
+    <FrameLayout android:id="@id/content" android:layout_width="match_parent" android:layout_height="0.0dp" android:layout_weight="1.0">
+        <FrameLayout android:layout_gravity="center" android:id="@id/all_apps_reveal" android:focusable="false" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="match_parent" android:elevation="2.0dp" />
+        <include android:layout_gravity="center" android:id="@id/all_apps_container" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" layout="@layout/all_apps_container" />
+    </FrameLayout>
+</net.oneplus.h2launcher.allapps.AllAppsContainerView>

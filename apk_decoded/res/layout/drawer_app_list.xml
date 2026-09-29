@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListView android:id="@id/app_list" android:scrollbars="none" android:layout_width="match_parent" android:layout_height="wrap_content" android:divider="@android:color/transparent" android:dividerHeight="@dimen/navigation_drawer_app_list_spacing" android:layout_marginStart="@dimen/navigation_drawer_app_list_padding_start" android:layout_marginEnd="@dimen/navigation_drawer_app_list_padding_end" />
+    <LinearLayout android:gravity="center_vertical" android:layout_gravity="end" android:orientation="vertical" android:id="@id/side_index" android:layout_width="@dimen/navigation_drawer_app_list_index_size" android:layout_height="match_parent" />
+</FrameLayout>

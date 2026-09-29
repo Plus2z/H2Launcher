@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/visual_category">
+        <ListPreference android:icon="@drawable/ic_icon_pack" android:persistent="false" android:layout="@layout/custom_preference" android:title="@string/pref_icon_pack" android:key="pref_icon_pack" android:summary="%s" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/quick_page">
+        <SwitchPreference android:icon="@drawable/ic_shelf" android:layout="@layout/custom_preference" android:title="@string/pref_quick_page_switch" android:key="pref_quick_page" android:defaultValue="true" android:summaryOn="@string/pref_quick_page_switch_summary_on" android:summaryOff="@string/pref_quick_page_switch_summary_off" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/other_category">
+        <SwitchPreference android:icon="@drawable/ic_hide_search" android:layout="@layout/custom_preference" android:title="@string/pref_hide_search_switch" android:key="pref_search_bar" android:summaryOn="@string/pref_hide_search_switch_summary_on" android:summaryOff="@string/pref_hide_search_switch_summary_off" />
+    </PreferenceCategory>
+</PreferenceScreen>

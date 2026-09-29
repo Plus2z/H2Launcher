@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="default_lock_wallpaper_index_simplified_16859">0</integer>
+    <integer name="default_lock_wallpaper_index_simplified_17801">0</integer>
+    <integer name="default_lock_wallpaper_index_simplified_18821">0</integer>
+    <integer name="default_lock_wallpaper_index_simplified_e">0</integer>
+    <integer name="default_lock_wallpaper_index_standard_16859">0</integer>
+    <integer name="default_lock_wallpaper_index_standard_17801">1</integer>
+    <integer name="default_lock_wallpaper_index_standard_18821">1</integer>
+    <integer name="default_lock_wallpaper_index_standard_e">1</integer>
+    <integer name="default_wallpaper_index_simplified_16859">0</integer>
+    <integer name="default_wallpaper_index_simplified_17801">0</integer>
+    <integer name="default_wallpaper_index_simplified_18821">0</integer>
+    <integer name="default_wallpaper_index_simplified_e">0</integer>
+    <integer name="default_wallpaper_index_standard_16859">0</integer>
+    <integer name="default_wallpaper_index_standard_17801">0</integer>
+    <integer name="default_wallpaper_index_standard_18821">0</integer>
+    <integer name="default_wallpaper_index_standard_e">0</integer>
+</resources>

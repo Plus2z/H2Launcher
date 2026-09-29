@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<net.oneplus.h2launcher.customizations.OnePlusScrollView android:scrollbarThumbVertical="@drawable/customization_scrollbar" android:orientation="vertical" android:scrollbars="vertical" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:id="@id/blur_box" android:background="@color/customization_card_subtitle_background_color" android:layout_width="match_parent" android:layout_height="@dimen/picker_blur_box_height" android:foreground="@drawable/ripple_with_mask" android:paddingStart="@dimen/picker_blur_box_padding_sides" android:paddingEnd="@dimen/picker_blur_box_padding_sides">
+            <ImageView android:id="@id/wallpaper" android:layout_width="@dimen/picker_blur_icon_size" android:layout_height="@dimen/picker_blur_icon_size" android:src="@drawable/ic_wallpaper" android:tint="@color/oneplus_accent_color" android:layout_centerVertical="true" />
+            <TextView android:textSize="12.0sp" android:textColor="@color/customization_common_text_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/blur_wallpaper" android:layout_centerVertical="true" android:layout_marginStart="@dimen/picker_blur_text_margin_start" android:layout_toEndOf="@id/wallpaper" />
+            <Switch android:id="@id/blur_switch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_alignParentEnd="true" style="@style/SwitchStyle" />
+        </RelativeLayout>
+        <LinearLayout android:id="@id/colors" android:clipChildren="false" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="@dimen/picker_color_box_height" android:paddingStart="@dimen/picker_color_box_padding_sides" android:paddingEnd="@dimen/picker_color_box_padding_sides">
+            <include android:layout_gravity="center_vertical" android:layout_width="0.0dp" android:layout_height="@dimen/picker_color_circle_size" android:layout_weight="1.0" layout="@layout/wallpaper_color_circle" />
+            <Space android:layout_width="0.0dp" android:layout_height="match_parent" android:layout_weight="1.0" />
+            <include android:layout_gravity="center_vertical" android:layout_width="0.0dp" android:layout_height="@dimen/picker_color_circle_size" android:layout_weight="1.0" layout="@layout/wallpaper_color_circle" />
+            <Space android:layout_width="0.0dp" android:layout_height="match_parent" android:layout_weight="1.0" />
+            <include android:layout_gravity="center_vertical" android:layout_width="0.0dp" android:layout_height="@dimen/picker_color_circle_size" android:layout_weight="1.0" layout="@layout/wallpaper_color_circle" />
+            <Space android:layout_width="0.0dp" android:layout_height="match_parent" android:layout_weight="1.0" />
+            <include android:layout_gravity="center_vertical" android:layout_width="0.0dp" android:layout_height="@dimen/picker_color_circle_size" android:layout_weight="1.0" layout="@layout/wallpaper_color_circle" />
+            <Space android:layout_width="0.0dp" android:layout_height="match_parent" android:layout_weight="1.0" />
+            <include android:layout_gravity="center_vertical" android:layout_width="0.0dp" android:layout_height="@dimen/picker_color_circle_size" android:layout_weight="1.0" layout="@layout/wallpaper_color_circle" />
+        </LinearLayout>
+        <TextView android:textSize="12.0sp" android:textColor="@color/oneplus_accent_color" android:gravity="center" android:id="@id/change_color_set" android:background="@drawable/ripple_with_mask" android:layout_width="match_parent" android:layout_height="@dimen/picker_change_color_text_height" android:text="@string/change_other_color_set" />
+    </LinearLayout>
+</net.oneplus.h2launcher.customizations.OnePlusScrollView>

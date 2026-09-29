@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<net.oneplus.h2launcher.quickpage.view.SettingsDrawerLayout android:background="@null" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.design.widget.CoordinatorLayout android:background="@null" android:clipChildren="false" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="match_parent">
+        <net.oneplus.h2launcher.quickpage.view.RecyclerViewWrapper android:theme="@style/Theme.Light.CustomOverscroll" android:id="@id/listview" android:clipChildren="false" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="match_parent" android:overScrollMode="never" android:layout_marginStart="@dimen/quick_page_recycle_view_margin" android:layout_marginEnd="@dimen/quick_page_recycle_view_margin" />
+        <net.oneplus.h2launcher.quickpage.view.DimmerBackground android:id="@id/dimmer_background" android:background="@drawable/dimmer_background_transition" android:visibility="gone" android:clickable="true" android:layout_width="match_parent" android:layout_height="match_parent" android:alpha="0.0" />
+        <include android:id="@id/fab_menu" layout="@layout/fab_menu" />
+        <ImageView android:layout_gravity="bottom" android:id="@id/navigation_background" android:visibility="gone" android:layout_width="match_parent" android:layout_height="@dimen/navigation_bar_height" android:src="@drawable/ic_nav_bg_png" android:scaleType="fitXY" android:contentDescription="@null" />
+        <View android:layout_gravity="top" android:id="@id/status_background" android:background="@color/status_bar_color" android:layout_width="match_parent" android:layout_height="@dimen/status_bar_height" android:alpha="0.0" />
+    </android.support.design.widget.CoordinatorLayout>
+</net.oneplus.h2launcher.quickpage.view.SettingsDrawerLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<net.oneplus.h2launcher.CheckableFrameLayout android:background="@drawable/bg_time_widget_tile" android:focusable="true" android:clickable="true" android:layout_width="@dimen/wallpaper_thumbnail_width" android:layout_height="@dimen/wallpaper_thumbnail_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <net.oneplus.h2launcher.customizations.Selection android:layout_gravity="center_horizontal" android:id="@id/selection" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:id="@id/time_widget_image" android:background="@drawable/ripple_with_mask" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="centerCrop" />
+    </net.oneplus.h2launcher.customizations.Selection>
+</net.oneplus.h2launcher.CheckableFrameLayout>

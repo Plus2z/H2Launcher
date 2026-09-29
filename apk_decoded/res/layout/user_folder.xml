@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<net.oneplus.h2launcher.Folder android:orientation="vertical" android:id="@id/folder" android:background="@drawable/bg_folder" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:paddingTop="@dimen/folder_content_padding_vertical" android:paddingBottom="@dimen/folder_content_padding_vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:paddingStart="@dimen/folder_content_padding_horizontal" android:paddingEnd="@dimen/folder_content_padding_horizontal">
+        <net.oneplus.h2launcher.FolderScrollView android:id="@id/folder_scroll_view" android:scrollbars="none" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="match_parent">
+            <net.oneplus.h2launcher.FolderContent android:orientation="vertical" android:id="@id/folder_content" android:layout_width="match_parent" android:layout_height="wrap_content" />
+        </net.oneplus.h2launcher.FolderScrollView>
+        <View android:layout_gravity="top" android:id="@id/top_line" android:background="#4cffffff" android:layout_width="match_parent" android:layout_height="1.0px" android:alpha="0.0" />
+        <View android:layout_gravity="bottom" android:id="@id/bottom_line" android:background="#4cffffff" android:layout_width="match_parent" android:layout_height="1.0px" android:alpha="0.0" />
+    </FrameLayout>
+</net.oneplus.h2launcher.Folder>

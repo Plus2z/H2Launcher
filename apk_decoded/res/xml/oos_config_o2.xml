@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<style>
+    <configuration name="show_search_bar">false</configuration>
+    <configuration name="show_internal_clock">false</configuration>
+    <configuration name="show_all_apps">true</configuration>
+    <configuration name="show_hot_seat">true</configuration>
+    <configuration name="show_widgets_button">true</configuration>
+    <configuration name="show_clear_button">true</configuration>
+    <configuration name="workspace_rows">5</configuration>
+    <configuration name="workspace_columns">4</configuration>
+    <configuration name="workspace_allow_reordering_home_screen">true</configuration>
+    <configuration name="card_type">Standard</configuration>
+    <configuration name="show_search_bar_in_options">false</configuration>
+    <configuration name="workspace_screen_scale_in_options">0.876</configuration>
+    <configuration name="capture_entire_screen">true</configuration>
+    <configuration name="draw_wallpaper_color_mask">false</configuration>
+    <configuration name="scrollable_wallpaper">true</configuration>
+    <configuration name="add_extra_workspace_items">false</configuration>
+    <configuration name="show_dynamic_icon">false</configuration>
+    <configuration name="show_icon_rearrangement">false</configuration>
+    <configuration name="show_standard_folder">true</configuration>
+    <configuration name="show_widgets_configurable">false</configuration>
+    <configuration name="disallow_same_icon_on_desktop">false</configuration>
+</style>

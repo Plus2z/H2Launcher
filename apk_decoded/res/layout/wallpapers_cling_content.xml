@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/bg_tooltip" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/customization_tooltip_margin_bottom" android:paddingStart="@dimen/customization_tooltip_padding_start" android:paddingEnd="@dimen/customization_tooltip_padding_end" android:layout_marginStart="@dimen/customization_tooltip_margin_sides" android:layout_marginEnd="@dimen/customization_tooltip_margin_sides"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <View android:id="@id/cling_dismiss_wallpapers_info" android:background="@drawable/ic_close" android:layout_width="@dimen/customization_tooltip_close_icon_size" android:layout_height="@dimen/customization_tooltip_close_icon_size" android:layout_centerVertical="true" android:layout_alignParentEnd="true" android:backgroundTint="@color/grey_A1000" />
+        <TextView android:textColor="@color/grey_A1000" android:ellipsize="end" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="@dimen/customization_tooltip_content_min_height" android:text="@string/customization_tooltip_content" android:maxLines="3" android:layout_marginEnd="@dimen/customization_tooltip_content_margin_end" android:layout_toStartOf="@id/cling_dismiss_wallpapers_info" android:layout_alignParentStart="true" />
+    </RelativeLayout>
+</RelativeLayout>

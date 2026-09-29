@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<net.oneplus.h2launcher.customizations.WallpapersContainerView android:orientation="vertical" android:descendantFocusability="afterDescendants" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/content" android:layout_width="match_parent" android:layout_height="match_parent">
+        <net.oneplus.h2launcher.customizations.WallpaperBackground android:id="@id/background" android:layout_width="match_parent" android:layout_height="match_parent" />
+        <FrameLayout android:layout_gravity="center" android:id="@id/wallpapers_reveal_view" android:focusable="false" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="match_parent" android:elevation="2.0dp" />
+        <RelativeLayout android:id="@id/wallpapers_content_container" android:layout_width="match_parent" android:layout_height="match_parent">
+            <include android:id="@id/wallpapers_action_bar" android:layout_width="match_parent" android:layout_height="@dimen/customization_action_bar_height" android:layout_marginTop="@dimen/status_bar_height" android:layout_alignParentTop="true" layout="@layout/customizations_action_bar" />
+            <net.oneplus.h2launcher.customizations.WallpaperPreview android:id="@id/wallpaper_preview" android:layout_width="match_parent" android:layout_height="0.0dp" android:layout_marginTop="@dimen/picker_preview_top_margin" android:layout_below="@id/wallpapers_action_bar" android:layout_marginStart="@dimen/picker_preview_side_margin" android:layout_marginEnd="@dimen/picker_preview_side_margin" />
+            <RelativeLayout android:id="@id/wallpaper_preview_titles" android:layout_width="match_parent" android:layout_height="@dimen/wallpaper_preview_title_height" android:layout_marginTop="@dimen/picker_texts_margin_top" android:layout_below="@id/wallpaper_preview">
+                <TextView android:id="@id/lockscreen_title" android:layout_width="@dimen/picker_preview_item_width" android:layout_height="match_parent" android:layout_marginLeft="@dimen/picker_texts_margin_sides" android:text="@string/wallpaper_title_lockscreen" android:layout_alignParentLeft="true" style="@style/WallpaperPreviewTitle" />
+                <TextView android:id="@id/homescreen_title" android:layout_width="@dimen/picker_preview_item_width" android:layout_height="match_parent" android:layout_marginRight="@dimen/picker_texts_margin_sides" android:text="@string/wallpaper_title_homescreen" android:layout_alignParentRight="true" style="@style/WallpaperPreviewTitle" />
+            </RelativeLayout>
+            <net.oneplus.h2launcher.customizations.WallpaperPager android:id="@id/wallpaper_pager" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" />
+            <net.oneplus.h2launcher.customizations.CustomizationPagerIndicator android:id="@id/wallpaper_pager_indicator" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="@dimen/customization_pager_indicator_height" android:layout_marginBottom="@dimen/customization_pager_indicator_margin_bottom" android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+    </FrameLayout>
+</net.oneplus.h2launcher.customizations.WallpapersContainerView>

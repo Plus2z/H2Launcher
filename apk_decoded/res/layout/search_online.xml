@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/search_online_divider" android:background="@color/search_online_divider_color" android:layout_width="match_parent" android:layout_height="1.0dp" android:layout_marginTop="@dimen/search_online_divider_margin_top" />
+    <Button android:textSize="14.0sp" android:textColor="?android:colorAccent" android:id="@id/search_online_button" android:background="@drawable/global_search_input_card" android:focusable="true" android:clickable="true" android:layout_width="match_parent" android:layout_height="@dimen/search_online_button_height" android:layout_marginTop="@dimen/search_online_button_margin_top" android:text="@string/search_online" android:layout_below="@id/search_online_divider" />
+</RelativeLayout>

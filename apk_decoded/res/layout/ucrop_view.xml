@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <net.oneplus.h2launcher.crop.view.GestureCropImageView android:id="@id/image_view_crop" android:layout_width="match_parent" android:layout_height="match_parent" />
+    <net.oneplus.h2launcher.crop.view.OverlayView android:id="@id/view_overlay" android:layout_width="match_parent" android:layout_height="match_parent" />
+</merge>

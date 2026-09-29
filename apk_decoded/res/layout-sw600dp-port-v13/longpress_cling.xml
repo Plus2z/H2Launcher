@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/longpress_cling" android:background="@color/cling_scrim_background" android:layout_width="match_parent" android:layout_height="match_parent" launcher:layout_ignoreInsets="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:launcher="http://schemas.android.com/apk/res-auto">
+    <Space android:layout_width="match_parent" android:layout_height="0.0dp" android:layout_weight="1.0" />
+    <FrameLayout android:layout_gravity="center_horizontal" android:id="@id/cling_content" android:background="@color/cling_background" android:layout_width="360.0dp" android:layout_height="wrap_content" />
+    <Space android:layout_width="match_parent" android:layout_height="0.0dp" android:layout_weight="3.0" />
+</LinearLayout>

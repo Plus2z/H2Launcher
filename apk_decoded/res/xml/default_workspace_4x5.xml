@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<favorites
+  xmlns:launcher="http://schemas.android.com/apk/res-auto/net.oneplus.h2launcher">
+    <favorite container="-101" screen="0" x="0" y="0" packageName="com.android.contacts" className="com.oneplus.contacts.activities.OPDialtactsActivity" />
+    <favorite container="-101" screen="1" x="1" y="0" packageName="com.android.mms" className="com.android.mms.ui.ConversationList" />
+    <favorite container="-101" screen="3" x="2" y="0" packageName="com.android.chrome" className="com.google.android.apps.chrome.Main" />
+    <favorite container="-101" screen="4" x="3" y="0" packageName="com.oneplus.camera" className="com.oneplus.camera.OPCameraActivity" />
+    <appwidget screen="0" x="0" y="0" spanX="4" spanY="1" packageName="com.google.android.googlequicksearchbox" className="com.google.android.googlequicksearchbox.SearchWidgetProvider" />
+    <folder title="@string/google_folder_title" screen="0" x="0" y="4">
+        <favorite packageName="com.google.android.googlequicksearchbox" className="com.google.android.googlequicksearchbox.SearchActivity" />
+        <favorite packageName="com.android.chrome" className="com.google.android.apps.chrome.Main" />
+        <favorite packageName="com.google.android.gm" className="com.google.android.gm.ConversationListActivityGmail" />
+        <favorite packageName="com.google.android.apps.maps" className="com.google.android.maps.MapsActivity" />
+        <favorite packageName="com.google.android.youtube" className="com.google.android.youtube.app.honeycomb.Shell$HomeActivity" />
+        <favorite packageName="com.google.android.apps.docs" className="com.google.android.apps.docs.app.NewMainProxyActivity" />
+        <favorite packageName="com.google.android.music" className="com.android.music.activitymanagement.TopLevelActivity" />
+        <favorite packageName="com.google.android.videos" className="com.google.android.youtube.videos.EntryPoint" />
+        <favorite packageName="com.google.android.talk" className="com.google.android.talk.SigningInActivity" />
+        <favorite packageName="com.google.android.apps.photos" className="com.google.android.apps.photos.home.HomeActivity" />
+    </folder>
+    <favorite screen="0" x="3" y="4" packageName="com.android.vending" className="com.android.vending.AssetBrowserActivity" />
+</favorites>

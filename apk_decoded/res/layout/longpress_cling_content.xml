@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingTop="42.0dp" android:paddingBottom="32.0dp" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="20.0sp" android:textColor="@color/cling_primary_text" android:paddingLeft="36.0dp" android:paddingRight="36.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/workspace_cling_longpress_title" />
+    <TextView android:textSize="16.0sp" android:textColor="@color/cling_secondary_text" android:paddingLeft="36.0dp" android:paddingRight="36.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dp" android:text="@string/workspace_cling_longpress_description" />
+    <Button android:textSize="16.0sp" android:textColor="@color/grey_A1000" android:layout_gravity="end" android:id="@id/cling_dismiss_longpress_info" android:paddingLeft="24.0dp" android:paddingRight="24.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="27.0dp" android:layout_marginRight="8.0dp" android:text="@string/workspace_cling_longpress_dismiss" android:fontFamily="sans-serif-medium" style="?android:attr/buttonBarButtonStyle" />
+</LinearLayout>

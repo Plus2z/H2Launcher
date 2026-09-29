@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:theme="@style/WidgetContainerTheme" android:background="?android:colorPrimaryDark" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/oneplus_contorl_layout_margin_bottom3" android:layout_marginStart="@dimen/oneplus_contorl_layout_margin_left3" android:layout_marginEnd="@dimen/oneplus_contorl_layout_margin_right3">
+        <net.oneplus.h2launcher.dragndrop.LivePreviewWidgetCell android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:orientation="vertical" android:id="@id/widget_cell" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <net.oneplus.h2launcher.widget.WidgetImageView android:id="@id/widget_preview" android:layout_width="@dimen/widget_imageview_size" android:layout_height="@dimen/widget_imageview_size" android:layout_marginTop="18.0dp" />
+            <LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:paddingTop="@dimen/widget_preview_label_vertical_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/oneplus_contorl_layout_margin_top1" android:layout_marginBottom="18.0dp">
+                <TextView android:textAppearance="@style/oneplus_contorl_text_style_body1" android:textColor="@color/add_item_cell_text_color" android:ellipsize="end" android:gravity="start" android:id="@id/widget_name" android:fadingEdge="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" />
+                <TextView android:textAppearance="@style/oneplus_contorl_text_style_descriptions" android:textColor="@color/add_item_cell_text_color" android:id="@id/widget_dims" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="6.0dp" />
+            </LinearLayout>
+        </net.oneplus.h2launcher.dragndrop.LivePreviewWidgetCell>
+    </FrameLayout>
+    <LinearLayout android:gravity="end" android:layout_width="match_parent" android:layout_height="wrap_content" style="?android:attr/buttonBarStyle">
+        <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@android:string/cancel" android:onClick="onCancelClick" style="?android:attr/buttonBarButtonStyle" />
+        <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/place_automatically" android:onClick="onPlaceAutomaticallyClick" style="?android:attr/buttonBarButtonStyle" />
+    </LinearLayout>
+</LinearLayout>

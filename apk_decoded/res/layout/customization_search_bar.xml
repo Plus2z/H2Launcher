@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:id="@id/selections" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/customization_search_bar_selection_container_margin_top" android:layout_centerHorizontal="true">
+            <net.oneplus.h2launcher.customizations.Selection android:id="@id/selection_default" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <View android:id="@id/search_bar_default_view" android:background="@drawable/search_bar_default" android:layout_width="@dimen/customization_search_bar_selection_width" android:layout_height="@dimen/customization_search_bar_selection_height" android:foreground="@drawable/ripple_with_mask" />
+            </net.oneplus.h2launcher.customizations.Selection>
+            <net.oneplus.h2launcher.customizations.Selection android:id="@id/selection_transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/customization_search_bar_selection_margin_top">
+                <View android:id="@id/search_bar_transparent_view" android:background="@drawable/search_bar_transparent" android:layout_width="@dimen/customization_search_bar_selection_width" android:layout_height="@dimen/customization_search_bar_selection_height" android:foreground="@drawable/ripple_with_mask" />
+            </net.oneplus.h2launcher.customizations.Selection>
+            <net.oneplus.h2launcher.customizations.Selection android:id="@id/selection_hidden" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/customization_search_bar_selection_margin_top">
+                <include android:layout_width="@dimen/customization_search_bar_selection_width" android:layout_height="@dimen/customization_search_bar_selection_height" layout="@layout/search_bar_hidden" />
+            </net.oneplus.h2launcher.customizations.Selection>
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

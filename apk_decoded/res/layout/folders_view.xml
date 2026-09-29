@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<net.oneplus.h2launcher.FoldersContainerView android:orientation="vertical" android:id="@id/folders_view" android:focusableInTouchMode="true" android:descendantFocusability="afterDescendants" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:layout_gravity="center" android:id="@id/reveal_view" android:focusable="false" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="match_parent" android:elevation="2.0dp" />
+    <RelativeLayout android:id="@id/main_content" android:clipChildren="false" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:id="@id/folder_header" android:clipChildren="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/folder_name_margin_bottom">
+            <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <net.oneplus.h2launcher.ExtendedEditText android:id="@id/folder_name" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/folder_hint_text" android:inputType="text" android:imeOptions="actionDone|flagNoExtractUi" android:paddingStart="@dimen/folder_name_edit_padding" android:paddingEnd="@dimen/folder_name_edit_padding" style="@style/FolderText" />
+                <TextView android:textColor="@color/oneplus_contorl_text_color_primary_dark" android:textColorHint="@color/oneplus_contorl_text_color_primary_dark" android:id="@id/folder_name_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingEnd="35.0dp" android:hyphenationFrequency="none" style="@style/FolderText" />
+            </FrameLayout>
+            <View android:layout_gravity="bottom" android:id="@id/folder_indicator" android:background="@drawable/bg_folder_name_indicator" android:layout_width="@dimen/folder_indicator_width" android:layout_height="@dimen/folder_indicator_height" />
+        </LinearLayout>
+        <net.oneplus.h2launcher.FolderScrollBar android:id="@id/scroller" android:layout_width="@dimen/folder_scrollbar_width" android:layout_height="0.0dp" android:layout_alignParentBottom="true" android:alpha="0.0" android:layout_marginEnd="@dimen/folder_scrollbar_margin_end" android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+</net.oneplus.h2launcher.FoldersContainerView>

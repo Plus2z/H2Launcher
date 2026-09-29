@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<net.oneplus.h2launcher.LauncherRootView android:id="@id/launcher" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:launcher="http://schemas.android.com/apk/res-auto">
+    <net.oneplus.h2launcher.DragLayer android:id="@id/drag_layer" android:layout_width="match_parent" android:layout_height="match_parent">
+        <net.oneplus.h2launcher.FocusIndicatorView android:id="@id/focus_indicator" android:layout_width="52.0dp" android:layout_height="52.0dp" />
+        <net.oneplus.h2launcher.Workspace android:id="@id/workspace" android:layout_width="match_parent" android:layout_height="match_parent" launcher:pageIndicator="@id/page_indicator" launcher:defaultScreen="@integer/config_workspaceDefaultScreen" />
+        <include android:id="@id/utils_panel" android:visibility="gone" layout="@layout/utils_panel_h2" />
+        <include android:id="@id/overview_panel" android:visibility="gone" layout="@layout/overview_panel" />
+        <include android:layout_gravity="center_horizontal" android:id="@id/page_indicator" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/page_indicator" />
+        <include android:id="@id/folders_view" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="match_parent" layout="@layout/folders_view" />
+        <include android:id="@id/search_drop_target_bar" layout="@layout/search_drop_target_bar" />
+        <include android:id="@id/widgets_view" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="match_parent" layout="@layout/widgets_view" />
+        <ViewStub android:id="@id/customizations_view_stub" android:layout="@layout/customizations_view" android:inflatedId="@id/customizations_view_inflate" android:layout_width="match_parent" android:layout_height="match_parent" launcher:layout_ignoreInsets="true" />
+        <ViewStub android:id="@id/wallpapers_view_stub" android:layout="@layout/wallpapers_view" android:inflatedId="@id/wallpapers_view_inflate" android:layout_width="match_parent" android:layout_height="match_parent" launcher:layout_ignoreInsets="true" />
+        <include android:id="@id/icon_rearrangement_view" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="match_parent" launcher:layout_ignoreInsets="true" layout="@layout/icon_rearrangement_view" />
+        <ViewStub android:id="@id/global_search_view_stub" android:layout="@layout/global_search_frame" android:inflatedId="@id/global_search_view" android:layout_width="match_parent" android:layout_height="match_parent" launcher:layout_ignoreInsets="true" />
+    </net.oneplus.h2launcher.DragLayer>
+    <ViewStub android:id="@id/launcher_overlay_stub" android:layout="@layout/launcher_overlay" android:inflatedId="@id/launcher_overlay" android:layout_width="match_parent" android:layout_height="match_parent" />
+</net.oneplus.h2launcher.LauncherRootView>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/orientation_box" android:background="@color/customization_card_subtitle_background_color" android:visibility="gone" android:layout_width="match_parent" android:layout_height="48.0dp" android:paddingStart="16.0dp" android:paddingEnd="4.0dp">
+        <TextView android:textSize="12.0sp" android:textColor="@color/customization_common_text_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/crop_orientation" android:layout_centerVertical="true" android:layout_alignParentStart="true" />
+        <net.oneplus.h2launcher.customizations.OptionButton android:id="@id/orientation_land" android:layout_width="84.0dp" android:layout_height="28.0dp" android:text="@string/orientation_landscape" android:layout_marginEnd="2.0dp" android:layout_toStartOf="@id/orientation_port" style="@style/OptionButton" />
+        <net.oneplus.h2launcher.customizations.OptionButton android:id="@id/orientation_port" android:layout_width="84.0dp" android:layout_height="28.0dp" android:text="@string/orientation_portrait" android:layout_alignParentEnd="true" style="@style/OptionButton" />
+    </RelativeLayout>
+    <net.oneplus.h2launcher.customizations.wallpaper.WallpapersRecyclerView android:scrollbarThumbVertical="@drawable/customization_scrollbar_offset" android:id="@id/master_wallpaper_list" android:scrollbars="vertical" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@id/orientation_box" android:paddingStart="@dimen/customization_card_content_padding_sides_small" android:paddingEnd="@dimen/customization_card_content_padding_sides_small" />
+</RelativeLayout>

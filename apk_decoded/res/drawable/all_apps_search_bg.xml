@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<inset android:drawable="@drawable/quantum_panel" android:insetTop="@dimen/container_bounds_minus_quantum_panel_padding_inset" android:insetBottom="@dimen/container_bounds_minus_quantum_panel_padding_inset"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

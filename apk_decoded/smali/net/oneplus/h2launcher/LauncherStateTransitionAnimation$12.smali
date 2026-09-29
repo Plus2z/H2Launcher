@@ -1,0 +1,200 @@
+.class Lnet/oneplus/h2launcher/LauncherStateTransitionAnimation$12;
+.super Ljava/lang/Object;
+.source "LauncherStateTransitionAnimation.java"
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lnet/oneplus/h2launcher/LauncherStateTransitionAnimation;->startAnimationToFolderOverlay(Lnet/oneplus/h2launcher/Workspace$State;Lnet/oneplus/h2launcher/Workspace$State;Landroid/view/View;Lnet/oneplus/h2launcher/FoldersContainerView;ZILnet/oneplus/h2launcher/LauncherStateTransitionAnimation$PrivateTransitionCallbacks;)V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+
+# instance fields
+.field final synthetic this$0:Lnet/oneplus/h2launcher/LauncherStateTransitionAnimation;
+
+.field final synthetic val$animated:Z
+
+.field final synthetic val$fromView:Landroid/view/View;
+
+.field final synthetic val$layerViews:Ljava/util/HashMap;
+
+.field final synthetic val$stateAnimation:Landroid/animation/AnimatorSet;
+
+.field final synthetic val$toView:Lnet/oneplus/h2launcher/FoldersContainerView;
+
+
+# direct methods
+.method constructor <init>(Lnet/oneplus/h2launcher/LauncherStateTransitionAnimation;Landroid/animation/AnimatorSet;Landroid/view/View;ZLnet/oneplus/h2launcher/FoldersContainerView;Ljava/util/HashMap;)V
+    .locals 0
+    .param p1, "this$0"    # Lnet/oneplus/h2launcher/LauncherStateTransitionAnimation;
+
+    .prologue
+    .line 794
+    iput-object p1, p0, Lnet/oneplus/h2launcher/LauncherStateTransitionAnimation$12;->this$0:Lnet/oneplus/h2launcher/LauncherStateTransitionAnimation;
+
+    iput-object p2, p0, Lnet/oneplus/h2launcher/LauncherStateTransitionAnimation$12;->val$stateAnimation:Landroid/animation/AnimatorSet;
+
+    iput-object p3, p0, Lnet/oneplus/h2launcher/LauncherStateTransitionAnimation$12;->val$fromView:Landroid/view/View;
+
+    iput-boolean p4, p0, Lnet/oneplus/h2launcher/LauncherStateTransitionAnimation$12;->val$animated:Z
+
+    iput-object p5, p0, Lnet/oneplus/h2launcher/LauncherStateTransitionAnimation$12;->val$toView:Lnet/oneplus/h2launcher/FoldersContainerView;
+
+    iput-object p6, p0, Lnet/oneplus/h2launcher/LauncherStateTransitionAnimation$12;->val$layerViews:Ljava/util/HashMap;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public run()V
+    .locals 6
+
+    .prologue
+    const/16 v5, 0x8
+
+    const/4 v4, 0x0
+
+    .line 798
+    iget-object v1, p0, Lnet/oneplus/h2launcher/LauncherStateTransitionAnimation$12;->this$0:Lnet/oneplus/h2launcher/LauncherStateTransitionAnimation;
+
+    iget-object v1, v1, Lnet/oneplus/h2launcher/LauncherStateTransitionAnimation;->mCurrentAnimation:Landroid/animation/AnimatorSet;
+
+    iget-object v2, p0, Lnet/oneplus/h2launcher/LauncherStateTransitionAnimation$12;->val$stateAnimation:Landroid/animation/AnimatorSet;
+
+    if-eq v1, v2, :cond_0
+
+    .line 821
+    :goto_0
+    return-void
+
+    .line 802
+    :cond_0
+    const-string v1, "PullUpBoost"
+
+    invoke-static {v1}, Landroid/os/Trace;->beginSection(Ljava/lang/String;)V
+
+    .line 803
+    invoke-static {}, Landroid/os/Trace;->endSection()V
+
+    .line 805
+    iget-object v1, p0, Lnet/oneplus/h2launcher/LauncherStateTransitionAnimation$12;->this$0:Lnet/oneplus/h2launcher/LauncherStateTransitionAnimation;
+
+    iget-object v2, p0, Lnet/oneplus/h2launcher/LauncherStateTransitionAnimation$12;->val$fromView:Landroid/view/View;
+
+    iget-boolean v3, p0, Lnet/oneplus/h2launcher/LauncherStateTransitionAnimation$12;->val$animated:Z
+
+    invoke-virtual {v1, v2, v3, v4}, Lnet/oneplus/h2launcher/LauncherStateTransitionAnimation;->dispatchOnLauncherTransitionStart(Landroid/view/View;ZZ)V
+
+    .line 806
+    iget-object v1, p0, Lnet/oneplus/h2launcher/LauncherStateTransitionAnimation$12;->this$0:Lnet/oneplus/h2launcher/LauncherStateTransitionAnimation;
+
+    iget-object v2, p0, Lnet/oneplus/h2launcher/LauncherStateTransitionAnimation$12;->val$toView:Lnet/oneplus/h2launcher/FoldersContainerView;
+
+    iget-boolean v3, p0, Lnet/oneplus/h2launcher/LauncherStateTransitionAnimation$12;->val$animated:Z
+
+    invoke-virtual {v1, v2, v3, v4}, Lnet/oneplus/h2launcher/LauncherStateTransitionAnimation;->dispatchOnLauncherTransitionStart(Landroid/view/View;ZZ)V
+
+    .line 810
+    iget-object v1, p0, Lnet/oneplus/h2launcher/LauncherStateTransitionAnimation$12;->val$layerViews:Ljava/util/HashMap;
+
+    invoke-virtual {v1}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    :cond_1
+    :goto_1
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/view/View;
+
+    .line 811
+    .local v0, "v":Landroid/view/View;
+    iget-object v1, p0, Lnet/oneplus/h2launcher/LauncherStateTransitionAnimation$12;->val$layerViews:Ljava/util/HashMap;
+
+    invoke-virtual {v1, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/Integer;
+
+    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
+
+    move-result v1
+
+    const/4 v3, 0x1
+
+    if-ne v1, v3, :cond_2
+
+    invoke-virtual {v0}, Landroid/view/View;->getVisibility()I
+
+    move-result v1
+
+    if-eq v1, v5, :cond_2
+
+    .line 812
+    const/4 v1, 0x2
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v0, v1, v3}, Landroid/view/View;->setLayerType(ILandroid/graphics/Paint;)V
+
+    .line 814
+    :cond_2
+    sget-boolean v1, Lnet/oneplus/h2launcher/Utilities;->ATLEAST_LOLLIPOP:Z
+
+    if-eqz v1, :cond_1
+
+    invoke-virtual {v0}, Landroid/view/View;->isAttachedToWindow()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-virtual {v0}, Landroid/view/View;->getVisibility()I
+
+    move-result v1
+
+    if-eq v1, v5, :cond_1
+
+    .line 815
+    invoke-virtual {v0}, Landroid/view/View;->buildLayer()V
+
+    goto :goto_1
+
+    .line 819
+    .end local v0    # "v":Landroid/view/View;
+    :cond_3
+    iget-object v1, p0, Lnet/oneplus/h2launcher/LauncherStateTransitionAnimation$12;->val$toView:Lnet/oneplus/h2launcher/FoldersContainerView;
+
+    invoke-virtual {v1}, Lnet/oneplus/h2launcher/FoldersContainerView;->requestFocus()Z
+
+    .line 820
+    iget-object v1, p0, Lnet/oneplus/h2launcher/LauncherStateTransitionAnimation$12;->val$stateAnimation:Landroid/animation/AnimatorSet;
+
+    invoke-virtual {v1}, Landroid/animation/AnimatorSet;->start()V
+
+    goto :goto_0
+.end method

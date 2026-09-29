@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<net.oneplus.h2launcher.CheckableFrameLayout android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:foreground="@drawable/wallpaper_tile_fg"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <net.oneplus.h2launcher.customizations.Selection android:layout_gravity="center_horizontal" android:id="@id/selection" android:layout_width="match_parent" android:layout_height="match_parent">
+        <ImageView android:id="@id/wallpaper_image" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="centerCrop" />
+    </net.oneplus.h2launcher.customizations.Selection>
+</net.oneplus.h2launcher.CheckableFrameLayout>

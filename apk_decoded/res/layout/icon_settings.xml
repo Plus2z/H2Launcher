@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@color/customization_card_subtitle_background_color" android:layout_width="match_parent" android:layout_height="48.0dp" android:paddingStart="@dimen/customization_icon_size_padding_start" android:paddingEnd="@dimen/customization_icon_size_padding_end">
+        <TextView android:textSize="12.0sp" android:textColor="@color/customization_common_text_color" android:gravity="center_vertical" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/icon_size_title" android:singleLine="true" android:layout_centerVertical="true" android:layout_toStartOf="@id/small" android:layout_alignParentStart="true" />
+        <net.oneplus.h2launcher.customizations.OptionButton android:id="@id/small" android:layout_width="66.0dp" android:layout_height="28.0dp" android:text="@string/size_small" android:layout_marginStart="2.0dp" android:layout_toStartOf="@id/standard" style="@style/OptionButton" />
+        <net.oneplus.h2launcher.customizations.OptionButton android:id="@id/standard" android:layout_width="66.0dp" android:layout_height="28.0dp" android:text="@string/size_normal" android:layout_marginStart="2.0dp" android:layout_toStartOf="@id/large" style="@style/OptionButton" />
+        <net.oneplus.h2launcher.customizations.OptionButton android:id="@id/large" android:layout_width="66.0dp" android:layout_height="28.0dp" android:text="@string/size_large" android:layout_marginStart="2.0dp" android:layout_alignParentEnd="true" style="@style/OptionButton" />
+    </RelativeLayout>
+    <GridView android:scrollbarThumbVertical="@drawable/customization_scrollbar_offset" android:gravity="center" android:id="@id/icon_pack_list" android:padding="4.0dp" android:scrollbars="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:listSelector="@android:color/transparent" android:horizontalSpacing="3.0dp" android:verticalSpacing="3.0dp" android:stretchMode="columnWidth" android:numColumns="auto_fit" />
+</LinearLayout>

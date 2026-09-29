@@ -1,0 +1,755 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="wallpaper_16859_09_colors">
+        <item>#ff189ea4</item>
+        <item>#ff7db5b7</item>
+        <item>#ffbf9b77</item>
+        <item>#ff1e3e3d</item>
+        <item>#ff655045</item>
+    </array>
+    <array name="wallpaper_16859_10_colors">
+        <item>#ff189ea4</item>
+        <item>#ff2579ac</item>
+        <item>#ff004d7d</item>
+        <item>#ff0a687d</item>
+        <item>#ff53a6d9</item>
+    </array>
+    <array name="wallpaper_16859_11_colors">
+        <item>#ff2379d1</item>
+        <item>#ff692b28</item>
+        <item>#ffd05946</item>
+        <item>#ff13375b</item>
+        <item>#ff511b00</item>
+    </array>
+    <array name="wallpaper_16859_12_colors">
+        <item>#ff56b7be</item>
+        <item>#ff9bdbe0</item>
+        <item>#ff034041</item>
+        <item>#ff00c5d1</item>
+        <item>#ffaacdd1</item>
+    </array>
+    <array name="wallpaper_16859_13_colors">
+        <item>#ffc04c48</item>
+        <item>#ff504968</item>
+        <item>#ffbc3e57</item>
+        <item>#ffeb8962</item>
+        <item>#ffe56763</item>
+    </array>
+    <array name="wallpaper_16859_14_colors">
+        <item>#ff1f473b</item>
+        <item>#ff0f1c49</item>
+        <item>#ff245d6b</item>
+        <item>#ff1d0a09</item>
+        <item>#ff2c8068</item>
+    </array>
+    <array name="wallpaper_17801_10_colors">
+        <item>#ff00113e</item>
+        <item>#ff102354</item>
+        <item>#ff1b1961</item>
+        <item>#ff250943</item>
+        <item>#ff364aa9</item>
+    </array>
+    <array name="wallpaper_17801_11_colors">
+        <item>#ffce435d</item>
+        <item>#ff92357e</item>
+        <item>#ffc0646f</item>
+        <item>#ffc06580</item>
+        <item>#ffd87a72</item>
+    </array>
+    <array name="wallpaper_17801_12_colors">
+        <item>#ff0d1f28</item>
+        <item>#ff233849</item>
+        <item>#ff000000</item>
+        <item>#ff354048</item>
+        <item>#ff7a768a</item>
+    </array>
+    <array name="wallpaper_17801_13_colors">
+        <item>#ff189ea4</item>
+        <item>#ff7db5b7</item>
+        <item>#ffbf9b77</item>
+        <item>#ff1e3e3d</item>
+        <item>#ff655045</item>
+    </array>
+    <array name="wallpaper_17801_14_colors">
+        <item>#ff189ea4</item>
+        <item>#ff2579ac</item>
+        <item>#ff004d7d</item>
+        <item>#ff0a687d</item>
+        <item>#ff53a6d9</item>
+    </array>
+    <array name="wallpaper_17801_15_colors">
+        <item>#ff2379d1</item>
+        <item>#ff692b28</item>
+        <item>#ffd05946</item>
+        <item>#ff13375b</item>
+        <item>#ff511b00</item>
+    </array>
+    <array name="wallpaper_17801_16_colors">
+        <item>#ff56b7be</item>
+        <item>#ff9bdbe0</item>
+        <item>#ff034041</item>
+        <item>#ff00c5d1</item>
+        <item>#ffaacdd1</item>
+    </array>
+    <array name="wallpaper_17801_17_colors">
+        <item>#ffc04c48</item>
+        <item>#ff504968</item>
+        <item>#ffbc3e57</item>
+        <item>#ffeb8962</item>
+        <item>#ffe56763</item>
+    </array>
+    <array name="wallpaper_17801_18_colors">
+        <item>#ff1f473b</item>
+        <item>#ff0f1c49</item>
+        <item>#ff245d6b</item>
+        <item>#ff1d0a09</item>
+        <item>#ff2c8068</item>
+    </array>
+    <array name="wallpaper_17801_1_colors">
+        <item>#ff70d4da</item>
+        <item>#ff2096b8</item>
+        <item>#ff265e66</item>
+        <item>#ff437eaf</item>
+        <item>#ff6460a8</item>
+    </array>
+    <array name="wallpaper_17801_2_colors">
+        <item>#ffe2a967</item>
+        <item>#fff29e54</item>
+        <item>#ffcf9c74</item>
+        <item>#ff634d39</item>
+        <item>#ffe69e5c</item>
+    </array>
+    <array name="wallpaper_17801_3_colors">
+        <item>#ff53777c</item>
+        <item>#ff53687c</item>
+        <item>#ff9b8c99</item>
+        <item>#ff999ba2</item>
+        <item>#ff9b907c</item>
+    </array>
+    <array name="wallpaper_17801_4_colors">
+        <item>#ff2a316c</item>
+        <item>#ff251f3d</item>
+        <item>#ff5b408c</item>
+        <item>#ff1960a2</item>
+        <item>#ff264989</item>
+    </array>
+    <array name="wallpaper_17801_5_colors">
+        <item>#ff2f0611</item>
+        <item>#ff5d4a5b</item>
+        <item>#ff271e39</item>
+        <item>#ff1f090a</item>
+        <item>#ff322033</item>
+    </array>
+    <array name="wallpaper_17801_6_colors">
+        <item>#ff6de5f4</item>
+        <item>#ff2a59bb</item>
+        <item>#ff979ce4</item>
+        <item>#ff148fdb</item>
+        <item>#ff7a60e1</item>
+    </array>
+    <array name="wallpaper_17801_7_colors">
+        <item>#ffdfcebe</item>
+        <item>#ffe1d9cb</item>
+        <item>#ffe3c3b8</item>
+        <item>#ffe9e1c6</item>
+        <item>#ffc7beb9</item>
+    </array>
+    <array name="wallpaper_17801_8_colors">
+        <item>#ffedbc7a</item>
+        <item>#ffe09a70</item>
+        <item>#ffc33f44</item>
+        <item>#ff8e3b3a</item>
+        <item>#ff632a34</item>
+    </array>
+    <array name="wallpaper_17801_9_colors">
+        <item>#ff5b1d25</item>
+        <item>#ffd44351</item>
+        <item>#ffd96a92</item>
+        <item>#ff884a55</item>
+        <item>#ff812645</item>
+    </array>
+    <array name="wallpaper_18821_01_colors">
+        <item>#ff000000</item>
+        <item>#ff080628</item>
+        <item>#ff2a1871</item>
+        <item>#ff11194e</item>
+        <item>#ff260430</item>
+    </array>
+    <array name="wallpaper_18821_02_colors">
+        <item>#ffdfe1e8</item>
+        <item>#ffe2dbd6</item>
+        <item>#ffeeeeee</item>
+        <item>#ffe4d8e0</item>
+        <item>#ffdce4e2</item>
+    </array>
+    <array name="wallpaper_18821_03_colors">
+        <item>#ff73cef1</item>
+        <item>#ff2a59bb</item>
+        <item>#ff979ce4</item>
+        <item>#ff148fdb</item>
+        <item>#ff7a60e1</item>
+    </array>
+    <array name="wallpaper_18821_04_colors">
+        <item>#ffdad2ce</item>
+        <item>#ffe1d9cb</item>
+        <item>#ffe3c3b8</item>
+        <item>#ffe9e1c6</item>
+        <item>#ffc7beb9</item>
+    </array>
+    <array name="wallpaper_18821_05_colors">
+        <item>#ffedbc7a</item>
+        <item>#ffe09a70</item>
+        <item>#ffc33f44</item>
+        <item>#ff8e3b3a</item>
+        <item>#ff632a34</item>
+    </array>
+    <array name="wallpaper_18821_06_colors">
+        <item>#ff5b1d25</item>
+        <item>#ffd44351</item>
+        <item>#ffd96a92</item>
+        <item>#ff884a55</item>
+        <item>#ff812645</item>
+    </array>
+    <array name="wallpaper_18821_07_colors">
+        <item>#ff00113e</item>
+        <item>#ff102354</item>
+        <item>#ff1b1961</item>
+        <item>#ff250943</item>
+        <item>#ff364aa9</item>
+    </array>
+    <array name="wallpaper_18821_08_colors">
+        <item>#ff000000</item>
+        <item>#ff212121</item>
+        <item>#ff494949</item>
+        <item>#ff1e1e1e</item>
+        <item>#ff1a0000</item>
+    </array>
+    <array name="wallpaper_18821_09_colors">
+        <item>#ff189ea4</item>
+        <item>#ff7db5b7</item>
+        <item>#ffbf9b77</item>
+        <item>#ff1e3e3d</item>
+        <item>#ff655045</item>
+    </array>
+    <array name="wallpaper_18821_10_colors">
+        <item>#ff189ea4</item>
+        <item>#ff2579ac</item>
+        <item>#ff004d7d</item>
+        <item>#ff0a687d</item>
+        <item>#ff53a6d9</item>
+    </array>
+    <array name="wallpaper_18821_11_colors">
+        <item>#ff2379d1</item>
+        <item>#ff692b28</item>
+        <item>#ffd05946</item>
+        <item>#ff13375b</item>
+        <item>#ff511b00</item>
+    </array>
+    <array name="wallpaper_18821_12_colors">
+        <item>#ff56b7be</item>
+        <item>#ff9bdbe0</item>
+        <item>#ff034041</item>
+        <item>#ff00c5d1</item>
+        <item>#ffaacdd1</item>
+    </array>
+    <array name="wallpaper_18821_13_colors">
+        <item>#ffc04c48</item>
+        <item>#ff504968</item>
+        <item>#ffbc3e57</item>
+        <item>#ffeb8962</item>
+        <item>#ffe56763</item>
+    </array>
+    <array name="wallpaper_18821_14_colors">
+        <item>#ff1f473b</item>
+        <item>#ff0f1c49</item>
+        <item>#ff245d6b</item>
+        <item>#ff1d0a09</item>
+        <item>#ff2c8068</item>
+    </array>
+    <array name="wallpaper_24_colors">
+        <item>#ff000000</item>
+        <item>#ff212121</item>
+        <item>#ff494949</item>
+        <item>#ff1e1e1e</item>
+        <item>#ff1a0000</item>
+    </array>
+    <array name="wallpaper_26_colors">
+        <item>#ff000000</item>
+        <item>#ff080628</item>
+        <item>#ff2a1871</item>
+        <item>#ff11194e</item>
+        <item>#ff260430</item>
+    </array>
+    <array name="wallpaper_27_colors">
+        <item>#ffdfe1e8</item>
+        <item>#ffe2dbd6</item>
+        <item>#ffeeeeee</item>
+        <item>#ffe4d8e0</item>
+        <item>#ffdce4e2</item>
+    </array>
+    <array name="wallpaper_28_colors">
+        <item>#ff73cef1</item>
+        <item>#ff2a59bb</item>
+        <item>#ff979ce4</item>
+        <item>#ff148fdb</item>
+        <item>#ff7a60e1</item>
+    </array>
+    <array name="wallpaper_29_colors">
+        <item>#ffdad2ce</item>
+        <item>#ffe1d9cb</item>
+        <item>#ffe3c3b8</item>
+        <item>#ffe9e1c6</item>
+        <item>#ffc7beb9</item>
+    </array>
+    <array name="wallpaper_30_colors">
+        <item>#ffedbc7a</item>
+        <item>#ffe09a70</item>
+        <item>#ffc33f44</item>
+        <item>#ff8e3b3a</item>
+        <item>#ff632a34</item>
+    </array>
+    <array name="wallpaper_31_colors">
+        <item>#ff5b1d25</item>
+        <item>#ffd44351</item>
+        <item>#ffd96a92</item>
+        <item>#ff884a55</item>
+        <item>#ff812645</item>
+    </array>
+    <array name="wallpaper_32_colors">
+        <item>#ff00113e</item>
+        <item>#ff102354</item>
+        <item>#ff1b1961</item>
+        <item>#ff250943</item>
+        <item>#ff364aa9</item>
+    </array>
+    <array name="wallpaper_e_3_colors">
+        <item>#ff189ea4</item>
+        <item>#ff7db5b7</item>
+        <item>#ffbf9b77</item>
+        <item>#ff1e3e3d</item>
+        <item>#ff655045</item>
+    </array>
+    <array name="wallpaper_e_4_colors">
+        <item>#ff189ea4</item>
+        <item>#ff2579ac</item>
+        <item>#ff004d7d</item>
+        <item>#ff0a687d</item>
+        <item>#ff53a6d9</item>
+    </array>
+    <array name="wallpaper_e_5_colors">
+        <item>#ff2379d1</item>
+        <item>#ff692b28</item>
+        <item>#ffd05946</item>
+        <item>#ff13375b</item>
+        <item>#ff511b00</item>
+    </array>
+    <array name="wallpaper_e_6_colors">
+        <item>#ff56b7be</item>
+        <item>#ff9bdbe0</item>
+        <item>#ff034041</item>
+        <item>#ff00c5d1</item>
+        <item>#ffaacdd1</item>
+    </array>
+    <array name="wallpaper_e_7_colors">
+        <item>#ffc04c48</item>
+        <item>#ff504968</item>
+        <item>#ffbc3e57</item>
+        <item>#ffeb8962</item>
+        <item>#ffe56763</item>
+    </array>
+    <array name="wallpaper_e_8_colors">
+        <item>#ff1f473b</item>
+        <item>#ff0f1c49</item>
+        <item>#ff245d6b</item>
+        <item>#ff1d0a09</item>
+        <item>#ff2c8068</item>
+    </array>
+    <string-array name="wallpaper_names_17801">
+        <item>wallpaper_17801_1</item>
+        <item>wallpaper_17801_11</item>
+        <item>wallpaper_17801_12</item>
+        <item>wallpaper_17801_2</item>
+        <item>wallpaper_17801_3</item>
+        <item>wallpaper_17801_4</item>
+        <item>wallpaper_17801_5</item>
+        <item>wallpaper_17801_6</item>
+        <item>wallpaper_17801_7</item>
+        <item>wallpaper_17801_8</item>
+        <item>wallpaper_17801_9</item>
+        <item>wallpaper_17801_10</item>
+        <item>wallpaper_17801_13</item>
+        <item>wallpaper_17801_14</item>
+        <item>wallpaper_17801_15</item>
+        <item>wallpaper_17801_16</item>
+        <item>wallpaper_17801_17</item>
+        <item>wallpaper_17801_18</item>
+    </string-array>
+    <string-array name="wallpaper_names_18821">
+        <item>wallpaper_18821_01</item>
+        <item>wallpaper_18821_02</item>
+        <item>wallpaper_18821_03</item>
+        <item>wallpaper_18821_04</item>
+        <item>wallpaper_18821_05</item>
+        <item>wallpaper_18821_06</item>
+        <item>wallpaper_18821_07</item>
+        <item>wallpaper_18821_08</item>
+        <item>wallpaper_18821_09</item>
+        <item>wallpaper_18821_10</item>
+        <item>wallpaper_18821_11</item>
+        <item>wallpaper_18821_12</item>
+        <item>wallpaper_18821_13</item>
+        <item>wallpaper_18821_14</item>
+    </string-array>
+    <string-array name="wallpaper_names_8996">
+        <item>wallpaper_16859_09</item>
+        <item>wallpaper_16859_10</item>
+        <item>wallpaper_16859_11</item>
+        <item>wallpaper_16859_12</item>
+        <item>wallpaper_16859_13</item>
+        <item>wallpaper_16859_14</item>
+    </string-array>
+    <string-array name="wallpaper_names_e">
+        <item>wallpaper_e_3</item>
+        <item>wallpaper_e_4</item>
+        <item>wallpaper_e_5</item>
+        <item>wallpaper_e_6</item>
+        <item>wallpaper_e_7</item>
+        <item>wallpaper_e_8</item>
+    </string-array>
+    <string-array name="wallpaper_names_simplified_16859">
+        <item>wallpaper_26</item>
+        <item>wallpaper_27</item>
+        <item>wallpaper_28</item>
+        <item>wallpaper_29</item>
+        <item>wallpaper_30</item>
+        <item>wallpaper_31</item>
+        <item>wallpaper_32</item>
+        <item>wallpaper_24</item>
+        <item>wallpaper_16859_09</item>
+        <item>wallpaper_16859_10</item>
+        <item>wallpaper_16859_11</item>
+        <item>wallpaper_16859_12</item>
+        <item>wallpaper_16859_13</item>
+        <item>wallpaper_16859_14</item>
+    </string-array>
+    <string-array name="wallpaper_names_standard_16859">
+        <item>wallpaper_26</item>
+        <item>wallpaper_27</item>
+        <item>wallpaper_28</item>
+        <item>wallpaper_29</item>
+        <item>wallpaper_30</item>
+        <item>wallpaper_31</item>
+        <item>wallpaper_32</item>
+        <item>wallpaper_24</item>
+        <item>wallpaper_16859_09</item>
+        <item>wallpaper_16859_10</item>
+        <item>wallpaper_16859_11</item>
+        <item>wallpaper_16859_12</item>
+        <item>wallpaper_16859_13</item>
+        <item>wallpaper_16859_14</item>
+    </string-array>
+    <array name="wallpaper_thumbnails_17801">
+        <item>@drawable/wallpaper_17801_1_small</item>
+        <item>@drawable/wallpaper_17801_11_small</item>
+        <item>@drawable/wallpaper_17801_12_small</item>
+        <item>@drawable/wallpaper_17801_2_small</item>
+        <item>@drawable/wallpaper_17801_3_small</item>
+        <item>@drawable/wallpaper_17801_4_small</item>
+        <item>@drawable/wallpaper_17801_5_small</item>
+        <item>@drawable/wallpaper_17801_6_small</item>
+        <item>@drawable/wallpaper_17801_7_small</item>
+        <item>@drawable/wallpaper_17801_8_small</item>
+        <item>@drawable/wallpaper_17801_9_small</item>
+        <item>@drawable/wallpaper_17801_10_small</item>
+        <item>@drawable/wallpaper_16859_09_small</item>
+        <item>@drawable/wallpaper_16859_10_small</item>
+        <item>@drawable/wallpaper_16859_11_small</item>
+        <item>@drawable/wallpaper_16859_12_small</item>
+        <item>@drawable/wallpaper_16859_13_small</item>
+        <item>@drawable/wallpaper_16859_14_small</item>
+    </array>
+    <array name="wallpaper_thumbnails_18821">
+        <item>@drawable/wallpaper_26_small</item>
+        <item>@drawable/wallpaper_27_small</item>
+        <item>@drawable/wallpaper_28_small</item>
+        <item>@drawable/wallpaper_29_small</item>
+        <item>@drawable/wallpaper_30_small</item>
+        <item>@drawable/wallpaper_31_small</item>
+        <item>@drawable/wallpaper_32_small</item>
+        <item>@drawable/wallpaper_24_small</item>
+        <item>@drawable/wallpaper_16859_09_small</item>
+        <item>@drawable/wallpaper_16859_10_small</item>
+        <item>@drawable/wallpaper_16859_11_small</item>
+        <item>@drawable/wallpaper_16859_12_small</item>
+        <item>@drawable/wallpaper_16859_13_small</item>
+        <item>@drawable/wallpaper_16859_14_small</item>
+    </array>
+    <array name="wallpaper_thumbnails_8996">
+        <item>@drawable/wallpaper_16859_09_small</item>
+        <item>@drawable/wallpaper_16859_10_small</item>
+        <item>@drawable/wallpaper_16859_11_small</item>
+        <item>@drawable/wallpaper_16859_12_small</item>
+        <item>@drawable/wallpaper_16859_13_small</item>
+        <item>@drawable/wallpaper_16859_14_small</item>
+    </array>
+    <array name="wallpaper_thumbnails_e">
+        <item>@drawable/wallpaper_e_3_small</item>
+        <item>@drawable/wallpaper_e_4_small</item>
+        <item>@drawable/wallpaper_e_5_small</item>
+        <item>@drawable/wallpaper_e_6_small</item>
+        <item>@drawable/wallpaper_e_7_small</item>
+        <item>@drawable/wallpaper_e_8_small</item>
+    </array>
+    <array name="wallpaper_thumbnails_simplified_16859">
+        <item>@drawable/wallpaper_26_small</item>
+        <item>@drawable/wallpaper_27_small</item>
+        <item>@drawable/wallpaper_28_small</item>
+        <item>@drawable/wallpaper_29_small</item>
+        <item>@drawable/wallpaper_30_small</item>
+        <item>@drawable/wallpaper_31_small</item>
+        <item>@drawable/wallpaper_32_small</item>
+        <item>@drawable/wallpaper_24_small</item>
+        <item>@drawable/wallpaper_16859_09_small</item>
+        <item>@drawable/wallpaper_16859_10_small</item>
+        <item>@drawable/wallpaper_16859_11_small</item>
+        <item>@drawable/wallpaper_16859_12_small</item>
+        <item>@drawable/wallpaper_16859_13_small</item>
+        <item>@drawable/wallpaper_16859_14_small</item>
+    </array>
+    <array name="wallpaper_thumbnails_standard_16859">
+        <item>@drawable/wallpaper_26_small</item>
+        <item>@drawable/wallpaper_27_small</item>
+        <item>@drawable/wallpaper_28_small</item>
+        <item>@drawable/wallpaper_29_small</item>
+        <item>@drawable/wallpaper_30_small</item>
+        <item>@drawable/wallpaper_31_small</item>
+        <item>@drawable/wallpaper_32_small</item>
+        <item>@drawable/wallpaper_24_small</item>
+        <item>@drawable/wallpaper_16859_09_small</item>
+        <item>@drawable/wallpaper_16859_10_small</item>
+        <item>@drawable/wallpaper_16859_11_small</item>
+        <item>@drawable/wallpaper_16859_12_small</item>
+        <item>@drawable/wallpaper_16859_13_small</item>
+        <item>@drawable/wallpaper_16859_14_small</item>
+    </array>
+    <array name="wallpapers_landscape_17801">
+        <item>@drawable/wallpaper_17801_1_land</item>
+        <item>@drawable/wallpaper_17801_11_land</item>
+        <item>@drawable/wallpaper_17801_12_land</item>
+        <item>@drawable/wallpaper_17801_2_land</item>
+        <item>@drawable/wallpaper_17801_3_land</item>
+        <item>@drawable/wallpaper_17801_4_land</item>
+        <item>@drawable/wallpaper_17801_5_land</item>
+        <item>@drawable/wallpaper_17801_6_land</item>
+        <item>@drawable/wallpaper_17801_7_land</item>
+        <item>@drawable/wallpaper_17801_8_land</item>
+        <item>@drawable/wallpaper_17801_9_land</item>
+        <item>@drawable/wallpaper_17801_10_land</item>
+        <item>@drawable/wallpaper_17801_13_land</item>
+        <item>@drawable/wallpaper_17801_14_land</item>
+        <item>@drawable/wallpaper_17801_15_land</item>
+        <item>@drawable/wallpaper_17801_16_land</item>
+        <item>@drawable/wallpaper_17801_17_land</item>
+        <item>@drawable/wallpaper_17801_18_land</item>
+    </array>
+    <array name="wallpapers_landscape_18821">
+        <item>@drawable/wallpaper_18821_01_land</item>
+        <item>@drawable/wallpaper_18821_02_land</item>
+        <item>@drawable/wallpaper_18821_03_land</item>
+        <item>@drawable/wallpaper_18821_04_land</item>
+        <item>@drawable/wallpaper_18821_05_land</item>
+        <item>@drawable/wallpaper_18821_06_land</item>
+        <item>@drawable/wallpaper_18821_07_land</item>
+        <item>@drawable/wallpaper_18821_08_land</item>
+        <item>@drawable/wallpaper_18821_09_land</item>
+        <item>@drawable/wallpaper_18821_10_land</item>
+        <item>@drawable/wallpaper_18821_11_land</item>
+        <item>@drawable/wallpaper_18821_12_land</item>
+        <item>@drawable/wallpaper_18821_13_land</item>
+        <item>@drawable/wallpaper_18821_14_land</item>
+    </array>
+    <array name="wallpapers_landscape_8996">
+        <item>@drawable/wallpaper_16859_09_land</item>
+        <item>@drawable/wallpaper_16859_10_land</item>
+        <item>@drawable/wallpaper_16859_11_land</item>
+        <item>@drawable/wallpaper_16859_12_land</item>
+        <item>@drawable/wallpaper_16859_13_land</item>
+        <item>@drawable/wallpaper_16859_14_land</item>
+    </array>
+    <array name="wallpapers_landscape_e">
+        <item>@drawable/wallpaper_e_3_land</item>
+        <item>@drawable/wallpaper_e_4_land</item>
+        <item>@drawable/wallpaper_e_5_land</item>
+        <item>@drawable/wallpaper_e_6_land</item>
+        <item>@drawable/wallpaper_e_7_land</item>
+        <item>@drawable/wallpaper_e_8_land</item>
+    </array>
+    <array name="wallpapers_portrait_17801">
+        <item>@drawable/wallpaper_17801_1</item>
+        <item>@drawable/wallpaper_17801_11</item>
+        <item>@drawable/wallpaper_17801_12</item>
+        <item>@drawable/wallpaper_17801_2</item>
+        <item>@drawable/wallpaper_17801_3</item>
+        <item>@drawable/wallpaper_17801_4</item>
+        <item>@drawable/wallpaper_17801_5</item>
+        <item>@drawable/wallpaper_17801_6</item>
+        <item>@drawable/wallpaper_17801_7</item>
+        <item>@drawable/wallpaper_17801_8</item>
+        <item>@drawable/wallpaper_17801_9</item>
+        <item>@drawable/wallpaper_17801_10</item>
+        <item>@drawable/wallpaper_17801_13</item>
+        <item>@drawable/wallpaper_17801_14</item>
+        <item>@drawable/wallpaper_17801_15</item>
+        <item>@drawable/wallpaper_17801_16</item>
+        <item>@drawable/wallpaper_17801_17</item>
+        <item>@drawable/wallpaper_17801_18</item>
+    </array>
+    <array name="wallpapers_portrait_18821">
+        <item>@drawable/wallpaper_18821_01</item>
+        <item>@drawable/wallpaper_18821_02</item>
+        <item>@drawable/wallpaper_18821_03</item>
+        <item>@drawable/wallpaper_18821_04</item>
+        <item>@drawable/wallpaper_18821_05</item>
+        <item>@drawable/wallpaper_18821_06</item>
+        <item>@drawable/wallpaper_18821_07</item>
+        <item>@drawable/wallpaper_18821_08</item>
+        <item>@drawable/wallpaper_18821_09</item>
+        <item>@drawable/wallpaper_18821_10</item>
+        <item>@drawable/wallpaper_18821_11</item>
+        <item>@drawable/wallpaper_18821_12</item>
+        <item>@drawable/wallpaper_18821_13</item>
+        <item>@drawable/wallpaper_18821_14</item>
+    </array>
+    <array name="wallpapers_portrait_8996">
+        <item>@drawable/wallpaper_16859_09</item>
+        <item>@drawable/wallpaper_16859_10</item>
+        <item>@drawable/wallpaper_16859_11</item>
+        <item>@drawable/wallpaper_16859_12</item>
+        <item>@drawable/wallpaper_16859_13</item>
+        <item>@drawable/wallpaper_16859_14</item>
+    </array>
+    <array name="wallpapers_portrait_e">
+        <item>@drawable/wallpaper_e_3</item>
+        <item>@drawable/wallpaper_e_4</item>
+        <item>@drawable/wallpaper_e_5</item>
+        <item>@drawable/wallpaper_e_6</item>
+        <item>@drawable/wallpaper_e_7</item>
+        <item>@drawable/wallpaper_e_8</item>
+    </array>
+    <array name="wallpapers_portrait_overlay_17801">
+        <item>@null</item>
+        <item>@null</item>
+        <item>@null</item>
+        <item>@null</item>
+        <item>@null</item>
+        <item>@null</item>
+        <item>@null</item>
+        <item>@null</item>
+        <item>@null</item>
+        <item>@null</item>
+        <item>@null</item>
+        <item>@null</item>
+        <item>@null</item>
+        <item>@null</item>
+        <item>@null</item>
+        <item>@null</item>
+        <item>@null</item>
+        <item>@null</item>
+    </array>
+    <array name="wallpapers_portrait_overlay_18821">
+        <item>@null</item>
+        <item>@null</item>
+        <item>@null</item>
+        <item>@null</item>
+        <item>@null</item>
+        <item>@null</item>
+        <item>@null</item>
+        <item>@null</item>
+        <item>@null</item>
+        <item>@null</item>
+        <item>@null</item>
+        <item>@null</item>
+        <item>@null</item>
+        <item>@null</item>
+    </array>
+    <array name="wallpapers_portrait_overlay_8996">
+        <item>@null</item>
+        <item>@null</item>
+        <item>@null</item>
+        <item>@null</item>
+        <item>@null</item>
+        <item>@null</item>
+    </array>
+    <array name="wallpapers_portrait_overlay_e">
+        <item>@null</item>
+        <item>@null</item>
+        <item>@null</item>
+        <item>@null</item>
+        <item>@null</item>
+        <item>@null</item>
+    </array>
+    <array name="wallpapers_simplified_landscape_16859">
+        <item>@drawable/wallpaper_26_land</item>
+        <item>@drawable/wallpaper_27_land</item>
+        <item>@drawable/wallpaper_28_land</item>
+        <item>@drawable/wallpaper_29_land</item>
+        <item>@drawable/wallpaper_30_land</item>
+        <item>@drawable/wallpaper_31_land</item>
+        <item>@drawable/wallpaper_32_land</item>
+        <item>@drawable/wallpaper_24_land</item>
+        <item>@drawable/wallpaper_16859_09_land</item>
+        <item>@drawable/wallpaper_16859_10_land</item>
+        <item>@drawable/wallpaper_16859_11_land</item>
+        <item>@drawable/wallpaper_16859_12_land</item>
+        <item>@drawable/wallpaper_16859_13_land</item>
+        <item>@drawable/wallpaper_16859_14_land</item>
+    </array>
+    <array name="wallpapers_simplified_portrait_16859">
+        <item>@drawable/wallpaper_26</item>
+        <item>@drawable/wallpaper_27</item>
+        <item>@drawable/wallpaper_28</item>
+        <item>@drawable/wallpaper_29</item>
+        <item>@drawable/wallpaper_30</item>
+        <item>@drawable/wallpaper_31</item>
+        <item>@drawable/wallpaper_32</item>
+        <item>@drawable/wallpaper_24</item>
+        <item>@drawable/wallpaper_16859_09</item>
+        <item>@drawable/wallpaper_16859_10</item>
+        <item>@drawable/wallpaper_16859_11</item>
+        <item>@drawable/wallpaper_16859_12</item>
+        <item>@drawable/wallpaper_16859_13</item>
+        <item>@drawable/wallpaper_16859_14</item>
+    </array>
+    <array name="wallpapers_simplified_portrait_overlay_16859">
+        <item>@null</item>
+        <item>@null</item>
+        <item>@null</item>
+        <item>@null</item>
+        <item>@null</item>
+        <item>@null</item>
+        <item>@null</item>
+        <item>@null</item>
+        <item>@null</item>
+        <item>@null</item>
+        <item>@null</item>
+        <item>@null</item>
+        <item>@null</item>
+        <item>@null</item>
+    </array>
+    <array name="wallpapers_standard_portrait_16859">
+        <item>@drawable/wallpaper_26</item>
+        <item>@drawable/wallpaper_27</item>
+        <item>@drawable/wallpaper_28</item>
+        <item>@drawable/wallpaper_29</item>
+        <item>@drawable/wallpaper_30</item>
+        <item>@drawable/wallpaper_31</item>
+        <item>@drawable/wallpaper_32</item>
+        <item>@drawable/wallpaper_24</item>
+        <item>@drawable/wallpaper_16859_09</item>
+        <item>@drawable/wallpaper_16859_10</item>
+        <item>@drawable/wallpaper_16859_11</item>
+        <item>@drawable/wallpaper_16859_12</item>
+        <item>@drawable/wallpaper_16859_13</item>
+        <item>@drawable/wallpaper_16859_14</item>
+    </array>
+</resources>

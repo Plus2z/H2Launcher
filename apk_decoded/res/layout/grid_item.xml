@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:background="@drawable/oval_ripple_with_mask" android:paddingTop="@dimen/customization_icon_pack_item_padding_top" android:paddingBottom="@dimen/customization_icon_pack_item_padding_bottom" android:layout_width="match_parent" android:layout_height="@dimen/customization_icon_pack_item_size"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <net.oneplus.h2launcher.customizations.Selection android:layout_gravity="center_horizontal" android:id="@id/selection" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:id="@id/icon_pack_image" android:layout_width="48.0dp" android:layout_height="48.0dp" />
+        </net.oneplus.h2launcher.customizations.Selection>
+        <TextView android:textSize="12.0dp" android:textColor="@color/customization_common_text_color" android:ellipsize="end" android:gravity="center" android:id="@id/icon_pack_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dp" android:layout_marginTop="10.0dp" android:layout_marginRight="10.0dp" android:singleLine="true" />
+    </LinearLayout>
+</LinearLayout>

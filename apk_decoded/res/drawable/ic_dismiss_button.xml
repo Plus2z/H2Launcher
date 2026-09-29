@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:top="8.0dp" android:bottom="0.0dp" android:start="24.0dp" android:end="8.0dp">
+        <shape android:shape="oval">
+            <solid android:color="@color/quick_page_item_dismiss_button_color" />
+            <size android:height="32.0dp" android:width="32.0dp" />
+        </shape>
+    </item>
+    <item android:gravity="center" android:drawable="@drawable/ic_dismiss" android:top="8.0dp" android:bottom="0.0dp" android:start="24.0dp" android:end="8.0dp" />
+</layer-list>

@@ -1,0 +1,45 @@
+# Android APK & Signatures
+*.apk
+*.idsig
+*.ap_
+*.dex
+
+# Keystores & Keys
+*.keystore
+*.jks
+*.p12
+
+# Build caches & outputs
+apk_decoded/build/
+scratch/apk_out/
+scratch/bin/
+scratch/dex/
+
+# Temporary screenshots & debug dumps
+screen_*.png
+current_thumb.*
+current_wallpaper.*
+wallpaper_saved_copy.*
+mouse_wall.png
+original_picked.jpg
+orig_photo.jpg
+comparison.jpg
+overview_check.png
+overview_settings.png
+settings_header.png
+check_top.png
+real_orig.jpg
+preview_card.png
+carousel.png
+card1.png
+
+# Keep card_home.png for README cover
+!card_home.png
+
+# Logs
+*.log
+scratch/test_log.sh
+
+# OS generated files
+.DS_Store
+Thumbs.db

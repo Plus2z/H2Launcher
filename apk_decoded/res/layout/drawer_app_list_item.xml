@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/icon" android:layout_width="@dimen/navigation_drawer_app_list_icon_size" android:layout_height="@dimen/navigation_drawer_app_list_icon_size" />
+    <TextView android:textSize="@dimen/navigation_drawer_app_list_label_text_size" android:textColor="@color/navigation_drawer_app_list_label_color" android:ellipsize="end" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:fontFamily="sans-serif" android:paddingStart="@dimen/navigation_drawer_app_list_padding_start" />
+</LinearLayout>

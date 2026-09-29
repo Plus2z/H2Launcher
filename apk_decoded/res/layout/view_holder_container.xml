@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<net.oneplus.h2launcher.quickpage.widget.SpringFrameLayout android:id="@id/container" android:paddingBottom="@dimen/quick_page_item_bottom_padding" android:clipChildren="false" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="match_parent" android:elevation="@dimen/quick_page_item_elevation"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.oneplus.lib.widget.cardview.CardView android:layout_gravity="center_horizontal" android:id="@id/card" android:clipChildren="false" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="match_parent" card_view:cardCornerRadius="2dp" card_view:cardElevation="@dimen/quick_page_item_elevation"
+      xmlns:card_view="http://schemas.android.com/apk/net.oneplus.h2launcher">
+        <net.oneplus.h2launcher.quickpage.view.QuickPageItemView android:layout_gravity="center" android:id="@id/content_holder" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <View android:id="@id/top_contour" android:layout_width="match_parent" android:layout_height="1.0dp" />
+    </com.oneplus.lib.widget.cardview.CardView>
+    <FrameLayout android:id="@id/drag_handle" android:background="@drawable/quick_page_card_border" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="@dimen/quick_page_item_edit_mode_card_margin" android:layout_marginBottom="@dimen/quick_page_item_edit_mode_card_margin" android:layout_marginStart="@dimen/quick_page_item_edit_mode_card_margin" android:layout_marginEnd="@dimen/quick_page_item_edit_mode_card_margin" android:elevation="@dimen/quick_page_item_drag_elevation">
+        <ImageView android:layout_gravity="center|bottom" android:id="@id/drag_handle_drawable" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/quick_page_item_drag_handle_margin_bottom" android:src="@drawable/drag_handle" android:contentDescription="@null" />
+    </FrameLayout>
+    <ImageView android:layout_gravity="center|bottom" android:id="@id/drag_handle_touchable" android:focusable="true" android:clickable="true" android:layout_width="match_parent" android:layout_height="@dimen/quick_page_item_drag_handle_touch_height" android:layout_marginBottom="@dimen/quick_page_item_drag_handle_touch_margin_bottom" android:contentDescription="@null" android:elevation="@dimen/quick_page_item_drag_elevation" />
+    <ImageView android:gravity="center" android:layout_gravity="end|top" android:id="@id/dismiss_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_dismiss_button" android:scaleType="center" android:contentDescription="@null" android:elevation="@dimen/quick_page_item_drag_elevation" />
+</net.oneplus.h2launcher.quickpage.widget.SpringFrameLayout>
