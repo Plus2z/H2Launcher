@@ -43,3 +43,6 @@ scratch/test_log.sh
 # OS generated files
 .DS_Store
 Thumbs.db
+platform-tools/
+.android/
+tools/

@@ -18524,7 +18524,7 @@
 
     invoke-virtual {v8}, Lnet/oneplus/h2launcher/LauncherAppWidgetHost;->stopListening()V
     :try_end_0
-    .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 3207
     :goto_1
@@ -22037,12 +22037,16 @@
 
     .line 1621
     .local v0, "app":Lnet/oneplus/h2launcher/LauncherAppState;
+    :try_start_onstop_host
     invoke-virtual {v0}, Lnet/oneplus/h2launcher/LauncherAppState;->getAppWidgetHost()Lnet/oneplus/h2launcher/LauncherAppWidgetHost;
 
     move-result-object v2
 
     invoke-virtual {v2}, Lnet/oneplus/h2launcher/LauncherAppWidgetHost;->stopListening()V
+    :try_end_onstop_host
+    .catch Ljava/lang/Throwable; {:try_start_onstop_host .. :try_end_onstop_host} :catch_onstop_host
 
+    :catch_onstop_host
     .line 1625
     .end local v0    # "app":Lnet/oneplus/h2launcher/LauncherAppState;
     :cond_2

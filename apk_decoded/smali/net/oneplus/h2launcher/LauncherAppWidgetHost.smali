@@ -270,50 +270,60 @@
     .locals 3
 
     .prologue
-    .line 72
     sget-object v1, Lnet/oneplus/h2launcher/LauncherAppWidgetHost;->TAG:Ljava/lang/String;
 
     const-string v2, "startListening:"
 
     invoke-static {v1, v2}, Lnet/oneplus/h2launcher/util/Logger;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 74
     :try_start_0
     invoke-super {p0}, Landroid/appwidget/AppWidgetHost;->startListening()V
     :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 86
-    :cond_0
+    :goto_0
     return-void
 
-    .line 75
     :catch_0
     move-exception v0
 
-    .line 76
-    .local v0, "e":Ljava/lang/Exception;
-    invoke-virtual {v0}, Ljava/lang/Exception;->getCause()Ljava/lang/Throwable;
+    .local v0, "e":Ljava/lang/Throwable;
+    sget-object v1, Lnet/oneplus/h2launcher/LauncherAppWidgetHost;->TAG:Ljava/lang/String;
 
-    move-result-object v1
+    const-string v2, "startListening error ignored"
 
-    instance-of v1, v1, Landroid/os/TransactionTooLargeException;
+    invoke-static {v1, v2, v0}, Lnet/oneplus/h2launcher/util/Logger;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    if-nez v1, :cond_0
+    goto :goto_0
+.end method
 
-    .line 77
-    invoke-virtual {v0}, Ljava/lang/Exception;->getCause()Ljava/lang/Throwable;
+.method public stopListening()V
+    .locals 3
 
-    move-result-object v1
+    .prologue
+    sget-object v1, Lnet/oneplus/h2launcher/LauncherAppWidgetHost;->TAG:Ljava/lang/String;
 
-    instance-of v1, v1, Landroid/os/DeadObjectException;
+    const-string v2, "stopListening:"
 
-    if-nez v1, :cond_0
+    invoke-static {v1, v2}, Lnet/oneplus/h2launcher/util/Logger;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 83
-    new-instance v1, Ljava/lang/RuntimeException;
+    :try_start_0
+    invoke-super {p0}, Landroid/appwidget/AppWidgetHost;->stopListening()V
+    :try_end_0
+    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+    :goto_0
+    return-void
 
-    throw v1
+    :catch_0
+    move-exception v0
+
+    .local v0, "e":Ljava/lang/Throwable;
+    sget-object v1, Lnet/oneplus/h2launcher/LauncherAppWidgetHost;->TAG:Ljava/lang/String;
+
+    const-string v2, "stopListening error ignored"
+
+    invoke-static {v1, v2, v0}, Lnet/oneplus/h2launcher/util/Logger;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    goto :goto_0
 .end method
