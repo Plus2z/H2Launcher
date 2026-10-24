@@ -136,6 +136,22 @@
     .line 291
     :cond_2
     :goto_1
+    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
+
+    move-result-wide v2
+
+    if-eqz v1, :cond_failmark
+
+    const-wide/16 v4, -0x1
+
+    sput-wide v4, Lnet/oneplus/h2launcher/util/WallpaperComposer;->sLastEnsureFailAt:J
+
+    goto :goto_failmark_done
+
+    :cond_failmark
+    sput-wide v2, Lnet/oneplus/h2launcher/util/WallpaperComposer;->sLastEnsureFailAt:J
+
+    :goto_failmark_done
     if-eqz v1, :cond_4
 
     .line 292

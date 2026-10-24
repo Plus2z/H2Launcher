@@ -3288,17 +3288,19 @@
     iput v7, p0, Lnet/oneplus/h2launcher/wallpaper/BlurWallpaper$DrawableEngine;->mScrollMode:I
 
     .line 1087
-    invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-static {p1}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object v0
 
     .line 1088
-    .local v0, "contentResolver":Landroid/content/ContentResolver;
+    .local v0, "prefs":Landroid/content/SharedPreferences;
     const-string v3, "oneplus_blur_wallpaper_settings"
 
     .line 1089
     .local v3, "settingsName":Ljava/lang/String;
-    invoke-static {v0, v3}, Landroid/provider/Settings$Global;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
+    const/4 v8, 0x0
+
+    invoke-interface {v0, v3, v8}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -3617,17 +3619,19 @@
 
     .line 1112
     .local v2, "notified":Z
-    invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-static {p1}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object v0
 
     .line 1113
-    .local v0, "contentResolver":Landroid/content/ContentResolver;
+    .local v0, "prefs":Landroid/content/SharedPreferences;
     const-string v5, "oneplus_blur_wallpaper_settings"
 
     .line 1114
     .local v5, "settingsName":Ljava/lang/String;
-    invoke-static {v0, v5}, Landroid/provider/Settings$Global;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
+    const/4 v8, 0x0
+
+    invoke-interface {v0, v5, v8}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v6
 

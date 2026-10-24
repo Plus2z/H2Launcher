@@ -16,6 +16,16 @@
 
 .field private static volatile sIsGenerating:Z
 
+.field private static volatile sCachedSettings:Lnet/oneplus/h2launcher/customizations/wallpaper/BlurWallpaperSettings;
+
+.field private static volatile sCachedSettingsKey:Ljava/lang/String;
+
+.field private static sScreenHeight:I
+
+.field private static sScreenWidth:I
+
+.field static volatile sLastEnsureFailAt:J
+
 
 # direct methods
 .method static bridge synthetic -$$Nest$sfputsIsGenerating(Z)V
@@ -44,6 +54,10 @@
 
     .line 34
     sput-object v0, Lnet/oneplus/h2launcher/util/WallpaperComposer;->sBlurPaint:Landroid/graphics/Paint;
+
+    const-wide/16 v0, -0x1
+
+    sput-wide v0, Lnet/oneplus/h2launcher/util/WallpaperComposer;->sLastEnsureFailAt:J
 
     return-void
 .end method
@@ -630,7 +644,7 @@
     const/4 v1, 0x1
 
     :try_start_0
-    invoke-static {v0}, Lnet/oneplus/h2launcher/config/PreferencesHelper;->getBlurWallpaperSettings(Landroid/content/Context;)Lnet/oneplus/h2launcher/customizations/wallpaper/BlurWallpaperSettings;
+    invoke-static {v0}, Lnet/oneplus/h2launcher/util/WallpaperComposer;->getCachedBlurSettings(Landroid/content/Context;)Lnet/oneplus/h2launcher/customizations/wallpaper/BlurWallpaperSettings;
 
     move-result-object v2
 
@@ -886,37 +900,58 @@
 
     .line 411
     :cond_e
+    invoke-virtual {p1}, Landroid/graphics/Canvas;->getWidth()I
+
+    move-result v5
+
+    sget v6, Lnet/oneplus/h2launcher/util/WallpaperComposer;->sScreenWidth:I
+
+    if-lez v6, :cond_screen
+
+    if-eq v5, v6, :cond_screen_ok
+
+    :cond_screen
     invoke-static {v0, v1}, Lnet/oneplus/h2launcher/Utilities;->getScreenDimensions(Landroid/content/Context;Z)Landroid/graphics/Point;
 
-    move-result-object v0
+    move-result-object v5
 
-    .line 412
-    if-eqz v0, :cond_f
+    if-eqz v5, :cond_screen_ok
 
-    iget v1, v0, Landroid/graphics/Point;->x:I
+    iget v6, v5, Landroid/graphics/Point;->x:I
 
-    if-lez v1, :cond_f
+    if-lez v6, :cond_screen_ok
 
-    iget v1, v0, Landroid/graphics/Point;->x:I
+    iget v6, v5, Landroid/graphics/Point;->x:I
+
+    sput v6, Lnet/oneplus/h2launcher/util/WallpaperComposer;->sScreenWidth:I
+
+    iget v6, v5, Landroid/graphics/Point;->y:I
+
+    if-lez v6, :cond_screen_ok
+
+    iget v6, v5, Landroid/graphics/Point;->y:I
+
+    sput v6, Lnet/oneplus/h2launcher/util/WallpaperComposer;->sScreenHeight:I
+
+    :cond_screen_ok
+    sget v1, Lnet/oneplus/h2launcher/util/WallpaperComposer;->sScreenWidth:I
+
+    if-lez v1, :cond_screen_w
 
     goto :goto_4
 
-    :cond_f
+    :cond_screen_w
     const/16 v1, 0x438
 
     .line 413
     :goto_4
-    if-eqz v0, :cond_10
+    sget v0, Lnet/oneplus/h2launcher/util/WallpaperComposer;->sScreenHeight:I
 
-    iget v5, v0, Landroid/graphics/Point;->y:I
-
-    if-lez v5, :cond_10
-
-    iget v0, v0, Landroid/graphics/Point;->y:I
+    if-lez v0, :cond_screen_h
 
     goto :goto_5
 
-    :cond_10
+    :cond_screen_h
     const/16 v0, 0x960
 
     .line 415
@@ -1013,7 +1048,7 @@
 .end method
 
 .method public static ensureBlurWallpaper(Landroid/content/Context;)V
-    .locals 2
+    .locals 6
 
     .line 267
     if-nez p0, :cond_0
@@ -1040,7 +1075,31 @@
     :cond_1
     sget-boolean v0, Lnet/oneplus/h2launcher/util/WallpaperComposer;->sIsGenerating:Z
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_1a
+
+    return-void
+
+    .line 270
+    :cond_1a
+    sget-wide v0, Lnet/oneplus/h2launcher/util/WallpaperComposer;->sLastEnsureFailAt:J
+
+    const-wide/16 v2, 0x0
+
+    cmp-long v4, v0, v2
+
+    if-ltz v4, :cond_2
+
+    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
+
+    move-result-wide v4
+
+    sub-long/2addr v4, v0
+
+    const-wide/16 v0, 0x7530
+
+    cmp-long v2, v4, v0
+
+    if-ltz v2, :cond_2
 
     return-void
 
@@ -2776,7 +2835,7 @@
 .end method
 
 .method public static reloadBlurWallpaper(Landroid/content/Context;)V
-    .locals 1
+    .locals 2
 
     .line 312
     if-nez p0, :cond_0
@@ -2789,9 +2848,102 @@
 
     sput-object v0, Lnet/oneplus/h2launcher/util/WallpaperComposer;->sCachedBlurWallpaper:Landroid/graphics/Bitmap;
 
+    const-wide/16 v0, -0x1
+
+    sput-wide v0, Lnet/oneplus/h2launcher/util/WallpaperComposer;->sLastEnsureFailAt:J
+
     .line 314
     invoke-static {p0}, Lnet/oneplus/h2launcher/util/WallpaperComposer;->ensureBlurWallpaper(Landroid/content/Context;)V
 
     .line 315
     return-void
+.end method
+
+.method private static getCachedBlurSettings(Landroid/content/Context;)Lnet/oneplus/h2launcher/customizations/wallpaper/BlurWallpaperSettings;
+    .locals 4
+    .param p0, "context"
+
+    .prologue
+    if-nez p0, :cond_0
+
+    invoke-static {}, Lnet/oneplus/h2launcher/customizations/wallpaper/BlurWallpaperSettings;->emptySettings()Lnet/oneplus/h2launcher/customizations/wallpaper/BlurWallpaperSettings;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_0
+    :try_start_0
+    invoke-static {p0}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    const-string v1, "oneplus_blur_wallpaper_settings"
+
+    const/4 v2, 0x0
+
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    const-string v1, ""
+
+    :cond_1
+    sget-object v0, Lnet/oneplus/h2launcher/util/WallpaperComposer;->sCachedSettingsKey:Ljava/lang/String;
+
+    if-eqz v0, :cond_3
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    sget-object v0, Lnet/oneplus/h2launcher/util/WallpaperComposer;->sCachedSettings:Lnet/oneplus/h2launcher/customizations/wallpaper/BlurWallpaperSettings;
+
+    if-eqz v0, :cond_3
+
+    return-object v0
+
+    :cond_3
+    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    invoke-static {}, Lnet/oneplus/h2launcher/customizations/wallpaper/BlurWallpaperSettings;->emptySettings()Lnet/oneplus/h2launcher/customizations/wallpaper/BlurWallpaperSettings;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    :cond_4
+    invoke-static {v1}, Lnet/oneplus/h2launcher/customizations/wallpaper/BlurWallpaperSettings;->deserialize(Ljava/lang/String;)Lnet/oneplus/h2launcher/customizations/wallpaper/BlurWallpaperSettings;
+
+    move-result-object v0
+
+    :goto_0
+    sput-object v1, Lnet/oneplus/h2launcher/util/WallpaperComposer;->sCachedSettingsKey:Ljava/lang/String;
+
+    sput-object v0, Lnet/oneplus/h2launcher/util/WallpaperComposer;->sCachedSettings:Lnet/oneplus/h2launcher/customizations/wallpaper/BlurWallpaperSettings;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    return-object v0
+
+    :catchall_0
+    move-exception v0
+
+    invoke-static {}, Lnet/oneplus/h2launcher/customizations/wallpaper/BlurWallpaperSettings;->emptySettings()Lnet/oneplus/h2launcher/customizations/wallpaper/BlurWallpaperSettings;
+
+    move-result-object v0
+
+    return-object v0
 .end method

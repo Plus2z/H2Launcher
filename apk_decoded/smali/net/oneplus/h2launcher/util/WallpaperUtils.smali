@@ -4780,6 +4780,8 @@
     invoke-static {v8, v9}, Lnet/oneplus/h2launcher/util/Logger;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_wm_done
+    if-eqz v10, :cond_no_recycle
+
     if-eq v10, v5, :cond_no_recycle
 
     invoke-virtual {v10}, Landroid/graphics/Bitmap;->recycle()V
