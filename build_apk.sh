@@ -22,15 +22,14 @@ fi
 # 计算目标版本号
 TARGET_VER="$1"
 if [ -z "$TARGET_VER" ]; then
-    # 查找本地已有的最新版本
+    # 查找本地已有的最新版本（版本号自然排序，r1.10 > r1.9）
     LATEST_APK=$(ls -v H2Launcher_1.6.1-android16-preview-r*.apk 2>/dev/null | tail -n 1 || true)
     if [ -n "$LATEST_APK" ]; then
-        # 提取当前版本号，如 r1.1 -> 1.1
-        CUR_VER=$(echo "$LATEST_APK" | sed -n 's/.*-r\([0-9.]*\)\.apk/\1/p')
+        # 提取当前版本号，如 r1.1 -> "1 1"
+        CUR_VER=$(printf '%s' "$LATEST_APK" | sed -n 's/.*-r\([0-9]*\)\.\([0-9]*\)\.apk/\1 \2/p')
         if [ -n "$CUR_VER" ]; then
-            # 自动递增 0.1
-            NEXT_VER=$(python3 -c "import decimal; v = decimal.Decimal('$CUR_VER') + decimal.Decimal('0.1'); print(f'{v:.1f}' if v % 1 != 0 else f'{v:.1f}')")
-            TARGET_VER="r${NEXT_VER}"
+            # 主次版本号均为整数，次版本号 +1，避免小数进位歧义（r1.9 -> r1.10 而非 r2.0）
+            TARGET_VER=$(printf '%s' "$CUR_VER" | awk '{printf "r%d.%d", $1, $2 + 1}')
         else
             TARGET_VER="r1.1"
         fi
@@ -38,10 +37,11 @@ if [ -z "$TARGET_VER" ]; then
         TARGET_VER="r1.0"
     fi
 else
-    # 如果用户指定了版本号，确保带 'r' 前缀（大小写保持一致）
+    # 如果用户指定了版本号，统一为小写 'r' 前缀，保证与自动递增的检索模式一致
     if [[ ! "$TARGET_VER" =~ ^[rR] ]]; then
         TARGET_VER="r${TARGET_VER}"
     fi
+    TARGET_VER=$(printf '%s' "$TARGET_VER" | tr 'R' 'r')
 fi
 
 OUTPUT_NAME="H2Launcher_1.6.1-android16-preview-${TARGET_VER}.apk"

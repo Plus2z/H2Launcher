@@ -166,10 +166,9 @@ adb install --bypass-low-target-sdk-block -r h2launcher_signed.apk
 ```
 
 ### 2. 授予必要权限
-为了能够正常选择本地相册中的图片作为壁纸，请在终端或系统权限管理中授予存储与媒体读取权限：
+为了能够正常选择本地相册中的图片作为壁纸，请在终端或系统权限管理中授予存储权限（本应用 targetSdk 为 26，仅需声明 `READ_EXTERNAL_STORAGE`；在 Android 13+ 上系统会自动将其映射为媒体读取权限，无需也无法授予 `READ_MEDIA_IMAGES` 等新版权限）：
 ```bash
 adb shell pm grant net.oneplus.h2launcher android.permission.READ_EXTERNAL_STORAGE 2>/dev/null || true
-adb shell pm grant net.oneplus.h2launcher android.permission.READ_MEDIA_IMAGES 2>/dev/null || true
 ```
 
 ### 3. 启动并开启“桌面模糊背景”
