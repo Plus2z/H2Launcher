@@ -10,7 +10,7 @@
     <permission android:name="net.oneplus.h2launcher.permission.RECEIVE_LAUNCH_BROADCASTS" android:protectionLevel="signature"/>
     <permission android:name="net.oneplus.h2launcher.permission.RECEIVE_FIRST_LOAD_BROADCAST" android:protectionLevel="signatureOrSystem"/>
     <permission android:name="net.oneplus.h2launcher.permission.NOTE" android:protectionLevel="normal"/>
-    <permission android:name="net.oneplus.h2launcher.permission.SET_WALLPAPER" android:protectionLevel="normal"/>
+    <permission android:name="net.oneplus.h2launcher.permission.SET_WALLPAPER" android:protectionLevel="signature"/>
     <uses-permission android:name="android.permission.READ_CALENDAR"/>
     <uses-permission android:name="android.permission.WRITE_CALENDAR"/>
     <uses-permission android:name="android.permission.MANAGE_DOCUMENTS"/>
@@ -45,7 +45,7 @@
     <uses-permission android:name="android.permission.SET_WALLPAPER_COMPONENT"/>
     <uses-permission android:name="android.permission.DEVICE_POWER"/>
     <meta-data android:name="android.support.VERSION" android:value="26.0.0-alpha1"/>
-    <application android:debuggable="true" android:allowBackup="@bool/enable_backup" android:backupAgent="net.oneplus.h2launcher.LauncherBackupAgentHelper" android:hardwareAccelerated="true" android:icon="@drawable/ic_launcher_home" android:label="@string/application_name_oneplus" android:largeHeap="@bool/config_largeHeap" android:name="net.oneplus.h2launcher.LauncherApplication" android:restoreAnyVersion="true" android:supportsRtl="true">
+    <application android:allowBackup="@bool/enable_backup" android:backupAgent="net.oneplus.h2launcher.LauncherBackupAgentHelper" android:hardwareAccelerated="true" android:icon="@drawable/ic_launcher_home" android:label="@string/application_name_oneplus" android:largeHeap="@bool/config_largeHeap" android:name="net.oneplus.h2launcher.LauncherApplication" android:restoreAnyVersion="true" android:supportsRtl="true">
         <meta-data android:name="use_common_accent_color" android:value="true"/>
         <activity android:clearTaskOnLaunch="true" android:configChanges="mcc|mnc|orientation|screenLayout|screenSize" android:enabled="true" android:excludeFromRecents="true" android:exported="true" android:launchMode="singleTask" android:name="net.oneplus.h2launcher.Launcher" android:resumeWhilePausing="true" android:screenOrientation="nosensor" android:stateNotNeeded="true" android:taskAffinity="" android:theme="@style/MainTheme" android:windowSoftInputMode="adjustPan">
             <intent-filter>
@@ -107,7 +107,7 @@
             </intent-filter>
             <meta-data android:name="android.service.wallpaper" android:resource="@xml/wallpaper"/>
         </service>
-        <receiver android:exported="true" android:name="net.oneplus.h2launcher.QuickPageBroadcastReceiver">
+        <receiver android:exported="false" android:name="net.oneplus.h2launcher.QuickPageBroadcastReceiver">
             <intent-filter>
                 <action android:name="net.oneplus.h2launcher.action.OPEN_QUICK_PAGE"/>
             </intent-filter>
@@ -132,7 +132,7 @@
                 <action android:name="android.intent.action.BOOT_COMPLETED"/>
             </intent-filter>
         </receiver>
-        <receiver android:exported="true" android:name="net.oneplus.h2launcher.test.TestWeatherInfoReceiver">
+        <receiver android:enabled="false" android:exported="false" android:name="net.oneplus.h2launcher.test.TestWeatherInfoReceiver">
             <intent-filter>
                 <action android:name="net.oneplus.weather.RECEIVE_LOCATION_WEATHER"/>
             </intent-filter>
@@ -153,7 +153,5 @@
         <meta-data android:name="upgrade_product_code" android:value="40014"/>
         <meta-data android:name="oneplus_libs" android:value="oplib.oneplus_sdk_wrapper:0.1.0;oplib.oneplus_sdk_utils:0.1.0;"/>
         <meta-data android:name="oneplus_upgrage" android:value="true"/>
-        <meta-data android:name="io.fabric.ApiKey" android:value="834d13baebc28e6a1f4417fe46bc72912a13b9ad"/>
-        <provider android:authorities="net.oneplus.h2launcher.crashlyticsinitprovider" android:exported="false" android:initOrder="100" android:name="com.crashlytics.android.CrashlyticsInitProvider"/>
     </application>
 </manifest>

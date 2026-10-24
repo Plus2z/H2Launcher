@@ -44,53 +44,10 @@
 .end method
 
 .method private initCrashlytics()V
-    .locals 4
+    .locals 0
 
     .prologue
-    const/4 v3, 0x0
-
     .line 33
-    new-instance v1, Lcom/crashlytics/android/Crashlytics$Builder;
-
-    invoke-direct {v1}, Lcom/crashlytics/android/Crashlytics$Builder;-><init>()V
-
-    new-instance v2, Lcom/crashlytics/android/core/CrashlyticsCore$Builder;
-
-    invoke-direct {v2}, Lcom/crashlytics/android/core/CrashlyticsCore$Builder;-><init>()V
-
-    .line 34
-    invoke-virtual {v2, v3}, Lcom/crashlytics/android/core/CrashlyticsCore$Builder;->disabled(Z)Lcom/crashlytics/android/core/CrashlyticsCore$Builder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Lcom/crashlytics/android/core/CrashlyticsCore$Builder;->build()Lcom/crashlytics/android/core/CrashlyticsCore;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Lcom/crashlytics/android/Crashlytics$Builder;->core(Lcom/crashlytics/android/core/CrashlyticsCore;)Lcom/crashlytics/android/Crashlytics$Builder;
-
-    move-result-object v1
-
-    .line 35
-    invoke-virtual {v1}, Lcom/crashlytics/android/Crashlytics$Builder;->build()Lcom/crashlytics/android/Crashlytics;
-
-    move-result-object v0
-
-    .line 36
-    .local v0, "crashlyticsKit":Lcom/crashlytics/android/Crashlytics;
-    const/4 v1, 0x1
-
-    new-array v1, v1, [Lio/fabric/sdk/android/Kit;
-
-    new-instance v2, Lcom/crashlytics/android/Crashlytics;
-
-    invoke-direct {v2}, Lcom/crashlytics/android/Crashlytics;-><init>()V
-
-    aput-object v2, v1, v3
-
-    invoke-static {p0, v1}, Lio/fabric/sdk/android/Fabric;->with(Landroid/content/Context;[Lio/fabric/sdk/android/Kit;)Lio/fabric/sdk/android/Fabric;
-
-    .line 37
     return-void
 .end method
 
