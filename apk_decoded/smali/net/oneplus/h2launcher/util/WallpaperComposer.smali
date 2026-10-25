@@ -1099,7 +1099,7 @@
 
     cmp-long v2, v4, v0
 
-    if-ltz v2, :cond_2
+    if-gez v2, :cond_2
 
     return-void
 
