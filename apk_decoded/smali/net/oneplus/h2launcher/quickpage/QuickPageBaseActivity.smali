@@ -52,6 +52,10 @@
 
 .field private mNavigationBarBackground:Landroid/view/View;
 
+.field private mPendingQuickPageWidgetComponent:Landroid/content/ComponentName;
+
+.field private mPendingQuickPageWidgetId:I
+
 .field private mProvider:Lnet/oneplus/h2launcher/quickpage/DataProvider;
 
 .field private mQuickPage:Landroid/support/v4/widget/DrawerLayout;
@@ -145,6 +149,10 @@
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
     iput-object v0, p0, Lnet/oneplus/h2launcher/quickpage/QuickPageBaseActivity;->mHandler:Landroid/os/Handler;
+
+    const/4 v0, -0x1
+
+    iput v0, p0, Lnet/oneplus/h2launcher/quickpage/QuickPageBaseActivity;->mPendingQuickPageWidgetId:I
 
     return-void
 .end method
@@ -1479,6 +1487,70 @@
 
     .line 1124
     :cond_0
+    invoke-virtual {v0}, Lnet/oneplus/h2launcher/quickpage/widget/WidgetPanel;->getWidgetId()I
+
+    move-result v8
+
+    invoke-virtual {v0}, Lnet/oneplus/h2launcher/quickpage/widget/WidgetPanel;->getWidgetInfo()Landroid/appwidget/AppWidgetProviderInfo;
+
+    move-result-object v9
+
+    if-ne p2, v5, :cond_cleanup_qp_widget
+
+    if-eq v8, v5, :cond_cleanup_qp_widget
+
+    if-eqz v9, :cond_cleanup_qp_widget
+
+    iput v8, p0, Lnet/oneplus/h2launcher/quickpage/QuickPageBaseActivity;->mPendingQuickPageWidgetId:I
+
+    iput-object p1, p0, Lnet/oneplus/h2launcher/quickpage/QuickPageBaseActivity;->mPendingQuickPageWidgetComponent:Landroid/content/ComponentName;
+
+    new-instance v1, Landroid/content/Intent;
+
+    const-string v3, "android.appwidget.action.APPWIDGET_BIND"
+
+    invoke-direct {v1, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    const-string v3, "appWidgetId"
+
+    invoke-virtual {v1, v3, v8}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+
+    const-string v3, "appWidgetProvider"
+
+    invoke-virtual {v1, v3, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
+
+    const-string v3, "appWidgetProviderProfile"
+
+    invoke-virtual {v9}, Landroid/appwidget/AppWidgetProviderInfo;->getProfile()Landroid/os/UserHandle;
+
+    move-result-object v4
+
+    invoke-virtual {v1, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
+
+    :try_start_qp_bind
+    const/16 v3, 0x16
+
+    invoke-virtual {p0, v1, v3}, Lnet/oneplus/h2launcher/quickpage/QuickPageBaseActivity;->startActivityForResult(Landroid/content/Intent;I)V
+    :try_end_qp_bind
+    .catch Ljava/lang/Exception; {:try_start_qp_bind .. :try_end_qp_bind} :catch_qp_bind
+
+    goto :goto_0
+
+    :catch_qp_bind
+    move-exception v1
+
+    :cond_cleanup_qp_widget
+    iput v5, p0, Lnet/oneplus/h2launcher/quickpage/QuickPageBaseActivity;->mPendingQuickPageWidgetId:I
+
+    const/4 v1, 0x0
+
+    iput-object v1, p0, Lnet/oneplus/h2launcher/quickpage/QuickPageBaseActivity;->mPendingQuickPageWidgetComponent:Landroid/content/ComponentName;
+
+    if-eq v8, v5, :cond_log_invalid
+
+    invoke-virtual {v2, v8}, Lnet/oneplus/h2launcher/LauncherAppWidgetHost;->deleteAppWidgetId(I)V
+
+    :cond_log_invalid
     sget-object v1, Lnet/oneplus/h2launcher/quickpage/QuickPageBaseActivity;->TAG:Ljava/lang/String;
 
     const-string v3, "the app widget is invalid, widget id: %d"
@@ -1487,17 +1559,13 @@
 
     new-array v4, v4, [Ljava/lang/Object;
 
-    const/4 v8, 0x0
+    const/4 v9, 0x0
 
-    invoke-virtual {v0}, Lnet/oneplus/h2launcher/quickpage/widget/WidgetPanel;->getWidgetId()I
+    invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result v9
+    move-result-object v8
 
-    invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v9
-
-    aput-object v9, v4, v8
+    aput-object v8, v4, v9
 
     invoke-static {v1, v3, v4}, Lnet/oneplus/h2launcher/util/Logger;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
@@ -2279,6 +2347,59 @@
     .param p3, "data"    # Landroid/content/Intent;
 
     .prologue
+    const/16 v1, 0x16
+
+    if-ne p1, v1, :cond_check_21
+
+    iget v2, p0, Lnet/oneplus/h2launcher/quickpage/QuickPageBaseActivity;->mPendingQuickPageWidgetId:I
+
+    iget-object v3, p0, Lnet/oneplus/h2launcher/quickpage/QuickPageBaseActivity;->mPendingQuickPageWidgetComponent:Landroid/content/ComponentName;
+
+    const/4 v1, -0x1
+
+    iput v1, p0, Lnet/oneplus/h2launcher/quickpage/QuickPageBaseActivity;->mPendingQuickPageWidgetId:I
+
+    const/4 v4, 0x0
+
+    iput-object v4, p0, Lnet/oneplus/h2launcher/quickpage/QuickPageBaseActivity;->mPendingQuickPageWidgetComponent:Landroid/content/ComponentName;
+
+    if-ne p2, v1, :cond_qp_bind_cancel
+
+    if-eqz v3, :cond_qp_bind_cancel
+
+    if-eqz p3, :cond_qp_use_id
+
+    const-string v4, "appWidgetId"
+
+    invoke-virtual {p3, v4, v2}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
+
+    move-result v4
+
+    if-ltz v4, :cond_qp_use_id
+
+    move v2, v4
+
+    :cond_qp_use_id
+    invoke-virtual {p0, v3, v2}, Lnet/oneplus/h2launcher/quickpage/QuickPageBaseActivity;->addBuildinWidget(Landroid/content/ComponentName;I)I
+
+    goto :cond_0
+
+    :cond_qp_bind_cancel
+    if-eq v2, v1, :cond_0
+
+    invoke-static {}, Lnet/oneplus/h2launcher/LauncherAppState;->getInstance()Lnet/oneplus/h2launcher/LauncherAppState;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lnet/oneplus/h2launcher/LauncherAppState;->getAppWidgetHost()Lnet/oneplus/h2launcher/LauncherAppWidgetHost;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v2}, Lnet/oneplus/h2launcher/LauncherAppWidgetHost;->deleteAppWidgetId(I)V
+
+    goto :cond_0
+
+    :cond_check_21
     .line 374
     const/16 v1, 0x15
 

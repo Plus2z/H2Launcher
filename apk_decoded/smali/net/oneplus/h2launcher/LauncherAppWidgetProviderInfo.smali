@@ -233,6 +233,22 @@
     .prologue
     const/4 v2, 0x0
 
+    if-nez p1, :cond_not_null
+
+    const/4 v0, 0x0
+
+    return-object v0
+
+    :cond_not_null
+    instance-of v0, p1, Lnet/oneplus/h2launcher/LauncherAppWidgetProviderInfo;
+
+    if-eqz v0, :cond_wrap
+
+    check-cast p1, Lnet/oneplus/h2launcher/LauncherAppWidgetProviderInfo;
+
+    return-object p1
+
+    :cond_wrap
     .line 44
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 

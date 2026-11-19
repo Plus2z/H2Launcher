@@ -54,43 +54,34 @@
 
     invoke-virtual {v0}, Lnet/oneplus/h2launcher/quickpage/widget/WidgetPanel;->getWidgetInfo()Landroid/appwidget/AppWidgetProviderInfo;
 
-    move-result-object v0
+    move-result-object v1
 
-    if-eqz v0, :cond_0
+    if-eqz v1, :cond_0
 
-    iget-object v0, p0, Lnet/oneplus/h2launcher/quickpage/QuickPageBaseActivity$16$1;->val$widget:Lnet/oneplus/h2launcher/quickpage/widget/WidgetPanel;
-
-    .line 1218
-    invoke-virtual {v0}, Lnet/oneplus/h2launcher/quickpage/widget/WidgetPanel;->getWidgetInfo()Landroid/appwidget/AppWidgetProviderInfo;
-
-    move-result-object v0
-
-    iget-object v0, v0, Landroid/appwidget/AppWidgetProviderInfo;->configure:Landroid/content/ComponentName;
+    iget-object v0, v1, Landroid/appwidget/AppWidgetProviderInfo;->configure:Landroid/content/ComponentName;
 
     if-eqz v0, :cond_0
 
     .line 1219
-    iget-object v0, p0, Lnet/oneplus/h2launcher/quickpage/QuickPageBaseActivity$16$1;->val$widgetHost:Lnet/oneplus/h2launcher/LauncherAppWidgetHost;
+    iget-object v0, p0, Lnet/oneplus/h2launcher/quickpage/QuickPageBaseActivity$16$1;->this$1:Lnet/oneplus/h2launcher/quickpage/QuickPageBaseActivity$16;
 
-    iget-object v1, p0, Lnet/oneplus/h2launcher/quickpage/QuickPageBaseActivity$16$1;->this$1:Lnet/oneplus/h2launcher/quickpage/QuickPageBaseActivity$16;
+    iget-object v3, v0, Lnet/oneplus/h2launcher/quickpage/QuickPageBaseActivity$16;->this$0:Lnet/oneplus/h2launcher/quickpage/QuickPageBaseActivity;
 
-    iget-object v1, v1, Lnet/oneplus/h2launcher/quickpage/QuickPageBaseActivity$16;->this$0:Lnet/oneplus/h2launcher/quickpage/QuickPageBaseActivity;
+    invoke-static {v3}, Lnet/oneplus/h2launcher/compat/AppWidgetManagerCompat;->getInstance(Landroid/content/Context;)Lnet/oneplus/h2launcher/compat/AppWidgetManagerCompat;
+
+    move-result-object v0
 
     iget-object v2, p0, Lnet/oneplus/h2launcher/quickpage/QuickPageBaseActivity$16$1;->val$widget:Lnet/oneplus/h2launcher/quickpage/widget/WidgetPanel;
 
-    .line 1220
     invoke-virtual {v2}, Lnet/oneplus/h2launcher/quickpage/widget/WidgetPanel;->getWidgetId()I
 
     move-result v2
 
-    const/4 v3, 0x0
+    iget-object v4, p0, Lnet/oneplus/h2launcher/quickpage/QuickPageBaseActivity$16$1;->val$widgetHost:Lnet/oneplus/h2launcher/LauncherAppWidgetHost;
 
-    const/16 v4, 0x15
+    const/16 v5, 0x15
 
-    const/4 v5, 0x0
-
-    .line 1219
-    invoke-virtual/range {v0 .. v5}, Lnet/oneplus/h2launcher/LauncherAppWidgetHost;->startAppWidgetConfigureActivityForResult(Landroid/app/Activity;IIILandroid/os/Bundle;)V
+    invoke-virtual/range {v0 .. v5}, Lnet/oneplus/h2launcher/compat/AppWidgetManagerCompat;->startConfigActivity(Landroid/appwidget/AppWidgetProviderInfo;ILandroid/app/Activity;Landroid/appwidget/AppWidgetHost;I)V
 
     .line 1223
     :cond_0

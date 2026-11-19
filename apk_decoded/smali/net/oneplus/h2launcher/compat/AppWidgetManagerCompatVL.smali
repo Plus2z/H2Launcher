@@ -400,6 +400,35 @@
 
     const/4 v5, 0x0
 
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x22
+
+    if-lt v0, v1, :cond_bal_skip
+
+    :try_start_opt
+    invoke-static {}, Landroid/app/ActivityOptions;->makeBasic()Landroid/app/ActivityOptions;
+
+    move-result-object v0
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Landroid/app/ActivityOptions;->setPendingIntentBackgroundActivityStartMode(I)Landroid/app/ActivityOptions;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/app/ActivityOptions;->toBundle()Landroid/os/Bundle;
+
+    move-result-object v5
+    :try_end_opt
+    .catch Ljava/lang/Throwable; {:try_start_opt .. :try_end_opt} :catch_opt
+
+    goto :cond_bal_skip
+
+    :catch_opt
+    move-exception v0
+
+    :cond_bal_skip
     move-object v0, p4
 
     move-object v1, p3
@@ -411,8 +440,7 @@
     :try_start_0
     invoke-virtual/range {v0 .. v5}, Landroid/appwidget/AppWidgetHost;->startAppWidgetConfigureActivityForResult(Landroid/app/Activity;IIILandroid/os/Bundle;)V
     :try_end_0
-    .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
-    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 98
     :goto_0
@@ -423,22 +451,7 @@
     move-exception v6
 
     .line 94
-    .local v6, "e":Landroid/content/ActivityNotFoundException;
-    invoke-static {p3, v8, v7}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
-
-    goto :goto_0
-
-    .line 95
-    .end local v6    # "e":Landroid/content/ActivityNotFoundException;
-    :catch_1
-    move-exception v6
-
-    .line 96
-    .local v6, "e":Ljava/lang/SecurityException;
+    .local v6, "e":Ljava/lang/Exception;
     invoke-static {p3, v8, v7}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
 
     move-result-object v0

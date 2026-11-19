@@ -1502,11 +1502,18 @@
     .line 3630
     .end local v0    # "appWidgetId":I
     :cond_2
-    invoke-static {}, Lnet/oneplus/h2launcher/LauncherAppState;->getInstance()Lnet/oneplus/h2launcher/LauncherAppState;
+    iget-object v4, p1, Lnet/oneplus/h2launcher/widget/PendingAddWidgetInfo;->info:Lnet/oneplus/h2launcher/LauncherAppWidgetProviderInfo;
 
-    move-result-object v3
+    iget-boolean v3, v4, Lnet/oneplus/h2launcher/LauncherAppWidgetProviderInfo;->isCustomWidget:Z
 
-    invoke-virtual {v3}, Lnet/oneplus/h2launcher/LauncherAppState;->getAppWidgetHost()Lnet/oneplus/h2launcher/LauncherAppWidgetHost;
+    if-eqz v3, :cond_3
+
+    const/16 v0, -0x64
+
+    goto :goto_1
+
+    :cond_3
+    invoke-virtual {p0}, Lnet/oneplus/h2launcher/Launcher;->getAppWidgetHost()Lnet/oneplus/h2launcher/LauncherAppWidgetHost;
 
     move-result-object v3
 
@@ -1518,20 +1525,98 @@
     .restart local v0    # "appWidgetId":I
     iget-object v2, p1, Lnet/oneplus/h2launcher/widget/PendingAddWidgetInfo;->bindOptions:Landroid/os/Bundle;
 
+    if-nez v2, :cond_4
+
+    invoke-static {p0, p1}, Lnet/oneplus/h2launcher/widget/WidgetHostViewLoader;->getDefaultOptionsForWidget(Landroid/app/Activity;Lnet/oneplus/h2launcher/widget/PendingAddWidgetInfo;)Landroid/os/Bundle;
+
+    move-result-object v2
+
     .line 3633
     .local v2, "options":Landroid/os/Bundle;
+    :cond_4
     iget-object v3, p0, Lnet/oneplus/h2launcher/Launcher;->mAppWidgetManager:Lnet/oneplus/h2launcher/compat/AppWidgetManagerCompat;
-
-    iget-object v4, p1, Lnet/oneplus/h2launcher/widget/PendingAddWidgetInfo;->info:Lnet/oneplus/h2launcher/LauncherAppWidgetProviderInfo;
 
     invoke-virtual {v3, v0, v4, v2}, Lnet/oneplus/h2launcher/compat/AppWidgetManagerCompat;->bindAppWidgetIdIfAllowed(ILandroid/appwidget/AppWidgetProviderInfo;Landroid/os/Bundle;)Z
 
-    .line 3634
-    iget-object v3, p1, Lnet/oneplus/h2launcher/widget/PendingAddWidgetInfo;->info:Lnet/oneplus/h2launcher/LauncherAppWidgetProviderInfo;
+    move-result v3
 
-    invoke-virtual {p0, v0, p1, v5, v3}, Lnet/oneplus/h2launcher/Launcher;->addAppWidgetImpl(ILnet/oneplus/h2launcher/ItemInfo;Landroid/appwidget/AppWidgetHostView;Lnet/oneplus/h2launcher/LauncherAppWidgetProviderInfo;)V
+    if-eqz v3, :cond_5
+
+    .line 3634
+    :goto_1
+    invoke-virtual {p0, v0, p1, v5, v4}, Lnet/oneplus/h2launcher/Launcher;->addAppWidgetImpl(ILnet/oneplus/h2launcher/ItemInfo;Landroid/appwidget/AppWidgetHostView;Lnet/oneplus/h2launcher/LauncherAppWidgetProviderInfo;)V
 
     goto :goto_0
+
+    :cond_5
+    iput-object v4, p0, Lnet/oneplus/h2launcher/Launcher;->mPendingAddWidgetInfo:Lnet/oneplus/h2launcher/LauncherAppWidgetProviderInfo;
+
+    iput v0, p0, Lnet/oneplus/h2launcher/Launcher;->mPendingAddWidgetId:I
+
+    invoke-virtual {p0, v7}, Lnet/oneplus/h2launcher/Launcher;->setWaitingForResult(Z)V
+
+    new-instance v1, Landroid/content/Intent;
+
+    const-string v3, "android.appwidget.action.APPWIDGET_BIND"
+
+    invoke-direct {v1, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    const-string v3, "appWidgetId"
+
+    invoke-virtual {v1, v3, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+
+    const-string v3, "appWidgetProvider"
+
+    iget-object v5, v4, Lnet/oneplus/h2launcher/LauncherAppWidgetProviderInfo;->provider:Landroid/content/ComponentName;
+
+    invoke-virtual {v1, v3, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
+
+    const-string v3, "appWidgetProviderProfile"
+
+    invoke-virtual {v4}, Lnet/oneplus/h2launcher/LauncherAppWidgetProviderInfo;->getProfile()Landroid/os/UserHandle;
+
+    move-result-object v5
+
+    invoke-virtual {v1, v3, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
+
+    if-eqz v2, :cond_6
+
+    const-string v3, "appWidgetOptions"
+
+    invoke-virtual {v1, v3, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Bundle;)Landroid/content/Intent;
+
+    :cond_6
+    :try_start_0
+    const/16 v3, 0xb
+
+    invoke-virtual {p0, v1, v3}, Lnet/oneplus/h2launcher/Launcher;->startActivityForResult(Landroid/content/Intent;I)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v3
+
+    invoke-virtual {p0}, Lnet/oneplus/h2launcher/Launcher;->getAppWidgetHost()Lnet/oneplus/h2launcher/LauncherAppWidgetHost;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v0}, Lnet/oneplus/h2launcher/LauncherAppWidgetHost;->deleteAppWidgetId(I)V
+
+    invoke-direct {p0}, Lnet/oneplus/h2launcher/Launcher;->resetAddInfo()V
+
+    invoke-virtual {p0, v6}, Lnet/oneplus/h2launcher/Launcher;->setWaitingForResult(Z)V
+
+    const v3, 0x7f0b002f
+
+    invoke-static {p0, v3, v6}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/widget/Toast;->show()V
+
+    goto/16 :goto_0
 .end method
 
 .method public static addDumpLog(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Exception;Z)V
@@ -3224,6 +3309,11 @@
     .line 1211
     .local v5, "appWidgetId":I
     :goto_1
+    if-gez v5, :cond_fallback_id
+
+    move v5, v15
+
+    :cond_fallback_id
     if-nez p2, :cond_4
 
     .line 1212
@@ -8431,6 +8521,35 @@
 
     .prologue
     .line 3524
+    if-nez p4, :cond_p4_ok
+
+    iget-object v0, p0, Lnet/oneplus/h2launcher/Launcher;->mAppWidgetManager:Lnet/oneplus/h2launcher/compat/AppWidgetManagerCompat;
+
+    invoke-virtual {v0, p1}, Lnet/oneplus/h2launcher/compat/AppWidgetManagerCompat;->getAppWidgetInfo(I)Landroid/appwidget/AppWidgetProviderInfo;
+
+    move-result-object v0
+
+    invoke-static {p0, v0}, Lnet/oneplus/h2launcher/LauncherAppWidgetProviderInfo;->fromProviderInfo(Landroid/content/Context;Landroid/appwidget/AppWidgetProviderInfo;)Lnet/oneplus/h2launcher/LauncherAppWidgetProviderInfo;
+
+    move-result-object p4
+
+    if-nez p4, :cond_p4_ok
+
+    :cond_cleanup
+    if-ltz p1, :cond_skip_del
+
+    invoke-virtual {p0}, Lnet/oneplus/h2launcher/Launcher;->getAppWidgetHost()Lnet/oneplus/h2launcher/LauncherAppWidgetHost;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Lnet/oneplus/h2launcher/LauncherAppWidgetHost;->deleteAppWidgetId(I)V
+
+    :cond_skip_del
+    invoke-direct {p0}, Lnet/oneplus/h2launcher/Launcher;->resetAddInfo()V
+
+    goto :goto_0
+
+    :cond_p4_ok
     iget-object v0, p4, Lnet/oneplus/h2launcher/LauncherAppWidgetProviderInfo;->configure:Landroid/content/ComponentName;
 
     if-eqz v0, :cond_0
@@ -8470,6 +8589,8 @@
 
     .line 3534
     :cond_0
+    if-eqz p2, :cond_cleanup
+
     new-instance v8, Lnet/oneplus/h2launcher/Launcher$27;
 
     invoke-direct {v8, p0}, Lnet/oneplus/h2launcher/Launcher$27;-><init>(Lnet/oneplus/h2launcher/Launcher;)V
@@ -12102,6 +12223,35 @@
 
     .line 2584
     :cond_0
+    move-object/from16 v4, p7
+
+    if-eqz v4, :cond_clean_widget
+
+    move-object/from16 v4, v17
+
+    if-nez v4, :cond_p7_ok
+
+    :cond_clean_widget
+    move/from16 v4, p1
+
+    if-ltz v4, :cond_skip_widget_del
+
+    move-object/from16 v4, p0
+
+    invoke-virtual {v4}, Lnet/oneplus/h2launcher/Launcher;->getAppWidgetHost()Lnet/oneplus/h2launcher/LauncherAppWidgetHost;
+
+    move-result-object v4
+
+    move/from16 v6, p1
+
+    invoke-virtual {v4, v6}, Lnet/oneplus/h2launcher/LauncherAppWidgetHost;->deleteAppWidgetId(I)V
+
+    :cond_skip_widget_del
+    invoke-direct/range {p0 .. p0}, Lnet/oneplus/h2launcher/Launcher;->resetAddInfo()V
+
+    return-void
+
+    :cond_p7_ok
     move-object/from16 v0, p7
 
     iget-boolean v4, v0, Lnet/oneplus/h2launcher/LauncherAppWidgetProviderInfo;->isCustomWidget:Z

@@ -129,16 +129,7 @@
     .line 580
     .local v4, "insertedId":J
     :try_start_0
-    iget-object v6, p0, Lnet/oneplus/h2launcher/AutoInstallsLayout$CustomWidgetParser;->this$0:Lnet/oneplus/h2launcher/AutoInstallsLayout;
-
-    iget-object v6, v6, Lnet/oneplus/h2launcher/AutoInstallsLayout;->mAppWidgetHost:Landroid/appwidget/AppWidgetHost;
-
-    invoke-virtual {v6}, Landroid/appwidget/AppWidgetHost;->allocateAppWidgetId()I
-
-    move-result v0
-
     .line 582
-    .local v0, "appWidgetId":I
     iget-object v6, p0, Lnet/oneplus/h2launcher/AutoInstallsLayout$CustomWidgetParser;->this$0:Lnet/oneplus/h2launcher/AutoInstallsLayout;
 
     iget-object v6, v6, Lnet/oneplus/h2launcher/AutoInstallsLayout;->mValues:Landroid/content/ContentValues;
@@ -219,26 +210,12 @@
 
     move-result-wide v4
 
-    .line 587
-    const-wide/16 v6, 0x0
-
-    cmp-long v6, v4, v6
-
-    if-gez v6, :cond_1
-
-    .line 588
-    iget-object v6, p0, Lnet/oneplus/h2launcher/AutoInstallsLayout$CustomWidgetParser;->this$0:Lnet/oneplus/h2launcher/AutoInstallsLayout;
-
-    iget-object v6, v6, Lnet/oneplus/h2launcher/AutoInstallsLayout;->mAppWidgetHost:Landroid/appwidget/AppWidgetHost;
-
-    invoke-virtual {v6, v0}, Landroid/appwidget/AppWidgetHost;->deleteAppWidgetId(I)V
     :try_end_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto/16 :goto_0
 
     .line 591
-    .end local v0    # "appWidgetId":I
     :catch_0
     move-exception v6
 

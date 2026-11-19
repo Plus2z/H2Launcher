@@ -188,6 +188,35 @@
 
     iput-object v8, p0, Lnet/oneplus/h2launcher/quickpage/widget/WidgetPanel;->mParentView:Landroid/widget/FrameLayout;
 
+    invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v8
+
+    invoke-static {}, Lnet/oneplus/h2launcher/compat/UserHandleCompat;->myUserHandle()Lnet/oneplus/h2launcher/compat/UserHandleCompat;
+
+    move-result-object v9
+
+    move-object/from16 v0, p3
+
+    invoke-static {v8, v0, v9}, Lnet/oneplus/h2launcher/LauncherModel;->getProviderInfo(Landroid/content/Context;Landroid/content/ComponentName;Lnet/oneplus/h2launcher/compat/UserHandleCompat;)Lnet/oneplus/h2launcher/LauncherAppWidgetProviderInfo;
+
+    move-result-object v8
+
+    iput-object v8, p0, Lnet/oneplus/h2launcher/quickpage/widget/WidgetPanel;->mAppWidgetProviderInfo:Lnet/oneplus/h2launcher/LauncherAppWidgetProviderInfo;
+
+    if-nez v8, :cond_provider_found
+
+    const/4 v8, -0x1
+
+    iput v8, p0, Lnet/oneplus/h2launcher/quickpage/widget/WidgetPanel;->mAppWidgetId:I
+
+    const/4 v8, 0x0
+
+    iput-boolean v8, p0, Lnet/oneplus/h2launcher/quickpage/widget/WidgetPanel;->mWidgetValid:Z
+
+    goto/16 :goto_3
+
+    :cond_provider_found
     .line 79
     const/4 v8, -0x1
 
@@ -267,24 +296,6 @@
     .line 90
     .end local v1    # "allowed":Z
     :goto_1
-    invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object v8
-
-    .line 91
-    invoke-static {}, Lnet/oneplus/h2launcher/compat/UserHandleCompat;->myUserHandle()Lnet/oneplus/h2launcher/compat/UserHandleCompat;
-
-    move-result-object v9
-
-    .line 90
-    move-object/from16 v0, p3
-
-    invoke-static {v8, v0, v9}, Lnet/oneplus/h2launcher/LauncherModel;->getProviderInfo(Landroid/content/Context;Landroid/content/ComponentName;Lnet/oneplus/h2launcher/compat/UserHandleCompat;)Lnet/oneplus/h2launcher/LauncherAppWidgetProviderInfo;
-
-    move-result-object v8
-
-    iput-object v8, p0, Lnet/oneplus/h2launcher/quickpage/widget/WidgetPanel;->mAppWidgetProviderInfo:Lnet/oneplus/h2launcher/LauncherAppWidgetProviderInfo;
-
     .line 93
     iget-object v8, p0, Lnet/oneplus/h2launcher/quickpage/widget/WidgetPanel;->mAppWidgetManager:Landroid/appwidget/AppWidgetManager;
 
@@ -977,6 +988,8 @@
     .local v2, "mSizeInDp":I
     iget-object v0, p0, Lnet/oneplus/h2launcher/quickpage/widget/WidgetPanel;->mWidget:Landroid/appwidget/AppWidgetHostView;
 
+    if-eqz v0, :cond_0
+
     const/4 v1, 0x0
 
     move v3, v2
@@ -988,6 +1001,7 @@
     invoke-virtual/range {v0 .. v5}, Landroid/appwidget/AppWidgetHostView;->updateAppWidgetSize(Landroid/os/Bundle;IIII)V
 
     .line 243
+    :cond_0
     invoke-virtual {p0}, Lnet/oneplus/h2launcher/quickpage/widget/WidgetPanel;->notifyItemSizeChanged()V
 
     .line 244
@@ -1002,11 +1016,15 @@
     .line 234
     iget-object v0, p0, Lnet/oneplus/h2launcher/quickpage/widget/WidgetPanel;->mAppWidgetProviderInfo:Lnet/oneplus/h2launcher/LauncherAppWidgetProviderInfo;
 
+    if-eqz v0, :cond_0
+
     iget v2, v0, Lnet/oneplus/h2launcher/LauncherAppWidgetProviderInfo;->minWidth:I
 
     .line 235
     .local v2, "width":I
     iget-object v0, p0, Lnet/oneplus/h2launcher/quickpage/widget/WidgetPanel;->mWidget:Landroid/appwidget/AppWidgetHostView;
+
+    if-eqz v0, :cond_0
 
     const/4 v1, 0x0
 
@@ -1019,6 +1037,7 @@
     invoke-virtual/range {v0 .. v5}, Landroid/appwidget/AppWidgetHostView;->updateAppWidgetSize(Landroid/os/Bundle;IIII)V
 
     .line 236
+    :cond_0
     return-void
 .end method
 
@@ -1111,6 +1130,8 @@
     :cond_2
     iget-object v0, p0, Lnet/oneplus/h2launcher/quickpage/widget/WidgetPanel;->mAppWidgetProviderInfo:Lnet/oneplus/h2launcher/LauncherAppWidgetProviderInfo;
 
+    if-eqz v0, :cond_0
+
     iget v2, v0, Lnet/oneplus/h2launcher/LauncherAppWidgetProviderInfo;->minWidth:I
 
     .line 221
@@ -1135,6 +1156,8 @@
 
     .line 225
     iget-object v0, p0, Lnet/oneplus/h2launcher/quickpage/widget/WidgetPanel;->mWidget:Landroid/appwidget/AppWidgetHostView;
+
+    if-eqz v0, :cond_0
 
     const/4 v1, 0x0
 

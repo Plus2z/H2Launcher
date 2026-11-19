@@ -350,14 +350,13 @@
 
     .line 85
     .local v0, "options":Landroid/os/Bundle;
-    iget-object v3, v1, Lnet/oneplus/h2launcher/LauncherAppWidgetProviderInfo;->configure:Landroid/content/ComponentName;
-
-    if-eqz v3, :cond_1
-
-    .line 86
     iget-object v3, p0, Lnet/oneplus/h2launcher/widget/WidgetHostViewLoader;->mInfo:Lnet/oneplus/h2launcher/widget/PendingAddWidgetInfo;
 
     iput-object v0, v3, Lnet/oneplus/h2launcher/widget/PendingAddWidgetInfo;->bindOptions:Landroid/os/Bundle;
+
+    iget-object v3, v1, Lnet/oneplus/h2launcher/LauncherAppWidgetProviderInfo;->configure:Landroid/content/ComponentName;
+
+    if-eqz v3, :cond_1
 
     goto :goto_0
 

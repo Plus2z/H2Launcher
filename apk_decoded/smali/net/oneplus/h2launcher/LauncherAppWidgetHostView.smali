@@ -178,13 +178,13 @@
     if-nez v1, :cond_0
 
     .line 174
-    new-instance v1, Ljava/lang/IllegalStateException;
+    invoke-virtual {p0}, Lnet/oneplus/h2launcher/LauncherAppWidgetHostView;->getContext()Landroid/content/Context;
 
-    const-string v2, "Launcher widget must have LauncherAppWidgetProviderInfo"
+    move-result-object v1
 
-    invoke-direct {v1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lnet/oneplus/h2launcher/LauncherAppWidgetProviderInfo;->fromProviderInfo(Landroid/content/Context;Landroid/appwidget/AppWidgetProviderInfo;)Lnet/oneplus/h2launcher/LauncherAppWidgetProviderInfo;
 
-    throw v1
+    move-result-object v0
 
     .line 177
     :cond_0
@@ -583,6 +583,21 @@
     const/4 v1, 0x0
 
     .line 208
+    if-eqz p2, :cond_wrap_done
+
+    instance-of v0, p2, Lnet/oneplus/h2launcher/LauncherAppWidgetProviderInfo;
+
+    if-nez v0, :cond_wrap_done
+
+    invoke-virtual {p0}, Lnet/oneplus/h2launcher/LauncherAppWidgetHostView;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-static {v0, p2}, Lnet/oneplus/h2launcher/LauncherAppWidgetProviderInfo;->fromProviderInfo(Landroid/content/Context;Landroid/appwidget/AppWidgetProviderInfo;)Lnet/oneplus/h2launcher/LauncherAppWidgetProviderInfo;
+
+    move-result-object p2
+
+    :cond_wrap_done
     invoke-super {p0, p1, p2}, Landroid/appwidget/AppWidgetHostView;->setAppWidget(ILandroid/appwidget/AppWidgetProviderInfo;)V
 
     .line 209

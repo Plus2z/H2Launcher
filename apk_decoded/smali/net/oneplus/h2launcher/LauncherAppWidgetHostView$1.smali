@@ -44,15 +44,17 @@
     .line 223
     iget-object v0, p0, Lnet/oneplus/h2launcher/LauncherAppWidgetHostView$1;->this$0:Lnet/oneplus/h2launcher/LauncherAppWidgetHostView;
 
-    new-instance v1, Landroid/widget/RemoteViews;
-
-    iget-object v2, p0, Lnet/oneplus/h2launcher/LauncherAppWidgetHostView$1;->this$0:Lnet/oneplus/h2launcher/LauncherAppWidgetHostView;
-
-    invoke-virtual {v2}, Lnet/oneplus/h2launcher/LauncherAppWidgetHostView;->getAppWidgetInfo()Landroid/appwidget/AppWidgetProviderInfo;
+    invoke-virtual {v0}, Lnet/oneplus/h2launcher/LauncherAppWidgetHostView;->getAppWidgetInfo()Landroid/appwidget/AppWidgetProviderInfo;
 
     move-result-object v2
 
+    if-eqz v2, :cond_0
+
     iget-object v2, v2, Landroid/appwidget/AppWidgetProviderInfo;->provider:Landroid/content/ComponentName;
+
+    if-eqz v2, :cond_0
+
+    new-instance v1, Landroid/widget/RemoteViews;
 
     invoke-virtual {v2}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
@@ -65,5 +67,6 @@
     invoke-virtual {v0, v1}, Lnet/oneplus/h2launcher/LauncherAppWidgetHostView;->updateAppWidget(Landroid/widget/RemoteViews;)V
 
     .line 224
+    :cond_0
     return-void
 .end method

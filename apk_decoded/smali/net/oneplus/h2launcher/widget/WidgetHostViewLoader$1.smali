@@ -102,6 +102,29 @@
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     .line 101
-    :cond_0
+    :goto_0
     return-void
+
+    :cond_0
+    invoke-static {}, Lnet/oneplus/h2launcher/LauncherAppState;->getInstance()Lnet/oneplus/h2launcher/LauncherAppState;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lnet/oneplus/h2launcher/LauncherAppState;->getAppWidgetHost()Lnet/oneplus/h2launcher/LauncherAppWidgetHost;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lnet/oneplus/h2launcher/widget/WidgetHostViewLoader$1;->this$0:Lnet/oneplus/h2launcher/widget/WidgetHostViewLoader;
+
+    iget v1, v1, Lnet/oneplus/h2launcher/widget/WidgetHostViewLoader;->mWidgetLoadingId:I
+
+    invoke-virtual {v0, v1}, Lnet/oneplus/h2launcher/LauncherAppWidgetHost;->deleteAppWidgetId(I)V
+
+    iget-object v0, p0, Lnet/oneplus/h2launcher/widget/WidgetHostViewLoader$1;->this$0:Lnet/oneplus/h2launcher/widget/WidgetHostViewLoader;
+
+    const/4 v1, -0x1
+
+    iput v1, v0, Lnet/oneplus/h2launcher/widget/WidgetHostViewLoader;->mWidgetLoadingId:I
+
+    goto :goto_0
 .end method

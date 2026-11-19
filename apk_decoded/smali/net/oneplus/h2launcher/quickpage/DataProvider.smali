@@ -463,6 +463,29 @@
 
     .line 99
     :cond_3
+    invoke-virtual/range {v24 .. v24}, Lnet/oneplus/h2launcher/quickpage/widget/WidgetPanel;->getWidgetId()I
+
+    move-result v3
+
+    const/4 v4, -0x1
+
+    if-eq v3, v4, :cond_skip_del
+
+    move-object/from16 v0, v21
+
+    iget v5, v0, Lnet/oneplus/h2launcher/quickpage/QuickPageItemInfo;->widgetId:I
+
+    if-ne v5, v4, :cond_skip_del
+
+    move-object/from16 v0, p0
+
+    iget-object v4, v0, Lnet/oneplus/h2launcher/quickpage/DataProvider;->mWidgetHost:Lnet/oneplus/h2launcher/LauncherAppWidgetHost;
+
+    if-eqz v4, :cond_skip_del
+
+    invoke-virtual {v4, v3}, Lnet/oneplus/h2launcher/LauncherAppWidgetHost;->deleteAppWidgetId(I)V
+
+    :cond_skip_del
     const/16 v23, 0x1
 
     goto/16 :goto_1

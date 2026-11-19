@@ -443,6 +443,22 @@
     if-nez v18, :cond_8
 
     .line 530
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lnet/oneplus/h2launcher/AutoInstallsLayout$AppWidgetParser;->this$0:Lnet/oneplus/h2launcher/AutoInstallsLayout;
+
+    move-object/from16 v18, v0
+
+    move-object/from16 v0, v18
+
+    iget-object v0, v0, Lnet/oneplus/h2launcher/AutoInstallsLayout;->mAppWidgetHost:Landroid/appwidget/AppWidgetHost;
+
+    move-object/from16 v18, v0
+
+    move-object/from16 v0, v18
+
+    invoke-virtual {v0, v2}, Landroid/appwidget/AppWidgetHost;->deleteAppWidgetId(I)V
+
     const-wide/16 v10, -0x1
 
     goto/16 :goto_0

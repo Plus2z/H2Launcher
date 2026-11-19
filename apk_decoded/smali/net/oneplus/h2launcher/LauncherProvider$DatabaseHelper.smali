@@ -2097,6 +2097,12 @@
 
     if-nez v10, :cond_1
 
+    iget-object v10, p0, Lnet/oneplus/h2launcher/LauncherProvider$DatabaseHelper;->mAppWidgetHost:Landroid/appwidget/AppWidgetHost;
+
+    invoke-virtual {v10, v0}, Landroid/appwidget/AppWidgetHost;->deleteAppWidgetId(I)V
+
+    goto :goto_0
+
     .line 946
     .end local v0    # "appWidgetId":I
     .end local v1    # "appWidgetManager":Landroid/appwidget/AppWidgetManager;

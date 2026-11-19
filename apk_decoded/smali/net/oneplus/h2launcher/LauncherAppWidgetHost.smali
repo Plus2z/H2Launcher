@@ -177,6 +177,8 @@
 
     .prologue
     .line 124
+    if-eqz p2, :cond_0
+
     iget-object v1, p0, Lnet/oneplus/h2launcher/LauncherAppWidgetHost;->mContext:Landroid/content/Context;
 
     invoke-static {v1, p2}, Lnet/oneplus/h2launcher/LauncherAppWidgetProviderInfo;->fromProviderInfo(Landroid/content/Context;Landroid/appwidget/AppWidgetProviderInfo;)Lnet/oneplus/h2launcher/LauncherAppWidgetProviderInfo;
@@ -188,6 +190,7 @@
     invoke-super {p0, p1, v0}, Landroid/appwidget/AppWidgetHost;->onProviderChanged(ILandroid/appwidget/AppWidgetProviderInfo;)V
 
     .line 127
+    :cond_0
     return-void
 .end method
 
