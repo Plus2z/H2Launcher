@@ -27,7 +27,7 @@
 
 # direct methods
 .method constructor <init>(Lnet/oneplus/h2launcher/customizations/WallpaperColorCustomizationCard;)V
-    .locals 1
+    .locals 2
     .param p1, "this$0"    # Lnet/oneplus/h2launcher/customizations/WallpaperColorCustomizationCard;
 
     .prologue
@@ -43,11 +43,32 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lnet/oneplus/h2launcher/util/WallpaperUtils;->isOnePlusBlurWallpaper(Landroid/content/Context;)Z
+    const/4 v1, 0x0
 
-    move-result v0
+    if-eqz v0, :cond_blur_done
 
-    iput-boolean v0, p0, Lnet/oneplus/h2launcher/customizations/WallpaperColorCustomizationCard$4;->mIsBlurWallpaper:Z
+    invoke-static {v0}, Lnet/oneplus/h2launcher/util/WallpaperUtils;->isNormalLiveWallpaper(Landroid/content/Context;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_blur_false
+
+    invoke-static {v0}, Lnet/oneplus/h2launcher/util/WallpaperUtils;->isOnePlusLiveWallpaper(Landroid/content/Context;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_blur_false
+
+    const/4 v1, 0x1
+
+    goto :goto_blur_done
+
+    :cond_blur_false
+    const/4 v1, 0x0
+
+    :cond_blur_done
+    :goto_blur_done
+    iput-boolean v1, p0, Lnet/oneplus/h2launcher/customizations/WallpaperColorCustomizationCard$4;->mIsBlurWallpaper:Z
 
     .line 131
     iget-object v0, p0, Lnet/oneplus/h2launcher/customizations/WallpaperColorCustomizationCard$4;->this$0:Lnet/oneplus/h2launcher/customizations/WallpaperColorCustomizationCard;

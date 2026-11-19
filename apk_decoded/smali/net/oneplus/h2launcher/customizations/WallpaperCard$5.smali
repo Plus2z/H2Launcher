@@ -57,26 +57,57 @@
 
 # virtual methods
 .method public run()V
-    .locals 4
+    .locals 6
 
     .prologue
     const/4 v3, 0x1
+
+    iget-object v1, p0, Lnet/oneplus/h2launcher/customizations/WallpaperCard$5;->this$0:Lnet/oneplus/h2launcher/customizations/WallpaperCard;
+
+    invoke-virtual {v1}, Lnet/oneplus/h2launcher/customizations/WallpaperCard;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    .local v0, "context":Landroid/content/Context;
+    iget-boolean v4, p0, Lnet/oneplus/h2launcher/customizations/WallpaperCard$5;->val$isHomeScreenWallpaperChanged:Z
 
     .line 367
     iget-object v1, p0, Lnet/oneplus/h2launcher/customizations/WallpaperCard$5;->val$settings:Lnet/oneplus/h2launcher/customizations/wallpaper/BlurWallpaperSettings;
 
     if-eqz v1, :cond_0
 
-    .line 368
-    iget-object v1, p0, Lnet/oneplus/h2launcher/customizations/WallpaperCard$5;->this$0:Lnet/oneplus/h2launcher/customizations/WallpaperCard;
+    if-nez v4, :cond_save_blur
 
-    invoke-virtual {v1}, Lnet/oneplus/h2launcher/customizations/WallpaperCard;->getContext()Landroid/content/Context;
+    invoke-static {v0}, Lnet/oneplus/h2launcher/config/PreferencesHelper;->getBlurWallpaperSettings(Landroid/content/Context;)Lnet/oneplus/h2launcher/customizations/wallpaper/BlurWallpaperSettings;
 
-    move-result-object v1
+    move-result-object v5
+
+    if-eqz v5, :cond_need_reapply
+
+    iget v1, v5, Lnet/oneplus/h2launcher/customizations/wallpaper/BlurWallpaperSettings;->maskColor:I
 
     iget-object v2, p0, Lnet/oneplus/h2launcher/customizations/WallpaperCard$5;->val$settings:Lnet/oneplus/h2launcher/customizations/wallpaper/BlurWallpaperSettings;
 
-    invoke-static {v1, v2}, Lnet/oneplus/h2launcher/config/PreferencesHelper;->setBlurWallpaperSettings(Landroid/content/Context;Lnet/oneplus/h2launcher/customizations/wallpaper/BlurWallpaperSettings;)V
+    iget v2, v2, Lnet/oneplus/h2launcher/customizations/wallpaper/BlurWallpaperSettings;->maskColor:I
+
+    if-ne v1, v2, :cond_need_reapply
+
+    iget v1, v5, Lnet/oneplus/h2launcher/customizations/wallpaper/BlurWallpaperSettings;->orientation:I
+
+    iget-object v2, p0, Lnet/oneplus/h2launcher/customizations/WallpaperCard$5;->val$settings:Lnet/oneplus/h2launcher/customizations/wallpaper/BlurWallpaperSettings;
+
+    iget v2, v2, Lnet/oneplus/h2launcher/customizations/wallpaper/BlurWallpaperSettings;->orientation:I
+
+    if-eq v1, v2, :cond_save_blur
+
+    :cond_need_reapply
+    const/4 v4, 0x1
+
+    :cond_save_blur
+    .line 368
+    iget-object v2, p0, Lnet/oneplus/h2launcher/customizations/WallpaperCard$5;->val$settings:Lnet/oneplus/h2launcher/customizations/wallpaper/BlurWallpaperSettings;
+
+    invoke-static {v0, v2}, Lnet/oneplus/h2launcher/config/PreferencesHelper;->setBlurWallpaperSettings(Landroid/content/Context;Lnet/oneplus/h2launcher/customizations/wallpaper/BlurWallpaperSettings;)V
 
     .line 369
     iget-object v1, p0, Lnet/oneplus/h2launcher/customizations/WallpaperCard$5;->val$settings:Lnet/oneplus/h2launcher/customizations/wallpaper/BlurWallpaperSettings;
@@ -92,14 +123,6 @@
 
     .line 374
     :cond_0
-    iget-object v1, p0, Lnet/oneplus/h2launcher/customizations/WallpaperCard$5;->this$0:Lnet/oneplus/h2launcher/customizations/WallpaperCard;
-
-    invoke-virtual {v1}, Lnet/oneplus/h2launcher/customizations/WallpaperCard;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    .line 375
-    .local v0, "context":Landroid/content/Context;
     iget-boolean v1, p0, Lnet/oneplus/h2launcher/customizations/WallpaperCard$5;->val$isLockScreenWallpaperChanged:Z
 
     if-eqz v1, :cond_1
@@ -124,9 +147,11 @@
 
     .line 379
     :cond_1
+    if-eqz v4, :cond_blur_only
+
     iget-object v1, p0, Lnet/oneplus/h2launcher/customizations/WallpaperCard$5;->val$homeScreenTileInfo:Lnet/oneplus/h2launcher/customizations/wallpaper/tileInfo/WallpaperTileInfo;
 
-    if-eqz v1, :cond_3
+    if-eqz v1, :cond_blur_only
 
     .line 380
     :cond_2
@@ -144,6 +169,38 @@
     iget-object v1, p0, Lnet/oneplus/h2launcher/customizations/WallpaperCard$5;->val$homeScreenTileInfo:Lnet/oneplus/h2launcher/customizations/wallpaper/tileInfo/WallpaperTileInfo;
 
     invoke-virtual {v1, v0, v3}, Lnet/oneplus/h2launcher/customizations/wallpaper/tileInfo/WallpaperTileInfo;->onSave(Landroid/content/Context;I)V
+
+    goto :cond_3
+
+    :cond_blur_only
+    iget-object v1, p0, Lnet/oneplus/h2launcher/customizations/WallpaperCard$5;->val$settings:Lnet/oneplus/h2launcher/customizations/wallpaper/BlurWallpaperSettings;
+
+    if-eqz v1, :cond_3
+
+    iget-boolean v2, v1, Lnet/oneplus/h2launcher/customizations/wallpaper/BlurWallpaperSettings;->notify:Z
+
+    if-eqz v2, :cond_3
+
+    iget-boolean v1, v1, Lnet/oneplus/h2launcher/customizations/wallpaper/BlurWallpaperSettings;->blurEnabled:Z
+
+    if-eqz v1, :cond_send_drawn
+
+    invoke-static {v0}, Lnet/oneplus/h2launcher/util/WallpaperComposer;->getBlurWallpaper(Landroid/content/Context;)Landroid/graphics/Bitmap;
+
+    :cond_send_drawn
+    new-instance v1, Landroid/content/Intent;
+
+    const-string v2, "net.oneplus.h2launcher.action.FIRST_FRAME_DRAWN"
+
+    invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
+
+    invoke-virtual {v0, v1}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
     :cond_3
     :cond_4

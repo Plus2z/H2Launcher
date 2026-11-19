@@ -1553,6 +1553,34 @@
 
     invoke-virtual {v3, v1}, Lnet/oneplus/h2launcher/customizations/WallpaperPreview;->setMaskColor(I)V
 
+    const/4 v3, 0x1
+
+    new-array v0, v3, [Lnet/oneplus/h2launcher/customizations/WallpaperColorCustomizationCard$Component;
+
+    sget-object v4, Lnet/oneplus/h2launcher/customizations/WallpaperColorCustomizationCard$Component;->CARD:Lnet/oneplus/h2launcher/customizations/WallpaperColorCustomizationCard$Component;
+
+    aput-object v4, v0, v5
+
+    invoke-direct {p0}, Lnet/oneplus/h2launcher/customizations/WallpaperColorCustomizationCard;->getWallpaperPreview()Lnet/oneplus/h2launcher/customizations/WallpaperPreview;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Lnet/oneplus/h2launcher/customizations/WallpaperPreview;->getCurrentPage()I
+
+    move-result v4
+
+    if-ne v4, v3, :cond_card_disabled
+
+    :goto_card_enable
+    invoke-direct {p0, v0, v3}, Lnet/oneplus/h2launcher/customizations/WallpaperColorCustomizationCard;->setComponentsEnabled([Lnet/oneplus/h2launcher/customizations/WallpaperColorCustomizationCard$Component;Z)V
+
+    goto :goto_1
+
+    :cond_card_disabled
+    move v3, v5
+
+    goto :goto_card_enable
+
     .line 129
     .end local v1    # "maskColor":I
     .end local v2    # "onLoaded":Ljava/lang/Runnable;
