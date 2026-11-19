@@ -135,6 +135,9 @@
 
     .prologue
     .line 56
+    if-eqz p2, :cond_empty
+
+    :try_start_0
     iget-object v3, p0, Lnet/oneplus/h2launcher/compat/LauncherAppsCompatVL;->mLauncherApps:Landroid/content/pm/LauncherApps;
 
     .line 57
@@ -146,9 +149,13 @@
     invoke-virtual {v3, p1, v4}, Landroid/content/pm/LauncherApps;->getActivityList(Ljava/lang/String;Landroid/os/UserHandle;)Ljava/util/List;
 
     move-result-object v2
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 58
     .local v2, "list":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/LauncherActivityInfo;>;"
+    if-eqz v2, :cond_empty
+
     invoke-interface {v2}, Ljava/util/List;->size()I
 
     move-result v3
@@ -156,6 +163,7 @@
     if-nez v3, :cond_1
 
     .line 59
+    :cond_empty
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v0
@@ -163,6 +171,11 @@
     .line 66
     :cond_0
     return-object v0
+
+    :catch_0
+    move-exception v3
+
+    goto :cond_empty
 
     .line 61
     :cond_1
@@ -238,7 +251,14 @@
     .param p2, "user"    # Lnet/oneplus/h2launcher/compat/UserHandleCompat;
 
     .prologue
+    const/4 v1, 0x0
+
     .line 111
+    if-eqz p1, :cond_0
+
+    if-eqz p2, :cond_0
+
+    :try_start_0
     iget-object v0, p0, Lnet/oneplus/h2launcher/compat/LauncherAppsCompatVL;->mLauncherApps:Landroid/content/pm/LauncherApps;
 
     invoke-virtual {p2}, Lnet/oneplus/h2launcher/compat/UserHandleCompat;->getUser()Landroid/os/UserHandle;
@@ -248,8 +268,18 @@
     invoke-virtual {v0, p1, v1}, Landroid/content/pm/LauncherApps;->isActivityEnabled(Landroid/content/ComponentName;Landroid/os/UserHandle;)Z
 
     move-result v0
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     return v0
+
+    :catch_0
+    move-exception v0
+
+    const/4 v1, 0x0
+
+    :cond_0
+    return v1
 .end method
 
 .method public isPackageEnabledForProfile(Ljava/lang/String;Lnet/oneplus/h2launcher/compat/UserHandleCompat;)Z
@@ -258,7 +288,14 @@
     .param p2, "user"    # Lnet/oneplus/h2launcher/compat/UserHandleCompat;
 
     .prologue
+    const/4 v1, 0x0
+
     .line 107
+    if-eqz p1, :cond_0
+
+    if-eqz p2, :cond_0
+
+    :try_start_0
     iget-object v0, p0, Lnet/oneplus/h2launcher/compat/LauncherAppsCompatVL;->mLauncherApps:Landroid/content/pm/LauncherApps;
 
     invoke-virtual {p2}, Lnet/oneplus/h2launcher/compat/UserHandleCompat;->getUser()Landroid/os/UserHandle;
@@ -268,8 +305,18 @@
     invoke-virtual {v0, p1, v1}, Landroid/content/pm/LauncherApps;->isPackageEnabled(Ljava/lang/String;Landroid/os/UserHandle;)Z
 
     move-result v0
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     return v0
+
+    :catch_0
+    move-exception v0
+
+    const/4 v1, 0x0
+
+    :cond_0
+    return v1
 .end method
 
 .method public isPackageSuspendedForProfile(Ljava/lang/String;Lnet/oneplus/h2launcher/compat/UserHandleCompat;)Z
@@ -348,6 +395,11 @@
 
     .prologue
     .line 70
+    if-eqz p1, :cond_0
+
+    if-eqz p2, :cond_0
+
+    :try_start_0
     iget-object v1, p0, Lnet/oneplus/h2launcher/compat/LauncherAppsCompatVL;->mLauncherApps:Landroid/content/pm/LauncherApps;
 
     invoke-virtual {p2}, Lnet/oneplus/h2launcher/compat/UserHandleCompat;->getUser()Landroid/os/UserHandle;
@@ -357,6 +409,8 @@
     invoke-virtual {v1, p1, v2}, Landroid/content/pm/LauncherApps;->resolveActivity(Landroid/content/Intent;Landroid/os/UserHandle;)Landroid/content/pm/LauncherActivityInfo;
 
     move-result-object v0
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 71
     .local v0, "activity":Landroid/content/pm/LauncherActivityInfo;
@@ -370,6 +424,9 @@
     .line 74
     :goto_0
     return-object v1
+
+    :catch_0
+    move-exception v1
 
     :cond_0
     const/4 v1, 0x0

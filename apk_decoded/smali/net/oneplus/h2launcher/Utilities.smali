@@ -6288,7 +6288,7 @@
     .line 1500
     invoke-virtual {v3, p2, p3}, Lnet/oneplus/h2launcher/compat/LauncherAppsCompat;->isActivityEnabledForProfile(Landroid/content/ComponentName;Lnet/oneplus/h2launcher/compat/UserHandleCompat;)Z
     :try_end_0
-    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result v1
 
@@ -6308,14 +6308,14 @@
     move-exception v0
 
     .line 1502
-    .local v0, "e":Ljava/lang/SecurityException;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v7, "Launcher.Utilities"
 
-    const-string v8, "isValidComponent SecurityException %s"
+    const-string v8, "isValidComponent Exception %s"
 
     new-array v9, v5, [Ljava/lang/Object;
 
-    invoke-virtual {v0}, Ljava/lang/SecurityException;->getMessage()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object v10
 
